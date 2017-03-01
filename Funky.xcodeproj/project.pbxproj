@@ -1,0 +1,514 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 46;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		94CAD0061C71236C85AB115D /* Pods_Funky.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 28BC5BE948F3C4E8FBF46667 /* Pods_Funky.framework */; };
+		ADDC0F681E672CA700C6CBF0 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = ADDC0F671E672CA700C6CBF0 /* AppDelegate.m */; };
+		ADDC0F6B1E672CA700C6CBF0 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = ADDC0F6A1E672CA700C6CBF0 /* main.m */; };
+		ADDC0F6D1E672CA700C6CBF0 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = ADDC0F6C1E672CA700C6CBF0 /* Assets.xcassets */; };
+		ADDC0F701E672CA700C6CBF0 /* MainMenu.xib in Resources */ = {isa = PBXBuildFile; fileRef = ADDC0F6E1E672CA700C6CBF0 /* MainMenu.xib */; };
+		ADDC0F7B1E672CA700C6CBF0 /* FunkyTests.m in Sources */ = {isa = PBXBuildFile; fileRef = ADDC0F7A1E672CA700C6CBF0 /* FunkyTests.m */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		ADDC0F771E672CA700C6CBF0 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = ADDC0F5B1E672CA700C6CBF0 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = ADDC0F621E672CA700C6CBF0;
+			remoteInfo = Funky;
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXFileReference section */
+		28BC5BE948F3C4E8FBF46667 /* Pods_Funky.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Funky.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		568290F4D8923507EEE8F13D /* Pods-Funky.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Funky.debug.xcconfig"; path = "Pods/Target Support Files/Pods-Funky/Pods-Funky.debug.xcconfig"; sourceTree = "<group>"; };
+		ADD04FB61E67331100EBADE0 /* Funky.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = Funky.entitlements; sourceTree = "<group>"; };
+		ADDC0F631E672CA700C6CBF0 /* Funky.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Funky.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		ADDC0F661E672CA700C6CBF0 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
+		ADDC0F671E672CA700C6CBF0 /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
+		ADDC0F6A1E672CA700C6CBF0 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
+		ADDC0F6C1E672CA700C6CBF0 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		ADDC0F6F1E672CA700C6CBF0 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = Base; path = Base.lproj/MainMenu.xib; sourceTree = "<group>"; };
+		ADDC0F711E672CA700C6CBF0 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		ADDC0F761E672CA700C6CBF0 /* FunkyTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = FunkyTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		ADDC0F7A1E672CA700C6CBF0 /* FunkyTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = FunkyTests.m; sourceTree = "<group>"; };
+		ADDC0F7C1E672CA700C6CBF0 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		E481CFF77DD2F9C6276994EA /* Pods-Funky.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Funky.release.xcconfig"; path = "Pods/Target Support Files/Pods-Funky/Pods-Funky.release.xcconfig"; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		ADDC0F601E672CA700C6CBF0 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				94CAD0061C71236C85AB115D /* Pods_Funky.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		ADDC0F731E672CA700C6CBF0 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		744704F610E1EF9338AD1E35 /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				568290F4D8923507EEE8F13D /* Pods-Funky.debug.xcconfig */,
+				E481CFF77DD2F9C6276994EA /* Pods-Funky.release.xcconfig */,
+			);
+			name = Pods;
+			sourceTree = "<group>";
+		};
+		81E44153B12790BCBB7BA1FC /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				28BC5BE948F3C4E8FBF46667 /* Pods_Funky.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		ADDC0F5A1E672CA700C6CBF0 = {
+			isa = PBXGroup;
+			children = (
+				ADDC0F651E672CA700C6CBF0 /* Funky */,
+				ADDC0F791E672CA700C6CBF0 /* FunkyTests */,
+				ADDC0F641E672CA700C6CBF0 /* Products */,
+				744704F610E1EF9338AD1E35 /* Pods */,
+				81E44153B12790BCBB7BA1FC /* Frameworks */,
+			);
+			sourceTree = "<group>";
+		};
+		ADDC0F641E672CA700C6CBF0 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				ADDC0F631E672CA700C6CBF0 /* Funky.app */,
+				ADDC0F761E672CA700C6CBF0 /* FunkyTests.xctest */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		ADDC0F651E672CA700C6CBF0 /* Funky */ = {
+			isa = PBXGroup;
+			children = (
+				ADD04FB61E67331100EBADE0 /* Funky.entitlements */,
+				ADDC0F661E672CA700C6CBF0 /* AppDelegate.h */,
+				ADDC0F671E672CA700C6CBF0 /* AppDelegate.m */,
+				ADDC0F6C1E672CA700C6CBF0 /* Assets.xcassets */,
+				ADDC0F6E1E672CA700C6CBF0 /* MainMenu.xib */,
+				ADDC0F711E672CA700C6CBF0 /* Info.plist */,
+				ADDC0F691E672CA700C6CBF0 /* Supporting Files */,
+			);
+			path = Funky;
+			sourceTree = "<group>";
+		};
+		ADDC0F691E672CA700C6CBF0 /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				ADDC0F6A1E672CA700C6CBF0 /* main.m */,
+			);
+			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		ADDC0F791E672CA700C6CBF0 /* FunkyTests */ = {
+			isa = PBXGroup;
+			children = (
+				ADDC0F7A1E672CA700C6CBF0 /* FunkyTests.m */,
+				ADDC0F7C1E672CA700C6CBF0 /* Info.plist */,
+			);
+			path = FunkyTests;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		ADDC0F621E672CA700C6CBF0 /* Funky */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = ADDC0F7F1E672CA700C6CBF0 /* Build configuration list for PBXNativeTarget "Funky" */;
+			buildPhases = (
+				F03259183E8236B73BA9FA07 /* [CP] Check Pods Manifest.lock */,
+				ADDC0F5F1E672CA700C6CBF0 /* Sources */,
+				ADDC0F601E672CA700C6CBF0 /* Frameworks */,
+				ADDC0F611E672CA700C6CBF0 /* Resources */,
+				9427CB184604D9557471BEB6 /* [CP] Embed Pods Frameworks */,
+				5043E31D490AAD24D87FB10F /* [CP] Copy Pods Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = Funky;
+			productName = Funky;
+			productReference = ADDC0F631E672CA700C6CBF0 /* Funky.app */;
+			productType = "com.apple.product-type.application";
+		};
+		ADDC0F751E672CA700C6CBF0 /* FunkyTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = ADDC0F821E672CA700C6CBF0 /* Build configuration list for PBXNativeTarget "FunkyTests" */;
+			buildPhases = (
+				ADDC0F721E672CA700C6CBF0 /* Sources */,
+				ADDC0F731E672CA700C6CBF0 /* Frameworks */,
+				ADDC0F741E672CA700C6CBF0 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				ADDC0F781E672CA700C6CBF0 /* PBXTargetDependency */,
+			);
+			name = FunkyTests;
+			productName = FunkyTests;
+			productReference = ADDC0F761E672CA700C6CBF0 /* FunkyTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		ADDC0F5B1E672CA700C6CBF0 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastUpgradeCheck = 0820;
+				ORGANIZATIONNAME = "Cătălin Stan";
+				TargetAttributes = {
+					ADDC0F621E672CA700C6CBF0 = {
+						CreatedOnToolsVersion = 8.2.1;
+						DevelopmentTeam = JNX7A8G939;
+						ProvisioningStyle = Automatic;
+						SystemCapabilities = {
+							com.apple.ApplicationGroups.Mac = {
+								enabled = 0;
+							};
+							com.apple.Sandbox = {
+								enabled = 0;
+							};
+							com.apple.iCloud = {
+								enabled = 1;
+							};
+						};
+					};
+					ADDC0F751E672CA700C6CBF0 = {
+						CreatedOnToolsVersion = 8.2.1;
+						DevelopmentTeam = JNX7A8G939;
+						ProvisioningStyle = Automatic;
+						TestTargetID = ADDC0F621E672CA700C6CBF0;
+					};
+				};
+			};
+			buildConfigurationList = ADDC0F5E1E672CA700C6CBF0 /* Build configuration list for PBXProject "Funky" */;
+			compatibilityVersion = "Xcode 3.2";
+			developmentRegion = English;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = ADDC0F5A1E672CA700C6CBF0;
+			productRefGroup = ADDC0F641E672CA700C6CBF0 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				ADDC0F621E672CA700C6CBF0 /* Funky */,
+				ADDC0F751E672CA700C6CBF0 /* FunkyTests */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		ADDC0F611E672CA700C6CBF0 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				ADDC0F6D1E672CA700C6CBF0 /* Assets.xcassets in Resources */,
+				ADDC0F701E672CA700C6CBF0 /* MainMenu.xib in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		ADDC0F741E672CA700C6CBF0 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		5043E31D490AAD24D87FB10F /* [CP] Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Copy Pods Resources";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-Funky/Pods-Funky-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		9427CB184604D9557471BEB6 /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-Funky/Pods-Funky-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		F03259183E8236B73BA9FA07 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_ROOT}/../Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		ADDC0F5F1E672CA700C6CBF0 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				ADDC0F6B1E672CA700C6CBF0 /* main.m in Sources */,
+				ADDC0F681E672CA700C6CBF0 /* AppDelegate.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		ADDC0F721E672CA700C6CBF0 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				ADDC0F7B1E672CA700C6CBF0 /* FunkyTests.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		ADDC0F781E672CA700C6CBF0 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = ADDC0F621E672CA700C6CBF0 /* Funky */;
+			targetProxy = ADDC0F771E672CA700C6CBF0 /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin PBXVariantGroup section */
+		ADDC0F6E1E672CA700C6CBF0 /* MainMenu.xib */ = {
+			isa = PBXVariantGroup;
+			children = (
+				ADDC0F6F1E672CA700C6CBF0 /* Base */,
+			);
+			name = MainMenu.xib;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		ADDC0F7D1E672CA700C6CBF0 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				CODE_SIGN_IDENTITY = "-";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				MACOSX_DEPLOYMENT_TARGET = 10.12;
+				MTL_ENABLE_DEBUG_INFO = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = macosx;
+			};
+			name = Debug;
+		};
+		ADDC0F7E1E672CA700C6CBF0 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				CODE_SIGN_IDENTITY = "-";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				MACOSX_DEPLOYMENT_TARGET = 10.12;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				SDKROOT = macosx;
+			};
+			name = Release;
+		};
+		ADDC0F801E672CA700C6CBF0 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 568290F4D8923507EEE8F13D /* Pods-Funky.debug.xcconfig */;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_ENTITLEMENTS = Funky/Funky.entitlements;
+				CODE_SIGN_IDENTITY = "Mac Developer";
+				COMBINE_HIDPI_IMAGES = YES;
+				DEVELOPMENT_TEAM = JNX7A8G939;
+				INFOPLIST_FILE = Funky/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/../Frameworks";
+				MACOSX_DEPLOYMENT_TARGET = 10.7;
+				PRODUCT_BUNDLE_IDENTIFIER = com.catalinstan.Funky;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+			};
+			name = Debug;
+		};
+		ADDC0F811E672CA700C6CBF0 /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = E481CFF77DD2F9C6276994EA /* Pods-Funky.release.xcconfig */;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_ENTITLEMENTS = Funky/Funky.entitlements;
+				CODE_SIGN_IDENTITY = "Mac Developer";
+				COMBINE_HIDPI_IMAGES = YES;
+				DEVELOPMENT_TEAM = JNX7A8G939;
+				INFOPLIST_FILE = Funky/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/../Frameworks";
+				MACOSX_DEPLOYMENT_TARGET = 10.7;
+				PRODUCT_BUNDLE_IDENTIFIER = com.catalinstan.Funky;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+			};
+			name = Release;
+		};
+		ADDC0F831E672CA700C6CBF0 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				COMBINE_HIDPI_IMAGES = YES;
+				DEVELOPMENT_TEAM = JNX7A8G939;
+				INFOPLIST_FILE = FunkyTests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/../Frameworks @loader_path/../Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = com.catalinstan.FunkyTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/Funky.app/Contents/MacOS/Funky";
+			};
+			name = Debug;
+		};
+		ADDC0F841E672CA700C6CBF0 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				COMBINE_HIDPI_IMAGES = YES;
+				DEVELOPMENT_TEAM = JNX7A8G939;
+				INFOPLIST_FILE = FunkyTests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/../Frameworks @loader_path/../Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = com.catalinstan.FunkyTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/Funky.app/Contents/MacOS/Funky";
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		ADDC0F5E1E672CA700C6CBF0 /* Build configuration list for PBXProject "Funky" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				ADDC0F7D1E672CA700C6CBF0 /* Debug */,
+				ADDC0F7E1E672CA700C6CBF0 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		ADDC0F7F1E672CA700C6CBF0 /* Build configuration list for PBXNativeTarget "Funky" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				ADDC0F801E672CA700C6CBF0 /* Debug */,
+				ADDC0F811E672CA700C6CBF0 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		ADDC0F821E672CA700C6CBF0 /* Build configuration list for PBXNativeTarget "FunkyTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				ADDC0F831E672CA700C6CBF0 /* Debug */,
+				ADDC0F841E672CA700C6CBF0 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = ADDC0F5B1E672CA700C6CBF0 /* Project object */;
+}
