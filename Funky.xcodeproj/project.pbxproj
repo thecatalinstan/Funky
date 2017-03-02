@@ -8,7 +8,8 @@
 
 /* Begin PBXBuildFile section */
 		94CAD0061C71236C85AB115D /* Pods_Funky.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 28BC5BE948F3C4E8FBF46667 /* Pods_Funky.framework */; };
-		ADDC0F681E672CA700C6CBF0 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = ADDC0F671E672CA700C6CBF0 /* AppDelegate.m */; };
+		ADCC3F711E684F0900A7C4F1 /* FKHelper.m in Sources */ = {isa = PBXBuildFile; fileRef = ADCC3F701E684F0900A7C4F1 /* FKHelper.m */; };
+		ADDC0F681E672CA700C6CBF0 /* FKAppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = ADDC0F671E672CA700C6CBF0 /* FKAppDelegate.m */; };
 		ADDC0F6B1E672CA700C6CBF0 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = ADDC0F6A1E672CA700C6CBF0 /* main.m */; };
 		ADDC0F6D1E672CA700C6CBF0 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = ADDC0F6C1E672CA700C6CBF0 /* Assets.xcassets */; };
 		ADDC0F701E672CA700C6CBF0 /* MainMenu.xib in Resources */ = {isa = PBXBuildFile; fileRef = ADDC0F6E1E672CA700C6CBF0 /* MainMenu.xib */; };
@@ -28,10 +29,12 @@
 /* Begin PBXFileReference section */
 		28BC5BE948F3C4E8FBF46667 /* Pods_Funky.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Funky.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		568290F4D8923507EEE8F13D /* Pods-Funky.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Funky.debug.xcconfig"; path = "Pods/Target Support Files/Pods-Funky/Pods-Funky.debug.xcconfig"; sourceTree = "<group>"; };
+		ADCC3F6F1E684F0900A7C4F1 /* FKHelper.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FKHelper.h; sourceTree = "<group>"; };
+		ADCC3F701E684F0900A7C4F1 /* FKHelper.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FKHelper.m; sourceTree = "<group>"; };
 		ADD04FB61E67331100EBADE0 /* Funky.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = Funky.entitlements; sourceTree = "<group>"; };
 		ADDC0F631E672CA700C6CBF0 /* Funky.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Funky.app; sourceTree = BUILT_PRODUCTS_DIR; };
-		ADDC0F661E672CA700C6CBF0 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
-		ADDC0F671E672CA700C6CBF0 /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
+		ADDC0F661E672CA700C6CBF0 /* FKAppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = FKAppDelegate.h; sourceTree = "<group>"; };
+		ADDC0F671E672CA700C6CBF0 /* FKAppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = FKAppDelegate.m; sourceTree = "<group>"; };
 		ADDC0F6A1E672CA700C6CBF0 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
 		ADDC0F6C1E672CA700C6CBF0 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		ADDC0F6F1E672CA700C6CBF0 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = Base; path = Base.lproj/MainMenu.xib; sourceTree = "<group>"; };
@@ -102,12 +105,14 @@
 			isa = PBXGroup;
 			children = (
 				ADD04FB61E67331100EBADE0 /* Funky.entitlements */,
-				ADDC0F661E672CA700C6CBF0 /* AppDelegate.h */,
-				ADDC0F671E672CA700C6CBF0 /* AppDelegate.m */,
+				ADDC0F661E672CA700C6CBF0 /* FKAppDelegate.h */,
+				ADDC0F671E672CA700C6CBF0 /* FKAppDelegate.m */,
 				ADDC0F6C1E672CA700C6CBF0 /* Assets.xcassets */,
 				ADDC0F6E1E672CA700C6CBF0 /* MainMenu.xib */,
 				ADDC0F711E672CA700C6CBF0 /* Info.plist */,
 				ADDC0F691E672CA700C6CBF0 /* Supporting Files */,
+				ADCC3F6F1E684F0900A7C4F1 /* FKHelper.h */,
+				ADCC3F701E684F0900A7C4F1 /* FKHelper.m */,
 			);
 			path = Funky;
 			sourceTree = "<group>";
@@ -295,7 +300,8 @@
 			buildActionMask = 2147483647;
 			files = (
 				ADDC0F6B1E672CA700C6CBF0 /* main.m in Sources */,
-				ADDC0F681E672CA700C6CBF0 /* AppDelegate.m in Sources */,
+				ADCC3F711E684F0900A7C4F1 /* FKHelper.m in Sources */,
+				ADDC0F681E672CA700C6CBF0 /* FKAppDelegate.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -427,8 +433,8 @@
 				DEVELOPMENT_TEAM = JNX7A8G939;
 				INFOPLIST_FILE = Funky/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/../Frameworks";
-				MACOSX_DEPLOYMENT_TARGET = 10.7;
-				PRODUCT_BUNDLE_IDENTIFIER = com.catalinstan.Funky;
+				MACOSX_DEPLOYMENT_TARGET = 10.8;
+				PRODUCT_BUNDLE_IDENTIFIER = com.catalinstan.funky;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 			};
 			name = Debug;
@@ -444,8 +450,8 @@
 				DEVELOPMENT_TEAM = JNX7A8G939;
 				INFOPLIST_FILE = Funky/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/../Frameworks";
-				MACOSX_DEPLOYMENT_TARGET = 10.7;
-				PRODUCT_BUNDLE_IDENTIFIER = com.catalinstan.Funky;
+				MACOSX_DEPLOYMENT_TARGET = 10.8;
+				PRODUCT_BUNDLE_IDENTIFIER = com.catalinstan.funky;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 			};
 			name = Release;

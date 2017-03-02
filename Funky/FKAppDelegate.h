@@ -1,5 +1,5 @@
 //
-//  AppDelegate.h
+//  FKAppDelegate.h
 //  Funky
 //
 //  Created by Cătălin Stan on 01/03/2017.
@@ -8,7 +8,7 @@
 
 #import <Cocoa/Cocoa.h>
 
-@interface AppDelegate : NSObject <NSApplicationDelegate>
+@interface FKAppDelegate : NSObject <NSApplicationDelegate>
 
 
 @end
