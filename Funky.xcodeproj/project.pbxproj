@@ -8,6 +8,12 @@
 
 /* Begin PBXBuildFile section */
 		94CAD0061C71236C85AB115D /* Pods_Funky.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 28BC5BE948F3C4E8FBF46667 /* Pods_Funky.framework */; };
+		ADB539ED1E6C609F00806DF8 /* FKPreferencesWindowController.m in Sources */ = {isa = PBXBuildFile; fileRef = ADB539EB1E6C609F00806DF8 /* FKPreferencesWindowController.m */; };
+		ADB539EE1E6C609F00806DF8 /* FKPreferencesWindowController.xib in Resources */ = {isa = PBXBuildFile; fileRef = ADB539EC1E6C609F00806DF8 /* FKPreferencesWindowController.xib */; };
+		ADB539F21E6C689700806DF8 /* FKPreferencesGeneralViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = ADB539F01E6C689700806DF8 /* FKPreferencesGeneralViewController.m */; };
+		ADB539F31E6C689700806DF8 /* FKPreferencesGeneralViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = ADB539F11E6C689700806DF8 /* FKPreferencesGeneralViewController.xib */; };
+		ADB539F71E6C695700806DF8 /* FKPreferencesAppsViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = ADB539F51E6C695700806DF8 /* FKPreferencesAppsViewController.m */; };
+		ADB539F81E6C695700806DF8 /* FKPreferencesAppsViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = ADB539F61E6C695700806DF8 /* FKPreferencesAppsViewController.xib */; };
 		ADCC3F711E684F0900A7C4F1 /* FKHelper.m in Sources */ = {isa = PBXBuildFile; fileRef = ADCC3F701E684F0900A7C4F1 /* FKHelper.m */; };
 		ADDC0F681E672CA700C6CBF0 /* FKAppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = ADDC0F671E672CA700C6CBF0 /* FKAppDelegate.m */; };
 		ADDC0F6B1E672CA700C6CBF0 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = ADDC0F6A1E672CA700C6CBF0 /* main.m */; };
@@ -29,6 +35,15 @@
 /* Begin PBXFileReference section */
 		28BC5BE948F3C4E8FBF46667 /* Pods_Funky.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Funky.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		568290F4D8923507EEE8F13D /* Pods-Funky.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Funky.debug.xcconfig"; path = "Pods/Target Support Files/Pods-Funky/Pods-Funky.debug.xcconfig"; sourceTree = "<group>"; };
+		ADB539EA1E6C609F00806DF8 /* FKPreferencesWindowController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FKPreferencesWindowController.h; sourceTree = "<group>"; };
+		ADB539EB1E6C609F00806DF8 /* FKPreferencesWindowController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FKPreferencesWindowController.m; sourceTree = "<group>"; };
+		ADB539EC1E6C609F00806DF8 /* FKPreferencesWindowController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = FKPreferencesWindowController.xib; sourceTree = "<group>"; };
+		ADB539EF1E6C689700806DF8 /* FKPreferencesGeneralViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FKPreferencesGeneralViewController.h; sourceTree = "<group>"; };
+		ADB539F01E6C689700806DF8 /* FKPreferencesGeneralViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FKPreferencesGeneralViewController.m; sourceTree = "<group>"; };
+		ADB539F11E6C689700806DF8 /* FKPreferencesGeneralViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = FKPreferencesGeneralViewController.xib; sourceTree = "<group>"; };
+		ADB539F41E6C695700806DF8 /* FKPreferencesAppsViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FKPreferencesAppsViewController.h; sourceTree = "<group>"; };
+		ADB539F51E6C695700806DF8 /* FKPreferencesAppsViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FKPreferencesAppsViewController.m; sourceTree = "<group>"; };
+		ADB539F61E6C695700806DF8 /* FKPreferencesAppsViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = FKPreferencesAppsViewController.xib; sourceTree = "<group>"; };
 		ADCC3F6F1E684F0900A7C4F1 /* FKHelper.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FKHelper.h; sourceTree = "<group>"; };
 		ADCC3F701E684F0900A7C4F1 /* FKHelper.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FKHelper.m; sourceTree = "<group>"; };
 		ADD04FB61E67331100EBADE0 /* Funky.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = Funky.entitlements; sourceTree = "<group>"; };
@@ -109,6 +124,15 @@
 				ADDC0F671E672CA700C6CBF0 /* FKAppDelegate.m */,
 				ADDC0F6C1E672CA700C6CBF0 /* Assets.xcassets */,
 				ADDC0F6E1E672CA700C6CBF0 /* MainMenu.xib */,
+				ADB539EA1E6C609F00806DF8 /* FKPreferencesWindowController.h */,
+				ADB539EB1E6C609F00806DF8 /* FKPreferencesWindowController.m */,
+				ADB539EC1E6C609F00806DF8 /* FKPreferencesWindowController.xib */,
+				ADB539EF1E6C689700806DF8 /* FKPreferencesGeneralViewController.h */,
+				ADB539F01E6C689700806DF8 /* FKPreferencesGeneralViewController.m */,
+				ADB539F11E6C689700806DF8 /* FKPreferencesGeneralViewController.xib */,
+				ADB539F41E6C695700806DF8 /* FKPreferencesAppsViewController.h */,
+				ADB539F51E6C695700806DF8 /* FKPreferencesAppsViewController.m */,
+				ADB539F61E6C695700806DF8 /* FKPreferencesAppsViewController.xib */,
 				ADDC0F711E672CA700C6CBF0 /* Info.plist */,
 				ADDC0F691E672CA700C6CBF0 /* Supporting Files */,
 				ADCC3F6F1E684F0900A7C4F1 /* FKHelper.h */,
@@ -193,7 +217,7 @@
 								enabled = 0;
 							};
 							com.apple.Sandbox = {
-								enabled = 0;
+								enabled = 1;
 							};
 							com.apple.iCloud = {
 								enabled = 1;
@@ -232,8 +256,11 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				ADB539F81E6C695700806DF8 /* FKPreferencesAppsViewController.xib in Resources */,
 				ADDC0F6D1E672CA700C6CBF0 /* Assets.xcassets in Resources */,
+				ADB539EE1E6C609F00806DF8 /* FKPreferencesWindowController.xib in Resources */,
 				ADDC0F701E672CA700C6CBF0 /* MainMenu.xib in Resources */,
+				ADB539F31E6C689700806DF8 /* FKPreferencesGeneralViewController.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -299,7 +326,10 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				ADB539F21E6C689700806DF8 /* FKPreferencesGeneralViewController.m in Sources */,
 				ADDC0F6B1E672CA700C6CBF0 /* main.m in Sources */,
+				ADB539F71E6C695700806DF8 /* FKPreferencesAppsViewController.m in Sources */,
+				ADB539ED1E6C609F00806DF8 /* FKPreferencesWindowController.m in Sources */,
 				ADCC3F711E684F0900A7C4F1 /* FKHelper.m in Sources */,
 				ADDC0F681E672CA700C6CBF0 /* FKAppDelegate.m in Sources */,
 			);

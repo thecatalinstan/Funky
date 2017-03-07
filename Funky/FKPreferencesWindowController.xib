@@ -1,0 +1,75 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.Cocoa.XIB" version="3.0" toolsVersion="11762" systemVersion="16D32" targetRuntime="MacOSX.Cocoa" propertyAccessControl="none" useAutolayout="YES">
+    <dependencies>
+        <deployment identifier="macosx"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.CocoaPlugin" version="11762"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <customObject id="-2" userLabel="File's Owner" customClass="FKPreferencesWindowController">
+            <connections>
+                <outlet property="toolbar" destination="17" id="28"/>
+                <outlet property="window" destination="2" id="117"/>
+            </connections>
+        </customObject>
+        <customObject id="-1" userLabel="First Responder" customClass="FirstResponder"/>
+        <customObject id="-3" userLabel="Application" customClass="NSObject"/>
+        <window title="Preferences" allowsToolTipsWhenApplicationIsInactive="NO" autorecalculatesKeyViewLoop="NO" restorable="NO" showsToolbarButton="NO" visibleAtLaunch="NO" frameAutosaveName="Preferences Dialog" animationBehavior="default" id="2">
+            <windowStyleMask key="styleMask" titled="YES" closable="YES" unifiedTitleAndToolbar="YES"/>
+            <windowCollectionBehavior key="collectionBehavior" managed="YES"/>
+            <windowPositionMask key="initialPositionMask" leftStrut="YES" rightStrut="YES" topStrut="YES" bottomStrut="YES"/>
+            <rect key="contentRect" x="271" y="390" width="540" height="303"/>
+            <rect key="screenRect" x="0.0" y="0.0" width="1920" height="1178"/>
+            <view key="contentView" id="3">
+                <rect key="frame" x="0.0" y="0.0" width="540" height="303"/>
+                <autoresizingMask key="autoresizingMask"/>
+            </view>
+            <toolbar key="toolbar" implicitIdentifier="6E7C1E3C-E2CC-4FB0-AD44-F486AD0331AF" autosavesConfiguration="NO" allowsUserCustomization="NO" displayMode="iconAndLabel" sizeMode="regular" id="17">
+                <allowedToolbarItems>
+                    <toolbarItem implicitItemIdentifier="829FF77B-A211-4065-9C6D-9F490F78E95F" explicitItemIdentifier="general" label="General" paletteLabel="General" image="preferences_general" selectable="YES" id="25">
+                        <size key="minSize" width="100" height="0.0"/>
+                        <connections>
+                            <action selector="loadView:" target="-2" id="33"/>
+                        </connections>
+                    </toolbarItem>
+                    <toolbarItem implicitItemIdentifier="75FAF969-5988-4444-ACDF-85C4722CABA5" explicitItemIdentifier="sharing" label="Apps" paletteLabel="Apps" tag="1" image="preferences_apps" selectable="YES" id="JRh-IJ-9vH">
+                        <size key="minSize" width="100" height="0.0"/>
+                        <connections>
+                            <action selector="loadView:" target="-2" id="OUe-zG-hGb"/>
+                        </connections>
+                    </toolbarItem>
+                    <toolbarItem implicitItemIdentifier="108A9879-E33E-4E4C-B1D9-9D9A3E4DE200" explicitItemIdentifier="annotations" label="Annotations" paletteLabel="Annotations" tag="2" image="preferences_annotations" selectable="YES" id="121">
+                        <connections>
+                            <action selector="loadView:" target="-2" id="122"/>
+                        </connections>
+                    </toolbarItem>
+                    <toolbarItem implicitItemIdentifier="86EEB616-3A43-4845-9236-1D3418010CAB" explicitItemIdentifier="advanced" label="Advanced" paletteLabel="Advanced" tag="3" image="preferences_advanced" selectable="YES" id="xox-22-ACv">
+                        <connections>
+                            <action selector="loadView:" target="-2" id="ROv-ad-y6P"/>
+                        </connections>
+                    </toolbarItem>
+                    <toolbarItem implicitItemIdentifier="NSToolbarFlexibleSpaceItem" id="hr4-WO-ZBj" userLabel="Flexible Space1"/>
+                </allowedToolbarItems>
+                <defaultToolbarItems>
+                    <toolbarItem reference="25"/>
+                    <toolbarItem reference="JRh-IJ-9vH"/>
+                    <toolbarItem reference="121"/>
+                    <toolbarItem reference="xox-22-ACv"/>
+                </defaultToolbarItems>
+                <connections>
+                    <outlet property="delegate" destination="-2" id="99C-pd-v0A"/>
+                </connections>
+            </toolbar>
+            <connections>
+                <outlet property="delegate" destination="-2" id="118"/>
+            </connections>
+            <point key="canvasLocation" x="0.0" y="-33.5"/>
+        </window>
+    </objects>
+    <resources>
+        <image name="preferences_advanced" width="32" height="32"/>
+        <image name="preferences_annotations" width="32" height="32"/>
+        <image name="preferences_apps" width="128" height="128"/>
+        <image name="preferences_general" width="32" height="32"/>
+    </resources>
+</document>

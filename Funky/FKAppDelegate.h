@@ -8,8 +8,12 @@
 
 #import <Cocoa/Cocoa.h>
 
+@class FKPreferencesWindowController;
+
 @interface FKAppDelegate : NSObject <NSApplicationDelegate>
 
+@property (strong) FKPreferencesWindowController *preferencesWindowController;
+@property (strong) NSStatusItem *statusItem;
 
 @end
 

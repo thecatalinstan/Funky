@@ -19,14 +19,23 @@
         </customObject>
         <menu id="yw0-pe-FUc">
             <items>
-                <menuItem title="Item 1" id="z59-yY-zh7">
+                <menuItem title="About Funky" id="z59-yY-zh7">
                     <modifierMask key="keyEquivalentModifierMask"/>
+                    <connections>
+                        <action selector="orderFrontStandardAboutPanel:" target="-1" id="xkS-k0-xhd"/>
+                    </connections>
                 </menuItem>
-                <menuItem title="Item 2" id="nCc-Mv-zvU">
-                    <modifierMask key="keyEquivalentModifierMask"/>
+                <menuItem isSeparatorItem="YES" id="XD1-av-2oi"/>
+                <menuItem title="Preferences ..." keyEquivalent="," id="nCc-Mv-zvU">
+                    <connections>
+                        <action selector="showPreferencesDialog:" target="-1" id="gtc-bb-iDd"/>
+                    </connections>
                 </menuItem>
-                <menuItem title="Item 3" id="4HS-vE-wRX">
-                    <modifierMask key="keyEquivalentModifierMask"/>
+                <menuItem isSeparatorItem="YES" id="to9-bm-HQz"/>
+                <menuItem title="Quit" keyEquivalent="q" id="4HS-vE-wRX">
+                    <connections>
+                        <action selector="terminate:" target="-1" id="B3D-FK-3cf"/>
+                    </connections>
                 </menuItem>
             </items>
             <point key="canvasLocation" x="-18" y="118"/>

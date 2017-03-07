@@ -41,20 +41,26 @@
     
     ret = IOMasterPort(bootstrap_port, &port);
     if ( ret != KERN_SUCCESS ) {
-        *error = [self machErrorWithResult:ret];
+        if ( error != NULL ) {
+            *error = [self machErrorWithResult:ret];
+        }
         return NO;
     }
     
     CFDictionaryRef class = IOServiceMatching(kIOHIDSystemClass);
     if ( class == NULL ) {
-        *error = [NSError errorWithDomain:FKHelperMachErrorDomain code:FKHelperMachErrorNoClass userInfo:@{NSLocalizedDescriptionKey: [NSString stringWithFormat:@"No matching IO Class: %s", kIOHIDSystemClass]}];
+        if ( error != NULL ) {
+            *error = [NSError errorWithDomain:FKHelperMachErrorDomain code:FKHelperMachErrorNoClass userInfo:@{NSLocalizedDescriptionKey: [NSString stringWithFormat:@"No matching IO Class: %s", kIOHIDSystemClass]}];
+        }
         return NO;
     }
     
     io_iterator_t iterator;
     ret = IOServiceGetMatchingServices(port, class, &iterator);
     if ( ret != KERN_SUCCESS ) {
-        *error = [self machErrorWithResult:ret];
+        if ( error != NULL ) {
+            *error = [self machErrorWithResult:ret];
+        }
         return NO;
     }
     
@@ -62,21 +68,27 @@
     IOObjectRelease(iterator);
     
     if ( !service ){
-        *error = [NSError errorWithDomain:FKHelperMachErrorDomain code:FKHelperMachErrorNoServices userInfo:@{NSLocalizedDescriptionKey: [NSString stringWithFormat:@"No matching services for class %s", kIOHIDSystemClass]}];
+        if ( error != NULL ) {
+            *error = [NSError errorWithDomain:FKHelperMachErrorDomain code:FKHelperMachErrorNoServices userInfo:@{NSLocalizedDescriptionKey: [NSString stringWithFormat:@"No matching services for class %s", kIOHIDSystemClass]}];
+        }
         return NO;
     }
     
     io_connect_t connect;
     ret = IOServiceOpen(service, mach_task_self(), kIOHIDParamConnectType, &connect);
     if ( ret != KERN_SUCCESS ) {
-        *error = [self machErrorWithResult:ret];
+        if ( error != NULL ) {
+            *error = [self machErrorWithResult:ret];
+        }
         return NO;
     }
     
     unsigned int val = state;
     ret = IOHIDSetParameter(connect, CFSTR(kIOHIDFKeyModeKey), &val, sizeof(val));
     if ( ret != KERN_SUCCESS ) {
-        *error = [self machErrorWithResult:ret];
+        if ( error != NULL ) {
+            *error = [self machErrorWithResult:ret];
+        }
         IOServiceClose(connect);
         return NO;
     }
