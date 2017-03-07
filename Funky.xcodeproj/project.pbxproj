@@ -20,6 +20,8 @@
 		ADDC0F6D1E672CA700C6CBF0 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = ADDC0F6C1E672CA700C6CBF0 /* Assets.xcassets */; };
 		ADDC0F701E672CA700C6CBF0 /* MainMenu.xib in Resources */ = {isa = PBXBuildFile; fileRef = ADDC0F6E1E672CA700C6CBF0 /* MainMenu.xib */; };
 		ADDC0F7B1E672CA700C6CBF0 /* FunkyTests.m in Sources */ = {isa = PBXBuildFile; fileRef = ADDC0F7A1E672CA700C6CBF0 /* FunkyTests.m */; };
+		ADE308DF1E6EC342001A48CB /* FKPreferencesAdvancedViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = ADE308DD1E6EC342001A48CB /* FKPreferencesAdvancedViewController.m */; };
+		ADE308E01E6EC342001A48CB /* FKPreferencesAdvancedViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = ADE308DE1E6EC342001A48CB /* FKPreferencesAdvancedViewController.xib */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -57,6 +59,9 @@
 		ADDC0F761E672CA700C6CBF0 /* FunkyTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = FunkyTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		ADDC0F7A1E672CA700C6CBF0 /* FunkyTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = FunkyTests.m; sourceTree = "<group>"; };
 		ADDC0F7C1E672CA700C6CBF0 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		ADE308DC1E6EC342001A48CB /* FKPreferencesAdvancedViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FKPreferencesAdvancedViewController.h; sourceTree = "<group>"; };
+		ADE308DD1E6EC342001A48CB /* FKPreferencesAdvancedViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FKPreferencesAdvancedViewController.m; sourceTree = "<group>"; };
+		ADE308DE1E6EC342001A48CB /* FKPreferencesAdvancedViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = FKPreferencesAdvancedViewController.xib; sourceTree = "<group>"; };
 		E481CFF77DD2F9C6276994EA /* Pods-Funky.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Funky.release.xcconfig"; path = "Pods/Target Support Files/Pods-Funky/Pods-Funky.release.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -133,6 +138,9 @@
 				ADB539F41E6C695700806DF8 /* FKPreferencesAppsViewController.h */,
 				ADB539F51E6C695700806DF8 /* FKPreferencesAppsViewController.m */,
 				ADB539F61E6C695700806DF8 /* FKPreferencesAppsViewController.xib */,
+				ADE308DC1E6EC342001A48CB /* FKPreferencesAdvancedViewController.h */,
+				ADE308DD1E6EC342001A48CB /* FKPreferencesAdvancedViewController.m */,
+				ADE308DE1E6EC342001A48CB /* FKPreferencesAdvancedViewController.xib */,
 				ADDC0F711E672CA700C6CBF0 /* Info.plist */,
 				ADDC0F691E672CA700C6CBF0 /* Supporting Files */,
 				ADCC3F6F1E684F0900A7C4F1 /* FKHelper.h */,
@@ -258,6 +266,7 @@
 			files = (
 				ADB539F81E6C695700806DF8 /* FKPreferencesAppsViewController.xib in Resources */,
 				ADDC0F6D1E672CA700C6CBF0 /* Assets.xcassets in Resources */,
+				ADE308E01E6EC342001A48CB /* FKPreferencesAdvancedViewController.xib in Resources */,
 				ADB539EE1E6C609F00806DF8 /* FKPreferencesWindowController.xib in Resources */,
 				ADDC0F701E672CA700C6CBF0 /* MainMenu.xib in Resources */,
 				ADB539F31E6C689700806DF8 /* FKPreferencesGeneralViewController.xib in Resources */,
@@ -332,6 +341,7 @@
 				ADB539ED1E6C609F00806DF8 /* FKPreferencesWindowController.m in Sources */,
 				ADCC3F711E684F0900A7C4F1 /* FKHelper.m in Sources */,
 				ADDC0F681E672CA700C6CBF0 /* FKAppDelegate.m in Sources */,
+				ADE308DF1E6EC342001A48CB /* FKPreferencesAdvancedViewController.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
