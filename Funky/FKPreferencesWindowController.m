@@ -9,18 +9,43 @@
 #import "FKPreferencesWindowController.h"
 #import "FKAppDelegate.h"
 
-@interface FKPreferencesWindowController () <NSWindowDelegate, NSToolbarDelegate>
+@interface FKPreferencesWindowController () <NSWindowDelegate, NSToolbarDelegate> {
+    BOOL shouldRecalculateWindowY;
+}
 
 @property (weak) IBOutlet NSToolbar *toolbar;
+
+@property (strong) NSViewController *currentViewController;
+@property (readonly) CGFloat toolbarHeight;
+@property (readonly) CGFloat titleHeight;
 
 - (IBAction)loadView:(id)sender;
 
 + (NSDictionary<NSString *, NSImage *> *)toolbarItems;
 
-
 @end
 
 @implementation FKPreferencesWindowController
+
+- (CGFloat)toolbarHeight {
+    static CGFloat toolbarHeight;
+    static dispatch_once_t onceToken;
+    dispatch_once(&onceToken, ^{
+        toolbarHeight = self.window.frame.size.height  - [self titleHeight] - self.window.contentView.frame.size.height;
+    });
+    return toolbarHeight;
+}
+
+- (CGFloat)titleHeight {
+    static CGFloat titleHeight;
+    static dispatch_once_t onceToken;
+    dispatch_once(&onceToken, ^{
+        NSRect frame = NSMakeRect (0, 0, 100, 100);
+        NSRect contentRect = [NSWindow contentRectForFrameRect: frame styleMask: NSTitledWindowMask];
+        titleHeight = frame.size.height - contentRect.size.height;
+    });
+    return titleHeight;
+}
 
 + (NSDictionary<NSString *,NSImage *> *)toolbarItems {
     static NSDictionary<NSString *,NSImage *> *toolbarItems;
@@ -76,15 +101,34 @@
     
     self.window.title = [NSString stringWithFormat: @"Loading %@ ...", ((NSToolbarItem*) sender).label];
     [self.window setViewsNeedDisplay:YES];
-
+    
     if ( self.window.contentView.subviews.count != 0 ) {
         [self.window.contentView.subviews[0] removeFromSuperview];
     }
+    if ( self.currentViewController != nil ) {
+        self.currentViewController = nil;
+    }
     
-    self.contentViewController = [[viewControllerClass alloc] initWithNibName:viewControllerClassName bundle:nil];
+    NSRect windowFrame = self.window.frame;
+    
+    self.currentViewController = [[viewControllerClass alloc] initWithNibName:nil bundle:nil];
+    NSRect newViewFrame = self.currentViewController.view.frame;
+    newViewFrame.size.width = windowFrame.size.width;
+    newViewFrame.origin.y = 0;
+    
+    windowFrame.size.height = self.titleHeight + self.toolbarHeight + self.currentViewController.view.frame.size.height;
+    if ( shouldRecalculateWindowY ) {
+        windowFrame.origin.y -= windowFrame.size.height - self.window.frame.size.height;
+    }
+    shouldRecalculateWindowY = YES;
+    
+    [self.window setFrame:windowFrame display:YES animate:YES];
+    [self.window.contentView addSubview:self.currentViewController.view];
+    [self.currentViewController.view setFrame:newViewFrame];
+    
     [self.window layoutIfNeeded];
     self.window.title = title;
-    
+    [self.window setViewsNeedDisplay:YES];
 }
 
 #pragma mark - NSToolbarDelegate

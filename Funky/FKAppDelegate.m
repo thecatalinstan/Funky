@@ -46,6 +46,8 @@
             [self handleApplicationSwitch:note];
         }});
     }}];
+    
+    [self showPreferencesDialog:self];
 }
 
 - (void)applicationWillTerminate:(NSNotification *)aNotification {
