@@ -9,9 +9,9 @@
 #import "FKAppDelegate.h"
 #import "FKHelper.h"
 #import "FKPreferencesWindowController.h"
+#import "FKBundle.h"
 
 #define FKStatusImageName                       @"FunkyStatusTemplate"
-#define FKBundleIdsKey                          @"FKBundleIds"
 #define FKPreferencesWindowControllerNibName    @"FKPreferencesWindowController"
 
 @interface FKAppDelegate ()
@@ -65,14 +65,15 @@
 
 - (void)handleApplicationSwitch:(NSNotification *)note {
     NSRunningApplication *app = note.userInfo[NSWorkspaceApplicationKey];
-    NSSet<NSString *> *bundleIds = [[NSUserDefaults standardUserDefaults] objectForKey:FKBundleIdsKey] ? : [NSSet set];
+    NSData *bundleData = [[NSUserDefaults standardUserDefaults] objectForKey:FKBundlesKeyPath];
+    NSArray<NSString *> *bundleIds = [[NSKeyedUnarchiver unarchiveObjectWithData:bundleData] valueForKeyPath:@"identifier"];
     BOOL state = [bundleIds containsObject:app.bundleIdentifier];
     
     NSError *error;
     if ( [[FKHelper sharedHelper] setFnKeyState:state error:&error] != YES)  {
         NSLog(@" ** Error: %@", error);
     } else {
-        NSLog(@"%@: %@", app.bundleIdentifier, @(state));
+        NSLog(@"%@: %@", app.bundleURL.path, @(state));
     }
 }
 

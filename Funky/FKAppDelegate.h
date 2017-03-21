@@ -8,7 +8,9 @@
 
 #import <Cocoa/Cocoa.h>
 
-@class FKPreferencesWindowController;
+#define FKBundlesKeyPath                        @"FKBundles"
+
+@class FKPreferencesWindowController, FKBundle;
 
 @interface FKAppDelegate : NSObject <NSApplicationDelegate>
 

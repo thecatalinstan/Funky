@@ -14,9 +14,13 @@
 
 @implementation FKPreferencesAdvancedViewController
 
+- (void)awakeFromNib {
+    
+}
+
 - (void)viewDidLoad {
     [super viewDidLoad];
-    // Do view setup here.
+    
 }
 
 @end

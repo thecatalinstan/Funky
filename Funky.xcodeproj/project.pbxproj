@@ -8,6 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		94CAD0061C71236C85AB115D /* Pods_Funky.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 28BC5BE948F3C4E8FBF46667 /* Pods_Funky.framework */; };
+		AD315BAE1E7FEB0500CAF103 /* FKBundle.m in Sources */ = {isa = PBXBuildFile; fileRef = AD315BAD1E7FEB0500CAF103 /* FKBundle.m */; };
 		ADB539ED1E6C609F00806DF8 /* FKPreferencesWindowController.m in Sources */ = {isa = PBXBuildFile; fileRef = ADB539EB1E6C609F00806DF8 /* FKPreferencesWindowController.m */; };
 		ADB539EE1E6C609F00806DF8 /* FKPreferencesWindowController.xib in Resources */ = {isa = PBXBuildFile; fileRef = ADB539EC1E6C609F00806DF8 /* FKPreferencesWindowController.xib */; };
 		ADB539F21E6C689700806DF8 /* FKPreferencesGeneralViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = ADB539F01E6C689700806DF8 /* FKPreferencesGeneralViewController.m */; };
@@ -37,6 +38,8 @@
 /* Begin PBXFileReference section */
 		28BC5BE948F3C4E8FBF46667 /* Pods_Funky.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Funky.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		568290F4D8923507EEE8F13D /* Pods-Funky.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Funky.debug.xcconfig"; path = "Pods/Target Support Files/Pods-Funky/Pods-Funky.debug.xcconfig"; sourceTree = "<group>"; };
+		AD315BAC1E7FEB0500CAF103 /* FKBundle.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FKBundle.h; sourceTree = "<group>"; };
+		AD315BAD1E7FEB0500CAF103 /* FKBundle.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FKBundle.m; sourceTree = "<group>"; };
 		ADB539EA1E6C609F00806DF8 /* FKPreferencesWindowController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FKPreferencesWindowController.h; sourceTree = "<group>"; };
 		ADB539EB1E6C609F00806DF8 /* FKPreferencesWindowController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FKPreferencesWindowController.m; sourceTree = "<group>"; };
 		ADB539EC1E6C609F00806DF8 /* FKPreferencesWindowController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = FKPreferencesWindowController.xib; sourceTree = "<group>"; };
@@ -145,6 +148,8 @@
 				ADDC0F691E672CA700C6CBF0 /* Supporting Files */,
 				ADCC3F6F1E684F0900A7C4F1 /* FKHelper.h */,
 				ADCC3F701E684F0900A7C4F1 /* FKHelper.m */,
+				AD315BAC1E7FEB0500CAF103 /* FKBundle.h */,
+				AD315BAD1E7FEB0500CAF103 /* FKBundle.m */,
 			);
 			path = Funky;
 			sourceTree = "<group>";
@@ -213,6 +218,7 @@
 		ADDC0F5B1E672CA700C6CBF0 /* Project object */ = {
 			isa = PBXProject;
 			attributes = {
+				CLASSPREFIX = FK;
 				LastUpgradeCheck = 0820;
 				ORGANIZATIONNAME = "Cătălin Stan";
 				TargetAttributes = {
@@ -337,6 +343,7 @@
 			files = (
 				ADB539F21E6C689700806DF8 /* FKPreferencesGeneralViewController.m in Sources */,
 				ADDC0F6B1E672CA700C6CBF0 /* main.m in Sources */,
+				AD315BAE1E7FEB0500CAF103 /* FKBundle.m in Sources */,
 				ADB539F71E6C695700806DF8 /* FKPreferencesAppsViewController.m in Sources */,
 				ADB539ED1E6C609F00806DF8 /* FKPreferencesWindowController.m in Sources */,
 				ADCC3F711E684F0900A7C4F1 /* FKHelper.m in Sources */,
