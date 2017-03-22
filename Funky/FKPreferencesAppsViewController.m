@@ -10,7 +10,7 @@
 #import "FKAppDelegate.h"
 #import "FKBundle.h"
 
-@interface FKPreferencesAppsViewController ()
+@interface FKPreferencesAppsViewController () <NSTableViewDelegate>
 
 @property (strong) IBOutlet NSArrayController *appsListController;
 
@@ -44,6 +44,20 @@
         }}];
         [self.appsListController commitEditing];
     }];
+}
+
+#pragma mark - NSTableViewDelegate
+
+- (NSArray<NSTableViewRowAction *> *)tableView:(NSTableView *)tableView rowActionsForRow:(NSInteger)row edge:(NSTableRowActionEdge)edge {
+    if ( edge != NSTableRowActionEdgeTrailing ) {
+        return nil;
+    }
+    
+    NSTableViewRowAction *deleteAction = [NSTableViewRowAction rowActionWithStyle:NSTableViewRowActionStyleDestructive title:@"Delete" handler:^(NSTableViewRowAction * _Nonnull action, NSInteger row) {
+        [self.appsListController removeObjectAtArrangedObjectIndex:row];
+    }];
+    
+    return @[deleteAction];
 }
 
 @end
