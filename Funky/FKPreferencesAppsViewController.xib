@@ -10,6 +10,7 @@
         <customObject id="-2" userLabel="File's Owner" customClass="FKPreferencesAppsViewController">
             <connections>
                 <outlet property="appsListController" destination="koX-UF-j7T" id="I7U-mR-grB"/>
+                <outlet property="appsListTableView" destination="yZT-Ub-ea1" id="4fW-X1-JrU"/>
                 <outlet property="view" destination="Hz6-mo-xeY" id="0bl-1N-x8E"/>
             </connections>
         </customObject>
@@ -19,9 +20,9 @@
             <rect key="frame" x="0.0" y="0.0" width="480" height="346"/>
             <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
             <subviews>
-                <scrollView autohidesScrollers="YES" horizontalLineScroll="62" horizontalPageScroll="10" verticalLineScroll="62" verticalPageScroll="10" usesPredominantAxisScrolling="NO" translatesAutoresizingMaskIntoConstraints="NO" id="bKn-62-UQx">
+                <scrollView canDrawConcurrently="YES" autohidesScrollers="YES" horizontalLineScroll="62" horizontalPageScroll="10" verticalLineScroll="62" verticalPageScroll="10" usesPredominantAxisScrolling="NO" translatesAutoresizingMaskIntoConstraints="NO" id="bKn-62-UQx">
                     <rect key="frame" x="20" y="48" width="440" height="278"/>
-                    <clipView key="contentView" drawsBackground="NO" id="TRc-9c-lSe">
+                    <clipView key="contentView" id="TRc-9c-lSe">
                         <rect key="frame" x="1" y="1" width="438" height="276"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
@@ -105,6 +106,7 @@
                                     <binding destination="koX-UF-j7T" name="content" keyPath="arrangedObjects" id="mDK-ep-08F"/>
                                     <binding destination="koX-UF-j7T" name="selectionIndexes" keyPath="selectionIndexes" previousBinding="mDK-ep-08F" id="Gvk-Lh-WG2"/>
                                     <binding destination="koX-UF-j7T" name="sortDescriptors" keyPath="sortDescriptors" previousBinding="Gvk-Lh-WG2" id="uHa-Kr-jeF"/>
+                                    <outlet property="dataSource" destination="-2" id="fhz-Tg-1OE"/>
                                     <outlet property="delegate" destination="-2" id="rtP-i1-CbY"/>
                                 </connections>
                             </tableView>

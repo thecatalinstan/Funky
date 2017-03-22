@@ -10,9 +10,10 @@
 #import "FKAppDelegate.h"
 #import "FKBundle.h"
 
-@interface FKPreferencesAppsViewController () <NSTableViewDelegate>
+@interface FKPreferencesAppsViewController () <NSTableViewDelegate, NSTableViewDataSource, NSDraggingDestination>
 
-@property (strong) IBOutlet NSArrayController *appsListController;
+@property (weak) IBOutlet NSArrayController *appsListController;
+@property (weak) IBOutlet NSTableView *appsListTableView;
 
 - (IBAction)addBundle:(id)sender;
 
@@ -21,6 +22,9 @@
 @implementation FKPreferencesAppsViewController
 
 - (void)awakeFromNib {
+    [self.appsListTableView registerForDraggedTypes:@[NSFilenamesPboardType]];
+    self.appsListTableView.draggingDestinationFeedbackStyle = NSTableViewDraggingDestinationFeedbackStyleSourceList;
+    
     self.appsListController.sortDescriptors = @[[NSSortDescriptor sortDescriptorWithKey:FKBundleNameKey ascending:YES], [NSSortDescriptor sortDescriptorWithKey:FKBundlePathKey ascending:YES]];
 }
 
@@ -36,14 +40,18 @@
             return;
         }
         [panel.URLs enumerateObjectsUsingBlock:^(NSURL * _Nonnull obj, NSUInteger idx, BOOL * _Nonnull stop) { @autoreleasepool {
-            FKBundle *bundle = [FKBundle bundleWithURL:obj];
-            if ( [[self.appsListController.arrangedObjects valueForKeyPath:FKBundleIdentifierKey] containsObject:bundle.identifier] ) {
-                return;
-            }
-            [self.appsListController addObject:bundle];
+            [self addBundleWithURL:obj];
         }}];
         [self.appsListController commitEditing];
     }];
+}
+
+- (void)addBundleWithURL:(NSURL *)URL {
+    FKBundle *bundle = [FKBundle bundleWithURL:URL];
+    if ( [[self.appsListController.arrangedObjects valueForKeyPath:FKBundleIdentifierKey] containsObject:bundle.identifier] ) {
+        return;
+    }
+    [self.appsListController addObject:bundle];
 }
 
 #pragma mark - NSTableViewDelegate
@@ -58,6 +66,39 @@
     }];
     
     return @[deleteAction];
+}
+
+- (NSDragOperation)tableView:(NSTableView*)tableView validateDrop:(nonnull id<NSDraggingInfo>)draggingInfo proposedRow:(NSInteger)row proposedDropOperation:(NSTableViewDropOperation)dropOperation {
+    
+    if ( ![draggingInfo.draggingPasteboard.types containsObject:NSFilenamesPboardType] ) {
+        return NSDragOperationNone;
+    }
+    
+    __block BOOL canAccept = NO;
+    NSArray<NSString *> *files = [draggingInfo.draggingPasteboard propertyListForType:NSFilenamesPboardType];
+    [files enumerateObjectsWithOptions:NSEnumerationConcurrent usingBlock:^(NSString * _Nonnull obj, NSUInteger idx, BOOL * _Nonnull stop) {
+        if ( [[[NSBundle bundleWithPath:obj] objectForInfoDictionaryKey:@"CFBundlePackageType"] isEqualToString:@"APPL"]) {
+            canAccept = YES;
+            *stop = YES;
+        }
+    }];
+    
+    return canAccept ? NSDragOperationCopy : NSDragOperationNone;
+}
+
+- (BOOL)tableView:(NSTableView*)tableView acceptDrop:(nonnull id<NSDraggingInfo>)draggingInfo row:(NSInteger)row dropOperation:(NSTableViewDropOperation)dropOperation {
+    __block BOOL canAccept = NO;
+    NSArray<NSString *> *files = [draggingInfo.draggingPasteboard propertyListForType:NSFilenamesPboardType];
+    [files enumerateObjectsUsingBlock:^(NSString * _Nonnull obj, NSUInteger idx, BOOL * _Nonnull stop) {
+        if ( ![[[NSBundle bundleWithPath:obj] objectForInfoDictionaryKey:@"CFBundlePackageType"] isEqualToString:@"APPL"]) {
+            return;
+        }
+        canAccept = YES;
+        NSURL *bundleURL = [NSURL fileURLWithPath:obj];
+        [self addBundleWithURL:bundleURL];
+    }];
+    
+    return canAccept;
 }
 
 @end

@@ -16,7 +16,6 @@
 @property (weak) IBOutlet NSToolbar *toolbar;
 
 @property (strong) NSViewController *currentViewController;
-@property (strong) NSButton *closeButton;
 @property (strong) NSButton *quitButton;
 
 @property (readonly) CGFloat toolbarHeight;
@@ -63,27 +62,18 @@
     return toolbarItems;
 }
 
-- (void)windowDidLoad {
-    self.closeButton = [NSButton buttonWithTitle:@"Close" target:self action:@selector(close:)];
-    self.closeButton.keyEquivalent = @"w";
-    self.closeButton.keyEquivalentModifierMask = NSCommandKeyMask;
-    self.closeButton.frame = NSZeroRect;
-    [self.window.contentView addSubview:self.closeButton];
-    
+- (void)awakeFromNib {
     self.quitButton = [NSButton buttonWithTitle:@"Quit" target:NSApp action:@selector(terminate:)];
     self.quitButton.keyEquivalent = @"q";
     self.quitButton.keyEquivalentModifierMask = NSCommandKeyMask;
     self.quitButton.frame = NSZeroRect;
     [self.window.contentView addSubview:self.quitButton];
 
+    [self.window standardWindowButton:NSWindowCloseButton].keyEquivalent = @"w";
+    [self.window standardWindowButton:NSWindowCloseButton].keyEquivalentModifierMask = NSCommandKeyMask;
+    
     self.toolbar.selectedItemIdentifier = self.toolbar.items[0].itemIdentifier;
     [self loadView:self.toolbar.items[0]];
-}
-
-- (void)showWindow:(id)sender {
-    [[self.window standardWindowButton:NSWindowCloseButton] setKeyEquivalent:@"w"];
-    [[self.window standardWindowButton:NSWindowCloseButton] setKeyEquivalentModifierMask:NSCommandKeyMask];
-    [super showWindow:sender];
 }
 
 - (void)windowWillClose:(NSNotification *)notification {
@@ -114,10 +104,8 @@
     self.window.title = [NSString stringWithFormat: @"Loading %@ ...", ((NSToolbarItem*) sender).label];
     [self.window setViewsNeedDisplay:YES];
     
-    if ( self.window.contentView.subviews.count != 0 ) {
-        [self.window.contentView.subviews[0] removeFromSuperview];
-    }
     if ( self.currentViewController != nil ) {
+        [self.currentViewController.view removeFromSuperview];
         self.currentViewController = nil;
     }
     
