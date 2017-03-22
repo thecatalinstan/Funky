@@ -105,6 +105,7 @@
                                     <binding destination="koX-UF-j7T" name="content" keyPath="arrangedObjects" id="mDK-ep-08F"/>
                                     <binding destination="koX-UF-j7T" name="selectionIndexes" keyPath="selectionIndexes" previousBinding="mDK-ep-08F" id="Gvk-Lh-WG2"/>
                                     <binding destination="koX-UF-j7T" name="sortDescriptors" keyPath="sortDescriptors" previousBinding="Gvk-Lh-WG2" id="uHa-Kr-jeF"/>
+                                    <outlet property="delegate" destination="-2" id="rtP-i1-CbY"/>
                                 </connections>
                             </tableView>
                         </subviews>
@@ -143,6 +144,7 @@
                         <string key="keyEquivalent" base64-UTF8="YES">
 CA
 </string>
+                        <modifierMask key="keyEquivalentModifierMask" command="YES"/>
                     </buttonCell>
                     <connections>
                         <action selector="remove:" target="koX-UF-j7T" id="r37-lr-HXH"/>

@@ -16,6 +16,9 @@
 @property (weak) IBOutlet NSToolbar *toolbar;
 
 @property (strong) NSViewController *currentViewController;
+@property (strong) NSButton *closeButton;
+@property (strong) NSButton *quitButton;
+
 @property (readonly) CGFloat toolbarHeight;
 @property (readonly) CGFloat titleHeight;
 
@@ -61,9 +64,18 @@
 }
 
 - (void)windowDidLoad {
-    self.window.contentView.wantsLayer = YES;
-    self.window.contentView.layerContentsRedrawPolicy = NSViewLayerContentsRedrawOnSetNeedsDisplay;
+    self.closeButton = [NSButton buttonWithTitle:@"Close" target:self action:@selector(close:)];
+    self.closeButton.keyEquivalent = @"w";
+    self.closeButton.keyEquivalentModifierMask = NSCommandKeyMask;
+    self.closeButton.frame = NSZeroRect;
+    [self.window.contentView addSubview:self.closeButton];
     
+    self.quitButton = [NSButton buttonWithTitle:@"Quit" target:NSApp action:@selector(terminate:)];
+    self.quitButton.keyEquivalent = @"q";
+    self.quitButton.keyEquivalentModifierMask = NSCommandKeyMask;
+    self.quitButton.frame = NSZeroRect;
+    [self.window.contentView addSubview:self.quitButton];
+
     self.toolbar.selectedItemIdentifier = self.toolbar.items[0].itemIdentifier;
     [self loadView:self.toolbar.items[0]];
 }
