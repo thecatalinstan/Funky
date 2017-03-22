@@ -66,7 +66,7 @@
 - (void)handleApplicationSwitch:(NSNotification *)note {
     NSRunningApplication *app = note.userInfo[NSWorkspaceApplicationKey];
     NSData *bundleData = [[NSUserDefaults standardUserDefaults] objectForKey:FKBundlesKeyPath];
-    NSArray<NSString *> *bundleIds = [[NSKeyedUnarchiver unarchiveObjectWithData:bundleData] valueForKeyPath:@"identifier"];
+    NSArray<NSString *> *bundleIds = [[NSKeyedUnarchiver unarchiveObjectWithData:bundleData] valueForKeyPath:FKBundleIdentifierKey];
     BOOL state = [bundleIds containsObject:app.bundleIdentifier];
     
     NSError *error;

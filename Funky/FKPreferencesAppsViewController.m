@@ -33,7 +33,7 @@
         }
         [panel.URLs enumerateObjectsUsingBlock:^(NSURL * _Nonnull obj, NSUInteger idx, BOOL * _Nonnull stop) { @autoreleasepool {
             FKBundle *bundle = [FKBundle bundleWithURL:obj];
-            if ( [[self.appsListController valueForKeyPath:@"arrangedObjects.identifier"] containsObject:bundle.identifier] ) {
+            if ( [[self.appsListController.arrangedObjects valueForKeyPath:FKBundleIdentifierKey] containsObject:bundle.identifier] ) {
                 return;
             }
             [self.appsListController addObject:bundle];

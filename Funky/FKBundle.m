@@ -10,11 +10,6 @@
 
 #import "FKBundle.h"
 
-#define FKBundleNameKey         @"name"
-#define FKBundlePathKey         @"path"
-#define FKBundleIdentifierKey   @"identifier"
-#define FKBundleImageKey        @"image"
-
 @implementation FKBundle
 
 + (instancetype)bundleWithURL:(NSURL *)URL {
