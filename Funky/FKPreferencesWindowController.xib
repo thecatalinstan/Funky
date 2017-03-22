@@ -18,10 +18,10 @@
             <windowStyleMask key="styleMask" titled="YES" closable="YES" unifiedTitleAndToolbar="YES"/>
             <windowCollectionBehavior key="collectionBehavior" managed="YES"/>
             <windowPositionMask key="initialPositionMask" leftStrut="YES" rightStrut="YES" topStrut="YES" bottomStrut="YES"/>
-            <rect key="contentRect" x="271" y="390" width="540" height="303"/>
+            <rect key="contentRect" x="271" y="390" width="578" height="383"/>
             <rect key="screenRect" x="0.0" y="0.0" width="1920" height="1178"/>
             <view key="contentView" id="3">
-                <rect key="frame" x="0.0" y="0.0" width="540" height="303"/>
+                <rect key="frame" x="0.0" y="0.0" width="578" height="383"/>
                 <autoresizingMask key="autoresizingMask"/>
             </view>
             <toolbar key="toolbar" implicitIdentifier="6E7C1E3C-E2CC-4FB0-AD44-F486AD0331AF" autosavesConfiguration="NO" allowsUserCustomization="NO" displayMode="iconAndLabel" sizeMode="regular" id="17">
@@ -34,7 +34,7 @@
             <connections>
                 <outlet property="delegate" destination="-2" id="118"/>
             </connections>
-            <point key="canvasLocation" x="0.0" y="-33.5"/>
+            <point key="canvasLocation" x="-91" y="-57.5"/>
         </window>
     </objects>
 </document>
