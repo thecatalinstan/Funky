@@ -20,6 +20,10 @@
 
 @implementation FKPreferencesAppsViewController
 
+- (void)awakeFromNib {
+    self.appsListController.sortDescriptors = @[[NSSortDescriptor sortDescriptorWithKey:FKBundleNameKey ascending:YES], [NSSortDescriptor sortDescriptorWithKey:FKBundlePathKey ascending:YES]];
+}
+
 - (IBAction)addBundle:(id)sender {
     NSOpenPanel* panel = [NSOpenPanel openPanel];
     panel.directoryURL = [[NSFileManager defaultManager] URLsForDirectory:NSAllApplicationsDirectory inDomains:NSAllDomainsMask].lastObject;
