@@ -19,5 +19,6 @@
 + (instancetype)sharedHelper;
 
 - (BOOL)setFnKeyState:(BOOL)state error:(NSError * __autoreleasing *)error;
+- (pid_t)parentProcessForPID:(NSUInteger)pid error:(NSError * __autoreleasing *)error;
 
 @end

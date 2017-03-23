@@ -6,12 +6,15 @@
 //  Copyright © 2017 Cătălin Stan. All rights reserved.
 //
 
-#import "FKHelper.h"
 #import <mach/mach.h>
+#import <sys/sysctl.h>
+
+#import "FKHelper.h"
 
 @interface FKHelper ()
 
 - (NSError *)machErrorWithResult:(kern_return_t)res;
+- (NSError *)posixError;
 
 @end
 
@@ -28,9 +31,14 @@
 
 - (NSError *)machErrorWithResult:(kern_return_t)res {
     NSString *description = [NSString stringWithUTF8String:mach_error_string(res)] ? : [NSString stringWithFormat:@"Unknown kernel result code: %d", res];
-    
     NSError *error = [NSError errorWithDomain:FKHelperMachErrorDomain code:@(res).integerValue userInfo:@{NSLocalizedDescriptionKey: description}];
-    
+    return error;
+}
+
+- (NSError *)posixError {
+    int errorNo = errno;
+    NSString *description = [NSString stringWithUTF8String:strerror(errorNo)];
+    NSError *error = [NSError errorWithDomain:NSPOSIXErrorDomain code:@(errorNo).integerValue userInfo:@{NSLocalizedDescriptionKey: description}];
     return error;
 }
 
@@ -95,6 +103,29 @@
     
     IOServiceClose(connect);
     return YES;
+}
+
+- (pid_t)parentProcessForPID:(NSUInteger)pid error:(NSError * __autoreleasing *)error {
+    struct kinfo_proc info;
+    size_t length = sizeof(struct kinfo_proc);
+    int mib[4] = { CTL_KERN, KERN_PROC, KERN_PROC_PID, @(pid).intValue };
+    
+    kern_return_t ret;
+    ret = sysctl(mib, 4, &info, &length, NULL, 0);
+    
+    if ( ret != KERN_SUCCESS) {
+        if ( error != NULL ) {
+            *error = [self posixError];
+        }
+        return INT32_MAX;
+    }
+    
+    if ( length == 0 ) {
+        *error = nil;
+        return INT32_MAX;
+    }
+    
+    return info.kp_eproc.e_ppid;
 }
 
 @end

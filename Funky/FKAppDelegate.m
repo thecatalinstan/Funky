@@ -24,6 +24,7 @@
 - (IBAction)showPreferencesDialog:(id)sender;
 
 - (void)handleApplicationSwitch:(NSNotification *)note;
+- (BOOL)stateForApp:(NSRunningApplication *)app inBundles:(NSArray<FKBundle *> *)bundles;
 
 @end
 
@@ -66,15 +67,33 @@
 - (void)handleApplicationSwitch:(NSNotification *)note {
     NSRunningApplication *app = note.userInfo[NSWorkspaceApplicationKey];
     NSData *bundleData = [[NSUserDefaults standardUserDefaults] objectForKey:FKBundlesKeyPath];
-    NSArray<NSString *> *bundleIds = [[NSKeyedUnarchiver unarchiveObjectWithData:bundleData] valueForKeyPath:FKBundleIdentifierKey];
-    BOOL state = [bundleIds containsObject:app.bundleIdentifier];
+    NSArray<FKBundle *> *bundles = [NSKeyedUnarchiver unarchiveObjectWithData:bundleData];
     
     NSError *error;
-    if ( [[FKHelper sharedHelper] setFnKeyState:state error:&error] != YES)  {
-        NSLog(@" ** Error: %@", error);
-    } else {
-        NSLog(@"%@: %@", app.bundleURL.path, @(state));
+    
+    BOOL state = [self stateForApp:app inBundles:bundles];
+    if ( !state ) {
+        pid_t pid = [[FKHelper sharedHelper] parentProcessForPID:app.processIdentifier error:&error];
+        if ( error ) {
+            NSLog(@" ** State: %@, Error: %@", @(state), error);
+        } else if (pid != 1) {
+            app = [NSRunningApplication runningApplicationWithProcessIdentifier:pid];
+            state = [self stateForApp:app inBundles:bundles];
+        }
     }
+    
+    error = nil;
+    if ( [[FKHelper sharedHelper] setFnKeyState:state error:&error] != YES)  {
+#if DEBUG
+        NSLog(@" ** State: %@, Error: %@", @(state), error);
+#endif
+    }
+    
+    NSLog(@"%@: %@", app.executableURL.path, @(state));
+}
+
+- (BOOL)stateForApp:(NSRunningApplication *)app inBundles:(NSArray<FKBundle *> *)bundles {
+    return [[bundles valueForKeyPath:FKBundleIdentifierKey] containsObject:app.bundleIdentifier] || [[bundles valueForKeyPath:FKBundlePathKey] containsObject:app.bundleURL.path];
 }
 
 @end
