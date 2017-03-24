@@ -149,12 +149,12 @@
 				ADE308DC1E6EC342001A48CB /* FKPreferencesAdvancedViewController.h */,
 				ADE308DD1E6EC342001A48CB /* FKPreferencesAdvancedViewController.m */,
 				ADE308DE1E6EC342001A48CB /* FKPreferencesAdvancedViewController.xib */,
-				ADDC0F711E672CA700C6CBF0 /* Info.plist */,
-				ADDC0F691E672CA700C6CBF0 /* Supporting Files */,
 				ADCC3F6F1E684F0900A7C4F1 /* FKHelper.h */,
 				ADCC3F701E684F0900A7C4F1 /* FKHelper.m */,
 				AD315BAC1E7FEB0500CAF103 /* FKBundle.h */,
 				AD315BAD1E7FEB0500CAF103 /* FKBundle.m */,
+				ADDC0F711E672CA700C6CBF0 /* Info.plist */,
+				ADDC0F691E672CA700C6CBF0 /* Supporting Files */,
 			);
 			path = Funky;
 			sourceTree = "<group>";
