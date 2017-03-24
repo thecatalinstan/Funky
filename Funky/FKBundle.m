@@ -23,15 +23,10 @@
         self.identifier = [bundle.bundleIdentifier copy];
         self.name = [bundle objectForInfoDictionaryKey:(__bridge NSString *)kCFBundleNameKey];
         self.path = [bundle.bundlePath copy];
+        self.executablePath  = [bundle.executablePath copy];
         self.image = [[NSWorkspace sharedWorkspace] iconForFile:bundle.bundlePath] ? : [NSImage imageNamed:NSImageNameApplicationIcon];
     }
     return self;
-}
-
-- (void)encodeWithCoder:(NSCoder *)coder {
-    [coder encodeObject:self.name forKey:FKBundleNameKey];
-    [coder encodeObject:self.path forKey:FKBundlePathKey];
-    [coder encodeObject:self.identifier forKey:FKBundleIdentifierKey];
 }
 
 - (instancetype)initWithCoder:(NSCoder *)decoder {
@@ -41,8 +36,20 @@
         self.path = [decoder decodeObjectForKey:FKBundlePathKey];
         self.identifier = [decoder decodeObjectForKey:FKBundleIdentifierKey];
         self.image = [[NSWorkspace sharedWorkspace] iconForFile:self.path] ? : [NSImage imageNamed:NSImageNameApplicationIcon];
+        
+        self.executablePath = [decoder decodeObjectForKey:FKBundleExecutablePathKey];
+        if ( self.executablePath.length == 0 ) {
+            self.executablePath = [NSBundle bundleWithPath:self.path].executablePath;
+        }
     }
     return self;
+}
+
+- (void)encodeWithCoder:(NSCoder *)coder {
+    [coder encodeObject:self.name forKey:FKBundleNameKey];
+    [coder encodeObject:self.path forKey:FKBundlePathKey];
+    [coder encodeObject:self.identifier forKey:FKBundleIdentifierKey];
+    [coder encodeObject:self.executablePath forKey:FKBundleExecutablePathKey];
 }
 
 - (NSString *)description {
