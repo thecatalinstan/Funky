@@ -10,12 +10,16 @@
 #import "FKAppDelegate.h"
 #import "FKBundle.h"
 
-@interface FKPreferencesAppsViewController () <NSTableViewDelegate, NSTableViewDataSource, NSDraggingDestination>
+@interface FKPreferencesAppsViewController () <NSTableViewDelegate, NSTableViewDataSource, NSDraggingDestination, NSTextFinderClient>
 
 @property (weak) IBOutlet NSArrayController *appsListController;
 @property (weak) IBOutlet NSTableView *appsListTableView;
+@property (weak) IBOutlet NSSearchField *appFilterSearchField;
+
+@property (readonly) NSEdgeInsets originalContentInsets;
 
 - (IBAction)addBundle:(id)sender;
+- (IBAction)filterApps:(id)sender;
 
 @end
 
@@ -26,6 +30,23 @@
     self.appsListTableView.draggingDestinationFeedbackStyle = NSTableViewDraggingDestinationFeedbackStyleSourceList;
     
     self.appsListController.sortDescriptors = @[[NSSortDescriptor sortDescriptorWithKey:FKBundleNameKey ascending:YES], [NSSortDescriptor sortDescriptorWithKey:FKBundlePathKey ascending:YES]];
+}
+
+- (NSEdgeInsets)originalContentInsets {
+    static NSEdgeInsets originalContentInsets;
+    static dispatch_once_t onceToken;
+    dispatch_once(&onceToken, ^{
+        originalContentInsets = self.appsListTableView.enclosingScrollView.contentInsets;
+    });
+    return originalContentInsets;
+}
+
+- (void)filterApps:(id)sender {
+    NSEdgeInsets contentInsets = self.originalContentInsets;
+    contentInsets.top = self.appFilterSearchField.bounds.size.height;
+    self.appsListTableView.enclosingScrollView.contentInsets = contentInsets;
+    
+    [self.appsListTableView.enclosingScrollView addSubview:self.appFilterSearchField positioned:NSWindowAbove relativeTo:self.appsListTableView];
 }
 
 - (IBAction)addBundle:(id)sender {
@@ -100,5 +121,9 @@
     
     return canAccept;
 }
+
+#pragma mark - NSTextFinderClient
+
+
 
 @end

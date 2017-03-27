@@ -10,6 +10,7 @@
     <objects>
         <customObject id="-2" userLabel="File's Owner" customClass="FKPreferencesAppsViewController">
             <connections>
+                <outlet property="appFilterSearchField" destination="k1Z-P9-6XH" id="dGP-Nw-VML"/>
                 <outlet property="appsListController" destination="koX-UF-j7T" id="I7U-mR-grB"/>
                 <outlet property="appsListTableView" destination="yZT-Ub-ea1" id="4fW-X1-JrU"/>
                 <outlet property="view" destination="Hz6-mo-xeY" id="0bl-1N-x8E"/>
@@ -293,6 +294,7 @@ CA
                                     <color key="backgroundColor" name="controlColor" catalog="System" colorSpace="catalog"/>
                                 </textFieldCell>
                                 <connections>
+                                    <binding destination="koX-UF-j7T" name="value" keyPath="selection.executablePath" id="UJI-0X-w2c"/>
                                     <binding destination="koX-UF-j7T" name="hidden" keyPath="selection.executablePath" id="mbp-pZ-PpL">
                                         <dictionary key="options">
                                             <integer key="NSMultipleValuesPlaceholder" value="1"/>
@@ -302,7 +304,6 @@ CA
                                             <string key="NSValueTransformerName">NSIsNil</string>
                                         </dictionary>
                                     </binding>
-                                    <binding destination="koX-UF-j7T" name="value" keyPath="selection.executablePath" id="UJI-0X-w2c"/>
                                 </connections>
                             </textField>
                         </subviews>
@@ -349,7 +350,7 @@ CA
                 <constraint firstItem="c9S-mn-XTR" firstAttribute="height" secondItem="48F-mT-hjd" secondAttribute="height" id="rt7-cz-avg"/>
                 <constraint firstItem="c9S-mn-XTR" firstAttribute="leading" secondItem="48F-mT-hjd" secondAttribute="trailing" constant="-1" id="sA2-ba-cKl"/>
             </constraints>
-            <point key="canvasLocation" x="-132.5" y="212"/>
+            <point key="canvasLocation" x="-187" y="33"/>
         </customView>
         <arrayController objectClassName="FKBundle" automaticallyPreparesContent="YES" avoidsEmptySelection="NO" automaticallyRearrangesObjects="YES" id="koX-UF-j7T">
             <connections>
@@ -379,6 +380,44 @@ CA
             </connections>
         </arrayController>
         <userDefaultsController representsSharedInstance="YES" id="Xc9-FC-QLI"/>
+        <menu id="col-lM-Yvo">
+            <items>
+                <menuItem title="Recent Searches" tag="1000" enabled="NO" id="mmJ-wN-gzp">
+                    <modifierMask key="keyEquivalentModifierMask"/>
+                </menuItem>
+                <menuItem title="[recents]" tag="1001" id="d87-Pg-3vl">
+                    <modifierMask key="keyEquivalentModifierMask"/>
+                </menuItem>
+                <menuItem isSeparatorItem="YES" tag="1000" id="rJ0-Ym-dBN"/>
+                <menuItem title="Clear Recent Searches" tag="1002" id="fFN-sn-WFE">
+                    <modifierMask key="keyEquivalentModifierMask"/>
+                </menuItem>
+                <menuItem title="No Recent Searches" tag="1003" enabled="NO" id="RGv-2q-V6s">
+                    <modifierMask key="keyEquivalentModifierMask"/>
+                </menuItem>
+            </items>
+            <point key="canvasLocation" x="-198" y="-255"/>
+        </menu>
+        <searchField wantsLayer="YES" verticalHuggingPriority="750" allowsCharacterPickerTouchBarItem="NO" textCompletion="NO" id="k1Z-P9-6XH">
+            <rect key="frame" x="0.0" y="0.0" width="215" height="22"/>
+            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
+            <searchFieldCell key="cell" scrollable="YES" lineBreakMode="clipping" selectable="YES" editable="YES" borderStyle="bezel" placeholderString="Search Apps" usesSingleLineMode="YES" bezelStyle="round" recentsAutosaveName="FKPreferencesAppsSearch" id="iou-UZ-QEg">
+                <font key="font" metaFont="smallSystem"/>
+                <color key="textColor" name="controlTextColor" catalog="System" colorSpace="catalog"/>
+                <color key="backgroundColor" name="windowBackgroundColor" catalog="System" colorSpace="catalog"/>
+            </searchFieldCell>
+            <connections>
+                <binding destination="koX-UF-j7T" name="predicate" keyPath="filterPredicate" id="kFd-dz-Dur">
+                    <dictionary key="options">
+                        <string key="NSDisplayName">name</string>
+                        <string key="NSPredicateFormat">name contains[c] $value or identifier contains[c] $value or executablePath contains[c] $value</string>
+                        <bool key="NSValidatesImmediately" value="YES"/>
+                    </dictionary>
+                </binding>
+                <outlet property="searchMenuTemplate" destination="col-lM-Yvo" id="NST-jN-jFn"/>
+            </connections>
+            <point key="canvasLocation" x="-169" y="191"/>
+        </searchField>
     </objects>
     <resources>
         <image name="NSAddTemplate" width="11" height="11"/>
