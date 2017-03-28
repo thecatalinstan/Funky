@@ -11,6 +11,7 @@
 
 @interface FKPreferencesWindowController () <NSWindowDelegate, NSToolbarDelegate> {
     BOOL shouldRecalculateWindowY;
+    NSUInteger currentViewIdx;
 }
 
 @property (weak) IBOutlet NSToolbar *toolbar;
@@ -20,7 +21,7 @@
 
 @property (readonly) CGFloat toolbarHeight;
 @property (readonly) CGFloat titleHeight;
-
+    
 - (IBAction)loadView:(id)sender;
 
 + (NSDictionary<NSString *, NSImage *> *)toolbarItems;
@@ -28,6 +29,14 @@
 @end
 
 @implementation FKPreferencesWindowController
+    
+- (instancetype)initWithWindowNibName:(NSString *)windowNibName currentViewIdx:(NSUInteger)idx {
+    self = [self initWithWindowNibName:windowNibName];
+    if ( self != nil ) {
+        currentViewIdx = MAX(MIN([FKPreferencesWindowController toolbarItems].count, idx), 0);
+    }
+    return self;
+}
 
 - (CGFloat)toolbarHeight {
     static CGFloat toolbarHeight;
@@ -72,8 +81,8 @@
     [self.window standardWindowButton:NSWindowCloseButton].keyEquivalent = @"w";
     [self.window standardWindowButton:NSWindowCloseButton].keyEquivalentModifierMask = NSCommandKeyMask;
     
-    self.toolbar.selectedItemIdentifier = self.toolbar.items[0].itemIdentifier;
-    [self loadView:self.toolbar.items[0]];
+    self.toolbar.selectedItemIdentifier = self.toolbar.items[currentViewIdx].itemIdentifier;
+    [self loadView:self.toolbar.items[currentViewIdx]];
 }
 
 - (void)windowWillClose:(NSNotification *)notification {

@@ -9,4 +9,6 @@
 
 @interface FKPreferencesWindowController : NSWindowController
 
+- (instancetype)initWithWindowNibName:(NSString *)windowNibName currentViewIdx:(NSUInteger)idx;
+    
 @end
