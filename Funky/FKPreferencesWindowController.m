@@ -98,7 +98,6 @@
 }
 
 - (IBAction)loadView:(id)sender {
-
     NSToolbarItem *item = (NSToolbarItem*) sender;
     NSString *viewControllerClassName = [NSString stringWithFormat:@"FKPreferences%@ViewController", item.label];
     Class viewControllerClass = NSClassFromString(viewControllerClassName);
@@ -108,12 +107,16 @@
         return;
     }
     
+    if ( [self.currentViewController isKindOfClass:viewControllerClass] ) {
+        return;
+    }
+    
     NSString *title = self.window.title;
     
     self.window.title = [NSString stringWithFormat: @"Loading %@ ...", ((NSToolbarItem*) sender).label];
     [self.window setViewsNeedDisplay:YES];
     
-    if ( self.currentViewController != nil ) {
+    if ( self.currentViewController != nil) {
         [self.currentViewController.view removeFromSuperview];
         self.currentViewController = nil;
     }
