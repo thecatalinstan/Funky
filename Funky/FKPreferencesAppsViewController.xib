@@ -17,8 +17,9 @@
                 <outlet property="appsListController" destination="koX-UF-j7T" id="I7U-mR-grB"/>
                 <outlet property="appsListTableView" destination="yZT-Ub-ea1" id="4fW-X1-JrU"/>
                 <outlet property="removeButton" destination="c9S-mn-XTR" id="klt-Ub-B36"/>
-                <outlet property="searchBarContainerView" destination="cAG-Cz-du9" id="cwk-bu-4h2"/>
+                <outlet property="searchBarContainerView" destination="agX-Q0-buu" id="79x-zt-TGB"/>
                 <outlet property="searchMenu" destination="col-lM-Yvo" id="4LE-io-41R"/>
+                <outlet property="tableViewTopConstraint" destination="2cI-K7-UHd" id="dqo-Ec-QG7"/>
                 <outlet property="view" destination="Hz6-mo-xeY" id="0bl-1N-x8E"/>
             </connections>
         </customObject>
@@ -31,6 +32,45 @@
                 <userLayoutGuide location="381" affinity="minX"/>
             </userGuides>
             <subviews>
+                <box boxType="custom" borderType="bezel" titlePosition="noTitle" translatesAutoresizingMaskIntoConstraints="NO" id="agX-Q0-buu">
+                    <rect key="frame" x="20" y="298" width="220" height="28"/>
+                    <view key="contentView" id="jFd-Fg-XVU">
+                        <rect key="frame" x="1" y="1" width="218" height="26"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <searchField wantsLayer="YES" focusRingType="none" verticalHuggingPriority="750" allowsCharacterPickerTouchBarItem="NO" textCompletion="NO" translatesAutoresizingMaskIntoConstraints="NO" id="k1Z-P9-6XH">
+                                <rect key="frame" x="2" y="2" width="214" height="22"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="22" id="RFK-Si-iQP"/>
+                                </constraints>
+                                <searchFieldCell key="cell" scrollable="YES" lineBreakMode="clipping" selectable="YES" editable="YES" borderStyle="bezel" focusRingType="none" placeholderString="Search Apps" usesSingleLineMode="YES" bezelStyle="round" sendsSearchStringImmediately="YES" recentsAutosaveName="FKPreferencesAppsSearch" id="iou-UZ-QEg">
+                                    <font key="font" metaFont="smallSystem"/>
+                                    <color key="textColor" name="controlTextColor" catalog="System" colorSpace="catalog"/>
+                                    <color key="backgroundColor" name="windowBackgroundColor" catalog="System" colorSpace="catalog"/>
+                                </searchFieldCell>
+                                <connections>
+                                    <binding destination="koX-UF-j7T" name="predicate" keyPath="filterPredicate" id="kFd-dz-Dur">
+                                        <dictionary key="options">
+                                            <string key="NSDisplayName">name</string>
+                                            <string key="NSPredicateFormat">name contains[c] $value or identifier contains[c] $value or executablePath contains[c] $value</string>
+                                            <bool key="NSValidatesImmediately" value="YES"/>
+                                        </dictionary>
+                                    </binding>
+                                    <outlet property="nextKeyView" destination="yZT-Ub-ea1" id="Oi8-OL-993"/>
+                                    <outlet property="searchMenuTemplate" destination="col-lM-Yvo" id="NST-jN-jFn"/>
+                                </connections>
+                            </searchField>
+                        </subviews>
+                        <constraints>
+                            <constraint firstItem="k1Z-P9-6XH" firstAttribute="leading" secondItem="jFd-Fg-XVU" secondAttribute="leading" constant="2" id="8Rn-4b-cI7"/>
+                            <constraint firstItem="k1Z-P9-6XH" firstAttribute="top" secondItem="jFd-Fg-XVU" secondAttribute="top" constant="2" id="DuG-Rl-49p"/>
+                            <constraint firstAttribute="bottom" secondItem="k1Z-P9-6XH" secondAttribute="bottom" constant="2" id="My8-Me-con"/>
+                            <constraint firstAttribute="trailing" secondItem="k1Z-P9-6XH" secondAttribute="trailing" constant="2" id="Rye-hT-WTH"/>
+                        </constraints>
+                    </view>
+                    <color key="borderColor" name="gridColor" catalog="System" colorSpace="catalog"/>
+                    <color key="fillColor" name="windowBackgroundColor" catalog="System" colorSpace="catalog"/>
+                </box>
                 <scrollView canDrawConcurrently="YES" autohidesScrollers="YES" horizontalLineScroll="50" horizontalPageScroll="10" verticalLineScroll="50" verticalPageScroll="10" usesPredominantAxisScrolling="NO" translatesAutoresizingMaskIntoConstraints="NO" id="bKn-62-UQx">
                     <rect key="frame" x="20" y="49" width="220" height="277"/>
                     <clipView key="contentView" id="TRc-9c-lSe">
@@ -342,7 +382,7 @@ CA
                 </button>
                 <button verticalHuggingPriority="750" translatesAutoresizingMaskIntoConstraints="NO" id="gyH-cM-P3s">
                     <rect key="frame" x="219" y="19" width="21" height="23"/>
-                    <buttonCell key="cell" type="smallSquare" bezelStyle="smallSquare" image="NSActionTemplate" imagePosition="overlaps" alignment="center" lineBreakMode="truncatingTail" state="on" borderStyle="border" imageScaling="proportionallyDown" inset="2" id="q7t-g5-sf4">
+                    <buttonCell key="cell" type="smallSquare" bezelStyle="smallSquare" image="NSPathTemplate" imagePosition="overlaps" alignment="center" lineBreakMode="truncatingTail" state="on" borderStyle="border" imageScaling="proportionallyDown" inset="2" id="q7t-g5-sf4">
                         <behavior key="behavior" pushIn="YES" lightByBackground="YES" lightByGray="YES"/>
                         <font key="font" metaFont="system"/>
                     </buttonCell>
@@ -378,19 +418,23 @@ CA
                 </button>
             </subviews>
             <constraints>
-                <constraint firstItem="bKn-62-UQx" firstAttribute="top" secondItem="Hz6-mo-xeY" secondAttribute="top" constant="20" symbolic="YES" id="2cI-K7-UHd"/>
+                <constraint firstItem="bKn-62-UQx" firstAttribute="top" secondItem="Hz6-mo-xeY" secondAttribute="top" priority="750" constant="20" symbolic="YES" id="2cI-K7-UHd"/>
                 <constraint firstItem="gyH-cM-P3s" firstAttribute="width" secondItem="c9S-mn-XTR" secondAttribute="width" id="385-am-ywx"/>
                 <constraint firstItem="gyH-cM-P3s" firstAttribute="centerY" secondItem="c9S-mn-XTR" secondAttribute="centerY" id="3cq-Zt-yF9"/>
+                <constraint firstItem="agX-Q0-buu" firstAttribute="leading" secondItem="bKn-62-UQx" secondAttribute="leading" id="7AC-Bq-eiY"/>
                 <constraint firstItem="1NK-zE-Rwz" firstAttribute="leading" secondItem="bKn-62-UQx" secondAttribute="trailing" constant="8" id="7V5-mp-bdN"/>
-                <constraint firstItem="bKn-62-UQx" firstAttribute="height" secondItem="1NK-zE-Rwz" secondAttribute="height" id="DDt-iv-poH"/>
+                <constraint firstItem="bKn-62-UQx" firstAttribute="top" secondItem="agX-Q0-buu" secondAttribute="bottom" priority="250" constant="-1" id="Awe-zl-1mh"/>
                 <constraint firstItem="gyH-cM-P3s" firstAttribute="trailing" secondItem="bKn-62-UQx" secondAttribute="trailing" id="Fqm-eo-IBe"/>
                 <constraint firstItem="48F-mT-hjd" firstAttribute="top" secondItem="bKn-62-UQx" secondAttribute="bottom" constant="8" id="LIf-10-r14"/>
                 <constraint firstItem="c9S-mn-XTR" firstAttribute="centerY" secondItem="48F-mT-hjd" secondAttribute="centerY" id="LUT-MK-8X3"/>
                 <constraint firstItem="48F-mT-hjd" firstAttribute="leading" secondItem="Hz6-mo-xeY" secondAttribute="leading" constant="20" symbolic="YES" id="Myj-1N-WMO"/>
+                <constraint firstItem="1NK-zE-Rwz" firstAttribute="top" secondItem="agX-Q0-buu" secondAttribute="top" id="RfR-WR-yiG"/>
+                <constraint firstItem="agX-Q0-buu" firstAttribute="width" secondItem="bKn-62-UQx" secondAttribute="width" id="UKV-dn-djW"/>
                 <constraint firstAttribute="bottom" secondItem="48F-mT-hjd" secondAttribute="bottom" constant="20" symbolic="YES" id="XVw-14-6Vb"/>
                 <constraint firstAttribute="trailing" secondItem="1NK-zE-Rwz" secondAttribute="trailing" constant="20" id="Yum-eH-mDK"/>
                 <constraint firstItem="bKn-62-UQx" firstAttribute="leading" secondItem="Hz6-mo-xeY" secondAttribute="leading" constant="20" id="bOS-Zq-vaZ"/>
-                <constraint firstItem="bKn-62-UQx" firstAttribute="centerY" secondItem="1NK-zE-Rwz" secondAttribute="centerY" id="fqh-FU-uuh"/>
+                <constraint firstItem="1NK-zE-Rwz" firstAttribute="bottom" secondItem="bKn-62-UQx" secondAttribute="bottom" id="czy-2A-4za"/>
+                <constraint firstItem="agX-Q0-buu" firstAttribute="top" secondItem="Hz6-mo-xeY" secondAttribute="top" constant="20" symbolic="YES" id="dWz-2s-Yxf"/>
                 <constraint firstItem="gyH-cM-P3s" firstAttribute="height" secondItem="c9S-mn-XTR" secondAttribute="height" id="hGd-2h-gYp"/>
                 <constraint firstItem="c9S-mn-XTR" firstAttribute="width" secondItem="48F-mT-hjd" secondAttribute="width" id="pPv-IP-V2S"/>
                 <constraint firstItem="c9S-mn-XTR" firstAttribute="height" secondItem="48F-mT-hjd" secondAttribute="height" id="rt7-cz-avg"/>
@@ -444,40 +488,6 @@ CA
             </items>
             <point key="canvasLocation" x="-198" y="-255"/>
         </menu>
-        <customView id="cAG-Cz-du9">
-            <rect key="frame" x="0.0" y="0.0" width="260" height="26"/>
-            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
-            <subviews>
-                <searchField wantsLayer="YES" verticalHuggingPriority="750" allowsCharacterPickerTouchBarItem="NO" textCompletion="NO" translatesAutoresizingMaskIntoConstraints="NO" id="k1Z-P9-6XH">
-                    <rect key="frame" x="2" y="2" width="256" height="22"/>
-                    <constraints>
-                        <constraint firstAttribute="height" constant="22" id="RFK-Si-iQP"/>
-                    </constraints>
-                    <searchFieldCell key="cell" scrollable="YES" lineBreakMode="clipping" selectable="YES" editable="YES" borderStyle="bezel" placeholderString="Search Apps" usesSingleLineMode="YES" bezelStyle="round" recentsAutosaveName="FKPreferencesAppsSearch" id="iou-UZ-QEg">
-                        <font key="font" metaFont="smallSystem"/>
-                        <color key="textColor" name="controlTextColor" catalog="System" colorSpace="catalog"/>
-                        <color key="backgroundColor" name="windowBackgroundColor" catalog="System" colorSpace="catalog"/>
-                    </searchFieldCell>
-                    <connections>
-                        <binding destination="koX-UF-j7T" name="predicate" keyPath="filterPredicate" id="kFd-dz-Dur">
-                            <dictionary key="options">
-                                <string key="NSDisplayName">name</string>
-                                <string key="NSPredicateFormat">name contains[c] $value or identifier contains[c] $value or executablePath contains[c] $value</string>
-                                <bool key="NSValidatesImmediately" value="YES"/>
-                            </dictionary>
-                        </binding>
-                        <outlet property="searchMenuTemplate" destination="col-lM-Yvo" id="NST-jN-jFn"/>
-                    </connections>
-                </searchField>
-            </subviews>
-            <constraints>
-                <constraint firstAttribute="bottom" secondItem="k1Z-P9-6XH" secondAttribute="bottom" constant="2" id="GLk-bZ-3Tn"/>
-                <constraint firstAttribute="trailing" secondItem="k1Z-P9-6XH" secondAttribute="trailing" constant="2" id="dPP-It-Keg"/>
-                <constraint firstItem="k1Z-P9-6XH" firstAttribute="leading" secondItem="cAG-Cz-du9" secondAttribute="leading" constant="2" id="rxt-97-szq"/>
-                <constraint firstItem="k1Z-P9-6XH" firstAttribute="top" secondItem="cAG-Cz-du9" secondAttribute="top" constant="2" id="veZ-jO-zzI"/>
-            </constraints>
-            <point key="canvasLocation" x="-247" y="265"/>
-        </customView>
         <menu id="nVr-u6-zAq">
             <items>
                 <menuItem title="Filter Apps" keyEquivalent="f" id="ouo-3O-bog">
@@ -492,8 +502,8 @@ CA
         </menu>
     </objects>
     <resources>
-        <image name="NSActionTemplate" width="14" height="14"/>
         <image name="NSAddTemplate" width="11" height="11"/>
+        <image name="NSPathTemplate" width="16" height="10"/>
         <image name="NSRemoveTemplate" width="11" height="11"/>
     </resources>
 </document>

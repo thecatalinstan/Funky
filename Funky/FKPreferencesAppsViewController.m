@@ -25,12 +25,13 @@
 @property (strong) IBOutlet NSMenu *actionsMenu;
 @property (strong) IBOutlet NSMenu *searchMenu;
 
-@property (readonly) NSEdgeInsets originalContentInsets;
+@property (strong) IBOutlet NSLayoutConstraint *tableViewTopConstraint;
 
 - (IBAction)addBundle:(id)sender;
 - (IBAction)addExecutablePath:(id)sender;
 - (IBAction)filterApps:(id)sender;
 - (IBAction)popupActionsMenu:(id)sender;
+- (IBAction)focusTableView:(id)sender;
 
 @end
 
@@ -43,32 +44,20 @@
     self.appsListController.sortDescriptors = @[[NSSortDescriptor sortDescriptorWithKey:FKBundleNameKey ascending:YES], [NSSortDescriptor sortDescriptorWithKey:FKBundlePathKey ascending:YES]];
 }
 
-- (NSEdgeInsets)originalContentInsets {
-    static NSEdgeInsets originalContentInsets;
-    static dispatch_once_t onceToken;
-    dispatch_once(&onceToken, ^{
-        originalContentInsets = self.appsListTableView.enclosingScrollView.contentInsets;
-    });
-    return originalContentInsets;
-}
-
 - (void)filterApps:(id)sender {
+    self.tableViewTopConstraint.active = !self.tableViewTopConstraint.active;
+    [self.view setNeedsLayout:YES];
     
-    NSRect frame = self.appFilterSearchField.superview.frame;
-    frame.size.width = self.appsListTableView.enclosingScrollView.frame.size.width;
-    self.appFilterSearchField.superview.frame = frame;
-    
-    NSEdgeInsets contentInsets = self.originalContentInsets;
-    contentInsets.top = self.appFilterSearchField.bounds.size.height;
-    self.appsListTableView.enclosingScrollView.contentInsets = contentInsets;
-    
-    [self.appsListTableView.enclosingScrollView addSubview:self.appFilterSearchField.superview positioned:NSWindowAbove relativeTo:self.appsListTableView];
-    self.appsListTableView.enclosingScrollView.translatesAutoresizingMaskIntoConstraints = YES;
+    [self.view.window makeFirstResponder:self.appFilterSearchField];
 }
 
 - (IBAction)popupActionsMenu:(id)sender {
     NSEvent *event = [NSEvent mouseEventWithType:NSEventTypeLeftMouseUp location:NSMakePoint(self.actionsButton.frame.origin.x - 1.0f, self.actionsButton.frame.origin.y + self.actionsButton.bounds.size.height + self.actionsMenu.size.height - 5.0f) modifierFlags:0 timestamp:0 windowNumber:self.view.window.windowNumber context:nil eventNumber:0 clickCount:1 pressure:1.0f];
     [NSMenu popUpContextMenu:self.actionsMenu withEvent:event forView:self.actionsButton];
+}
+        
+- (IBAction)focusTableView:(id)sender {
+    [self.view.window makeFirstResponder:self.appsListTableView];
 }
 
 - (IBAction)addBundle:(id)sender {
