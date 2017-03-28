@@ -14,12 +14,23 @@
 
 @property (weak) IBOutlet NSArrayController *appsListController;
 @property (weak) IBOutlet NSTableView *appsListTableView;
+
+@property (weak) IBOutlet NSButton *actionsButton;
+@property (weak) IBOutlet NSButton *addButton;
+@property (weak) IBOutlet NSButton *removeButton;
+
 @property (weak) IBOutlet NSSearchField *appFilterSearchField;
+@property (strong) IBOutlet NSView *searchBarContainerView;
+
+@property (strong) IBOutlet NSMenu *actionsMenu;
+@property (strong) IBOutlet NSMenu *searchMenu;
 
 @property (readonly) NSEdgeInsets originalContentInsets;
 
 - (IBAction)addBundle:(id)sender;
+- (IBAction)addExecutablePath:(id)sender;
 - (IBAction)filterApps:(id)sender;
+- (IBAction)popupActionsMenu:(id)sender;
 
 @end
 
@@ -42,11 +53,22 @@
 }
 
 - (void)filterApps:(id)sender {
+    
+    NSRect frame = self.appFilterSearchField.superview.frame;
+    frame.size.width = self.appsListTableView.enclosingScrollView.frame.size.width;
+    self.appFilterSearchField.superview.frame = frame;
+    
     NSEdgeInsets contentInsets = self.originalContentInsets;
     contentInsets.top = self.appFilterSearchField.bounds.size.height;
     self.appsListTableView.enclosingScrollView.contentInsets = contentInsets;
     
-    [self.appsListTableView.enclosingScrollView addSubview:self.appFilterSearchField positioned:NSWindowAbove relativeTo:self.appsListTableView];
+    [self.appsListTableView.enclosingScrollView addSubview:self.appFilterSearchField.superview positioned:NSWindowAbove relativeTo:self.appsListTableView];
+    self.appsListTableView.enclosingScrollView.translatesAutoresizingMaskIntoConstraints = YES;
+}
+
+- (IBAction)popupActionsMenu:(id)sender {
+    NSEvent *event = [NSEvent mouseEventWithType:NSEventTypeLeftMouseUp location:NSMakePoint(self.actionsButton.frame.origin.x - 1.0f, self.actionsButton.frame.origin.y + self.actionsButton.bounds.size.height + self.actionsMenu.size.height - 5.0f) modifierFlags:0 timestamp:0 windowNumber:self.view.window.windowNumber context:nil eventNumber:0 clickCount:1 pressure:1.0f];
+    [NSMenu popUpContextMenu:self.actionsMenu withEvent:event forView:self.actionsButton];
 }
 
 - (IBAction)addBundle:(id)sender {
@@ -65,6 +87,10 @@
         }}];
         [self.appsListController commitEditing];
     }];
+}
+
+- (void)addExecutablePath:(id)sender {
+    
 }
 
 - (void)addBundleWithURL:(NSURL *)URL {
