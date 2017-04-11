@@ -10,5 +10,9 @@
 
 @implementation FKBundleTableCellView
 
+- (void)setBackgroundStyle:(NSBackgroundStyle)backgroundStyle {
+    [super setBackgroundStyle:backgroundStyle];
+    self.titleLabel.textColor = (backgroundStyle == NSBackgroundStyleLight ? [NSColor labelColor] : [NSColor selectedTextColor]);
+}
 
 @end
