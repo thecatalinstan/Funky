@@ -137,8 +137,4 @@
     return canAccept;
 }
 
-#pragma mark - NSTextFinderClient
-
-
-
 @end
