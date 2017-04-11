@@ -6,6 +6,9 @@
 //  Copyright © 2017 Cătălin Stan. All rights reserved.
 //
 
+#import <Fabric/Fabric.h>
+#import <Crashlytics/Crashlytics.h>
+
 #import "FKAppDelegate.h"
 #import "FKHelper.h"
 #import "FKPreferencesWindowController.h"
@@ -37,6 +40,8 @@
 }
 
 - (void)applicationDidFinishLaunching:(NSNotification *)aNotification {
+    
+    [Fabric with:@[[Crashlytics class]]];
     
     self.statusItem = [[NSStatusBar systemStatusBar] statusItemWithLength:NSSquareStatusItemLength];
     self.statusItem.image = [NSImage imageNamed:FKStatusImageName];

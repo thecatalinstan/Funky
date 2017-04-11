@@ -189,6 +189,7 @@
 				ADDC0F611E672CA700C6CBF0 /* Resources */,
 				9427CB184604D9557471BEB6 /* [CP] Embed Pods Frameworks */,
 				5043E31D490AAD24D87FB10F /* [CP] Copy Pods Resources */,
+				ADC2C04A1E9D170200FA3904 /* Crashlytics */,
 			);
 			buildRules = (
 			);
@@ -323,6 +324,20 @@
 			shellPath = /bin/sh;
 			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-Funky/Pods-Funky-frameworks.sh\"\n";
 			showEnvVarsInLog = 0;
+		};
+		ADC2C04A1E9D170200FA3904 /* Crashlytics */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = Crashlytics;
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Fabric/run\" 41b2b87be52ab143a0c7a2fe9c4d179d3799509a d6ca98ecb5a4aa4a03ebb1d823fcb18cf0bf3b20b7df7390e6873d435c0d147f";
 		};
 		F03259183E8236B73BA9FA07 /* [CP] Check Pods Manifest.lock */ = {
 			isa = PBXShellScriptBuildPhase;
@@ -483,6 +498,7 @@
 				CODE_SIGN_ENTITLEMENTS = Funky/Funky.entitlements;
 				CODE_SIGN_IDENTITY = "Mac Developer";
 				COMBINE_HIDPI_IMAGES = YES;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
 				DEVELOPMENT_TEAM = JNX7A8G939;
 				INFOPLIST_FILE = Funky/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/../Frameworks";
