@@ -19,8 +19,8 @@
 
 @implementation FKPreferencesGeneralViewController
 
-- (void)viewDidLoad {
-    [super viewDidLoad];
+- (void)awakeFromNib {
+    [super awakeFromNib];
 
     self.toggleAppShortcut.style = MASShortcutViewStyleTexturedRect;
     self.toggleAppShortcut.associatedUserDefaultsKey = FKToggleAppShortcutKeyPath;

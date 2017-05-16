@@ -46,17 +46,13 @@
     
     [Fabric with:@[[Crashlytics class]]];
     
-    self.statusItem = [[NSStatusBar systemStatusBar] statusItemWithLength:NSSquareStatusItemLength];
-    self.statusItem.image = [NSImage imageNamed:FKStatusImageName];
-    self.statusItem.menu = self.statusMenu;
-    
-    
     NSMutableDictionary *defaults = [NSMutableDictionary dictionary];
     
     MASShortcut *toggleAppShortcut = [MASShortcut shortcutWithKeyCode:kVK_ANSI_F modifierFlags:NSShiftKeyMask|NSAlternateKeyMask|NSCommandKeyMask];
     defaults[FKToggleAppShortcutKeyPath] = [NSKeyedArchiver archivedDataWithRootObject:toggleAppShortcut];
     
     [[NSUserDefaults standardUserDefaults] registerDefaults:defaults];
+    [[NSUserDefaults standardUserDefaults] synchronize];
     
     // Associate the preference key with an action
     [[MASShortcutBinder sharedBinder] bindShortcutWithDefaultsKey:FKToggleAppShortcutKeyPath toAction:^{
@@ -67,6 +63,17 @@
         dispatch_async(self.eventQueue, ^{ @autoreleasepool {
             [self handleApplicationSwitch:note];
         }});
+    }}];
+    
+    self.statusItem = [[NSStatusBar systemStatusBar] statusItemWithLength:NSSquareStatusItemLength];
+    self.statusItem.image = [NSImage imageNamed:FKStatusImageName];
+    self.statusItem.menu = self.statusMenu;
+    
+    [[NSNotificationCenter defaultCenter] addObserverForName:NSUserDefaultsDidChangeNotification object:nil queue:nil usingBlock:^(NSNotification * _Nonnull note) { @autoreleasepool {
+        NSData *toggleAppShortcutData = [[NSUserDefaults standardUserDefaults] objectForKey:FKToggleAppShortcutKeyPath];
+        MASShortcut *toggleAppShortcut = [NSKeyedUnarchiver unarchiveObjectWithData:toggleAppShortcutData];
+        self.toggleCurrentAppMenuItem.keyEquivalent = toggleAppShortcut.keyCodeStringForKeyEquivalent;
+        self.toggleCurrentAppMenuItem.keyEquivalentModifierMask = toggleAppShortcut.modifierFlags;
     }}];
     
     [self showPreferencesDialog:self];
