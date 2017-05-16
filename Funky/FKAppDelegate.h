@@ -9,6 +9,8 @@
 #import <Cocoa/Cocoa.h>
 
 #define FKBundlesKeyPath                        @"FKBundles"
+#define FKToggleAppShortcutKeyPath              @"FKToggleAppShortcut"
+
 
 @class FKPreferencesWindowController, FKBundle;
 
@@ -16,6 +18,8 @@
 
 @property (strong) FKPreferencesWindowController *preferencesWindowController;
 @property (strong) NSStatusItem *statusItem;
+
+@property (strong) IBOutlet NSMenuItem *toggleCurrentAppMenuItem;
 
 @end
 

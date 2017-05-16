@@ -6,19 +6,24 @@
 //  Copyright © 2017 Cătălin Stan. All rights reserved.
 //
 
+#import <MASShortcut/Shortcut.h>
+
 #import "FKPreferencesGeneralViewController.h"
+#import "FKAppDelegate.h"
 
 @interface FKPreferencesGeneralViewController ()
 
-
+@property (nonatomic, weak) IBOutlet MASShortcutView *toggleAppShortcut;
 
 @end
 
 @implementation FKPreferencesGeneralViewController
 
-- (void)viewDidLoad {
-    [super viewDidLoad];
-    // Do view setup here.
+- (void)awakeFromNib {
+    [super awakeFromNib];
+
+    self.toggleAppShortcut.style = MASShortcutViewStyleTexturedRect;
+    self.toggleAppShortcut.associatedUserDefaultsKey = FKToggleAppShortcutKeyPath;
 }
 
 @end

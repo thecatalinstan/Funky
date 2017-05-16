@@ -61,7 +61,7 @@
 }
 
 - (BOOL)isEqualTo:(id)object {
-    if ( [object isKindOfClass:[self class]] ) {
+    if ( ![object isKindOfClass:[self class]] ) {
         return NO;
     }
     return [self.identifier isEqualToString:((FKBundle *) object).identifier];
