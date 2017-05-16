@@ -127,15 +127,27 @@
         bundles = [NSMutableArray array];
     }
     
+    NSString *message, *title;
+    
     if ( [[bundles valueForKeyPath:FKBundleIdentifierKey] containsObject:bundle.identifier] ) {
         [bundles removeObject:bundle];
+        title = NSLocalizedString(@"Application Removed",);
+        message = NSLocalizedString(@"%@ has been removed from the Funky list.",);
     } else {
         [bundles addObject:bundle];
+        title = NSLocalizedString(@"Application Added",);
+        message = NSLocalizedString(@"%@ has been added to the Funky list.",);
     }
     
     bundleData = [NSKeyedArchiver archivedDataWithRootObject:bundles];
     dispatch_async(dispatch_get_main_queue(), ^{
         [[NSUserDefaults standardUserDefaults] setObject:bundleData forKey:FKBundlesKeyPath];
+        
+        NSUserNotification *notification = [[NSUserNotification alloc] init];
+        notification.title = title;
+        notification.informativeText = [NSString stringWithFormat:message, bundle.name];
+        notification.contentImage = bundle.image;
+        [[NSUserNotificationCenter defaultUserNotificationCenter] deliverNotification:notification];
     });
 }
 
