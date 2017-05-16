@@ -19,5 +19,7 @@
 @property (strong) FKPreferencesWindowController *preferencesWindowController;
 @property (strong) NSStatusItem *statusItem;
 
+@property (strong) IBOutlet NSMenuItem *toggleCurrentAppMenuItem;
+
 @end
 

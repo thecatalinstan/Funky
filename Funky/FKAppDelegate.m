@@ -27,6 +27,7 @@
 @property (strong) dispatch_queue_t eventQueue;
 
 - (IBAction)showPreferencesDialog:(id)sender;
+- (IBAction)toggleCurrentApp:(id)sender;
 
 - (void)handleApplicationSwitch:(NSNotification *)note;
 - (BOOL)stateForApp:(NSRunningApplication *)app inBundles:(NSArray<FKBundle *> *)bundles;
@@ -59,9 +60,8 @@
     
     // Associate the preference key with an action
     [[MASShortcutBinder sharedBinder] bindShortcutWithDefaultsKey:FKToggleAppShortcutKeyPath toAction:^{
-        NSRunningApplication *app = [[NSWorkspace sharedWorkspace] activeApplication][NSWorkspaceApplicationKey];
-        [self addBundleWithURL:app.bundleURL];
-     }];
+        [self toggleCurrentApp:nil];
+    }];
     
     [[NSWorkspace sharedWorkspace].notificationCenter addObserverForName:NSWorkspaceDidActivateApplicationNotification object:nil queue:nil usingBlock:^(NSNotification * _Nonnull note) { @autoreleasepool {
         dispatch_async(self.eventQueue, ^{ @autoreleasepool {
@@ -76,6 +76,11 @@
     dispatch_barrier_sync(self.eventQueue, ^{ @autoreleasepool {
         [[FKHelper sharedHelper] setFnKeyState:NO error:nil];
     }});
+}
+
+- (void)toggleCurrentApp:(id)sender {
+    NSRunningApplication *app = [[NSWorkspace sharedWorkspace] activeApplication][NSWorkspaceApplicationKey];
+    [self addBundleWithURL:app.bundleURL];
 }
 
 - (void)showPreferencesDialog:(id)sender {
@@ -147,6 +152,7 @@
         notification.title = title;
         notification.informativeText = [NSString stringWithFormat:message, bundle.name];
         notification.contentImage = bundle.image;
+        notification.identifier = [NSUUID UUID].UUIDString;
         [[NSUserNotificationCenter defaultUserNotificationCenter] deliverNotification:notification];
     });
 }
