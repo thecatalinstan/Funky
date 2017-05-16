@@ -59,7 +59,8 @@
     
     // Associate the preference key with an action
     [[MASShortcutBinder sharedBinder] bindShortcutWithDefaultsKey:FKToggleAppShortcutKeyPath toAction:^{
-        NSLog(@" * Add application %@", [[NSWorkspace sharedWorkspace] activeApplication]);
+        NSRunningApplication *app = [[NSWorkspace sharedWorkspace] activeApplication][NSWorkspaceApplicationKey];
+        [self addBundleWithURL:app.bundleURL];
      }];
     
     [[NSWorkspace sharedWorkspace].notificationCenter addObserverForName:NSWorkspaceDidActivateApplicationNotification object:nil queue:nil usingBlock:^(NSNotification * _Nonnull note) { @autoreleasepool {
@@ -79,7 +80,7 @@
 
 - (void)showPreferencesDialog:(id)sender {
     if ( self.preferencesWindowController == nil ) {
-        self.preferencesWindowController = [[FKPreferencesWindowController alloc] initWithWindowNibName:FKPreferencesWindowControllerNibName currentViewIdx:0];
+        self.preferencesWindowController = [[FKPreferencesWindowController alloc] initWithWindowNibName:FKPreferencesWindowControllerNibName currentViewIdx:1];
     }
     [self.preferencesWindowController showWindow:sender];
 }
@@ -114,6 +115,28 @@
 
 - (BOOL)stateForApp:(NSRunningApplication *)app inBundles:(NSArray<FKBundle *> *)bundles {
     return [[bundles valueForKeyPath:FKBundleIdentifierKey] containsObject:app.bundleIdentifier] || [[bundles valueForKeyPath:FKBundlePathKey] containsObject:app.bundleURL.path];
+}
+
+- (void)addBundleWithURL:(NSURL *)URL {
+    FKBundle *bundle = [FKBundle bundleWithURL:URL];
+    
+    NSData *bundleData = [[NSUserDefaults standardUserDefaults] objectForKey:FKBundlesKeyPath];
+    NSMutableArray<FKBundle *> *bundles = [[NSKeyedUnarchiver unarchiveObjectWithData:bundleData] mutableCopy];
+    
+    if ( bundles == nil ) {
+        bundles = [NSMutableArray array];
+    }
+    
+    if ( [[bundles valueForKeyPath:FKBundleIdentifierKey] containsObject:bundle.identifier] ) {
+        [bundles removeObject:bundle];
+    } else {
+        [bundles addObject:bundle];
+    }
+    
+    bundleData = [NSKeyedArchiver archivedDataWithRootObject:bundles];
+    dispatch_async(dispatch_get_main_queue(), ^{
+        [[NSUserDefaults standardUserDefaults] setObject:bundleData forKey:FKBundlesKeyPath];
+    });
 }
 
 @end
