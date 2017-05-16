@@ -8,6 +8,8 @@
 
 #import <Fabric/Fabric.h>
 #import <Crashlytics/Crashlytics.h>
+#import <MASShortcut/MASShortcut.h>
+#import <MASShortcut/MASShortcutBinder.h>
 
 #import "FKAppDelegate.h"
 #import "FKHelper.h"
@@ -47,6 +49,19 @@
     self.statusItem.image = [NSImage imageNamed:FKStatusImageName];
     self.statusItem.menu = self.statusMenu;
     
+    
+    NSMutableDictionary *defaults = [NSMutableDictionary dictionary];
+    
+    MASShortcut *toggleAppShortcut = [MASShortcut shortcutWithKeyCode:kVK_ANSI_F modifierFlags:NSShiftKeyMask|NSAlternateKeyMask|NSCommandKeyMask];
+    defaults[FKToggleAppShortcutKeyPath] = [NSKeyedArchiver archivedDataWithRootObject:toggleAppShortcut];
+    
+    [[NSUserDefaults standardUserDefaults] registerDefaults:defaults];
+    
+    // Associate the preference key with an action
+    [[MASShortcutBinder sharedBinder] bindShortcutWithDefaultsKey:FKToggleAppShortcutKeyPath toAction:^{
+        NSLog(@" * Add application %@", [[NSWorkspace sharedWorkspace] activeApplication]);
+     }];
+    
     [[NSWorkspace sharedWorkspace].notificationCenter addObserverForName:NSWorkspaceDidActivateApplicationNotification object:nil queue:nil usingBlock:^(NSNotification * _Nonnull note) { @autoreleasepool {
         dispatch_async(self.eventQueue, ^{ @autoreleasepool {
             [self handleApplicationSwitch:note];
@@ -64,7 +79,7 @@
 
 - (void)showPreferencesDialog:(id)sender {
     if ( self.preferencesWindowController == nil ) {
-        self.preferencesWindowController = [[FKPreferencesWindowController alloc] initWithWindowNibName:FKPreferencesWindowControllerNibName currentViewIdx:1];
+        self.preferencesWindowController = [[FKPreferencesWindowController alloc] initWithWindowNibName:FKPreferencesWindowControllerNibName currentViewIdx:0];
     }
     [self.preferencesWindowController showWindow:sender];
 }

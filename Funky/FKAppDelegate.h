@@ -9,6 +9,8 @@
 #import <Cocoa/Cocoa.h>
 
 #define FKBundlesKeyPath                        @"FKBundles"
+#define FKToggleAppShortcutKeyPath              @"FKToggleAppShortcut"
+
 
 @class FKPreferencesWindowController, FKBundle;
 
