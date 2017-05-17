@@ -1,8 +1,8 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.Cocoa.XIB" version="3.0" toolsVersion="11762" systemVersion="16D32" targetRuntime="MacOSX.Cocoa" propertyAccessControl="none" useAutolayout="YES" customObjectInstantitationMethod="direct">
+<document type="com.apple.InterfaceBuilder3.Cocoa.XIB" version="3.0" toolsVersion="12120" systemVersion="16E195" targetRuntime="MacOSX.Cocoa" propertyAccessControl="none" useAutolayout="YES" customObjectInstantitationMethod="direct">
     <dependencies>
         <deployment identifier="macosx"/>
-        <plugIn identifier="com.apple.InterfaceBuilder.CocoaPlugin" version="11762"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.CocoaPlugin" version="12120"/>
         <capability name="Aspect ratio constraints" minToolsVersion="5.1"/>
         <capability name="box content view" minToolsVersion="7.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
@@ -255,7 +255,7 @@
                                     <constraint firstAttribute="width" constant="8" id="gWJ-nJ-t1l"/>
                                 </constraints>
                             </customView>
-                            <textField verticalHuggingPriority="750" horizontalCompressionResistancePriority="250" setsMaxLayoutWidthAtFirstLayout="YES" translatesAutoresizingMaskIntoConstraints="NO" id="wWv-XC-xch">
+                            <textField verticalHuggingPriority="750" horizontalCompressionResistancePriority="250" setsMaxLayoutWidthAtFirstLayout="YES" allowsCharacterPickerTouchBarItem="YES" translatesAutoresizingMaskIntoConstraints="NO" id="wWv-XC-xch">
                                 <rect key="frame" x="137" y="108" width="126" height="13"/>
                                 <textFieldCell key="cell" selectable="YES" sendsActionOnEndEditing="YES" title="Multiline Label" id="nsO-tZ-etX">
                                     <font key="font" metaFont="label"/>
@@ -294,7 +294,7 @@
                                     </binding>
                                 </connections>
                             </textField>
-                            <textField verticalHuggingPriority="750" horizontalCompressionResistancePriority="250" setsMaxLayoutWidthAtFirstLayout="YES" translatesAutoresizingMaskIntoConstraints="NO" id="kt3-c0-SMB">
+                            <textField verticalHuggingPriority="750" horizontalCompressionResistancePriority="250" setsMaxLayoutWidthAtFirstLayout="YES" allowsCharacterPickerTouchBarItem="YES" translatesAutoresizingMaskIntoConstraints="NO" id="kt3-c0-SMB">
                                 <rect key="frame" x="137" y="79" width="126" height="13"/>
                                 <textFieldCell key="cell" selectable="YES" sendsActionOnEndEditing="YES" title="Multiline Label" id="NMO-QH-k7P">
                                     <font key="font" metaFont="label"/>
@@ -444,9 +444,10 @@ CA
         </customView>
         <arrayController objectClassName="FKBundle" automaticallyPreparesContent="YES" avoidsEmptySelection="NO" automaticallyRearrangesObjects="YES" id="koX-UF-j7T">
             <connections>
-                <binding destination="Xc9-FC-QLI" name="contentArray" keyPath="values.FKBundles" id="fly-6z-TIr">
+                <binding destination="Xc9-FC-QLI" name="contentArray" keyPath="values.FKBundles" id="8a0-Ji-Xwa">
                     <dictionary key="options">
                         <bool key="NSConditionallySetsEditable" value="NO"/>
+                        <bool key="NSDeletesObjectsOnRemove" value="YES"/>
                         <bool key="NSHandlesContentAsCompoundValue" value="YES"/>
                         <bool key="NSRaisesForNotApplicableKeys" value="NO"/>
                         <bool key="NSValidatesImmediately" value="YES"/>
