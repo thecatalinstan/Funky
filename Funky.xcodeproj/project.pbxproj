@@ -8,6 +8,10 @@
 
 /* Begin PBXBuildFile section */
 		94CAD0061C71236C85AB115D /* Pods_Funky.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 28BC5BE948F3C4E8FBF46667 /* Pods_Funky.framework */; };
+		AD10C1701ECC632B002BF215 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = AD10C16F1ECC632B002BF215 /* AppDelegate.m */; };
+		AD10C1731ECC632B002BF215 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = AD10C1721ECC632B002BF215 /* main.m */; };
+		AD10C1811ECC64F4002BF215 /* Main.xib in Resources */ = {isa = PBXBuildFile; fileRef = AD10C1801ECC64F4002BF215 /* Main.xib */; };
+		AD10C1841ECC65EC002BF215 /* FunkyHelper.app in Copy Helper App */ = {isa = PBXBuildFile; fileRef = AD10C16C1ECC632B002BF215 /* FunkyHelper.app */; settings = {ATTRIBUTES = (RemoveHeadersOnCopy, ); }; };
 		AD315BAE1E7FEB0500CAF103 /* FKBundle.m in Sources */ = {isa = PBXBuildFile; fileRef = AD315BAD1E7FEB0500CAF103 /* FKBundle.m */; };
 		AD85E9081E82C2D200125BF0 /* FKBundleTableCellView.m in Sources */ = {isa = PBXBuildFile; fileRef = AD85E9071E82C2D200125BF0 /* FKBundleTableCellView.m */; };
 		ADB539ED1E6C609F00806DF8 /* FKPreferencesWindowController.m in Sources */ = {isa = PBXBuildFile; fileRef = ADB539EB1E6C609F00806DF8 /* FKPreferencesWindowController.m */; };
@@ -36,9 +40,30 @@
 		};
 /* End PBXContainerItemProxy section */
 
+/* Begin PBXCopyFilesBuildPhase section */
+		AD10C1831ECC65B4002BF215 /* Copy Helper App */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = Contents/Library/LoginItems;
+			dstSubfolderSpec = 1;
+			files = (
+				AD10C1841ECC65EC002BF215 /* FunkyHelper.app in Copy Helper App */,
+			);
+			name = "Copy Helper App";
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXCopyFilesBuildPhase section */
+
 /* Begin PBXFileReference section */
 		28BC5BE948F3C4E8FBF46667 /* Pods_Funky.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Funky.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		568290F4D8923507EEE8F13D /* Pods-Funky.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Funky.debug.xcconfig"; path = "Pods/Target Support Files/Pods-Funky/Pods-Funky.debug.xcconfig"; sourceTree = "<group>"; };
+		AD10C16C1ECC632B002BF215 /* FunkyHelper.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = FunkyHelper.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		AD10C16E1ECC632B002BF215 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
+		AD10C16F1ECC632B002BF215 /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
+		AD10C1721ECC632B002BF215 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
+		AD10C17C1ECC632B002BF215 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		AD10C1801ECC64F4002BF215 /* Main.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = Main.xib; sourceTree = "<group>"; };
+		AD10C1821ECC655B002BF215 /* FunkyHelper.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = FunkyHelper.entitlements; sourceTree = "<group>"; };
 		AD315BAC1E7FEB0500CAF103 /* FKBundle.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FKBundle.h; sourceTree = "<group>"; };
 		AD315BAD1E7FEB0500CAF103 /* FKBundle.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FKBundle.m; sourceTree = "<group>"; };
 		AD85E9061E82C2D200125BF0 /* FKBundleTableCellView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FKBundleTableCellView.h; sourceTree = "<group>"; };
@@ -72,6 +97,13 @@
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
+		AD10C1691ECC632B002BF215 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		ADDC0F601E672CA700C6CBF0 /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
@@ -107,10 +139,32 @@
 			name = Frameworks;
 			sourceTree = "<group>";
 		};
+		AD10C16D1ECC632B002BF215 /* FunkyHelper */ = {
+			isa = PBXGroup;
+			children = (
+				AD10C16E1ECC632B002BF215 /* AppDelegate.h */,
+				AD10C16F1ECC632B002BF215 /* AppDelegate.m */,
+				AD10C1801ECC64F4002BF215 /* Main.xib */,
+				AD10C17C1ECC632B002BF215 /* Info.plist */,
+				AD10C1821ECC655B002BF215 /* FunkyHelper.entitlements */,
+				AD10C1711ECC632B002BF215 /* Supporting Files */,
+			);
+			path = FunkyHelper;
+			sourceTree = "<group>";
+		};
+		AD10C1711ECC632B002BF215 /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				AD10C1721ECC632B002BF215 /* main.m */,
+			);
+			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
 		ADDC0F5A1E672CA700C6CBF0 = {
 			isa = PBXGroup;
 			children = (
 				ADDC0F651E672CA700C6CBF0 /* Funky */,
+				AD10C16D1ECC632B002BF215 /* FunkyHelper */,
 				ADDC0F791E672CA700C6CBF0 /* FunkyTests */,
 				ADDC0F641E672CA700C6CBF0 /* Products */,
 				744704F610E1EF9338AD1E35 /* Pods */,
@@ -123,6 +177,7 @@
 			children = (
 				ADDC0F631E672CA700C6CBF0 /* Funky.app */,
 				ADDC0F761E672CA700C6CBF0 /* FunkyTests.xctest */,
+				AD10C16C1ECC632B002BF215 /* FunkyHelper.app */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -179,6 +234,23 @@
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
+		AD10C16B1ECC632B002BF215 /* FunkyHelper */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = AD10C17F1ECC632B002BF215 /* Build configuration list for PBXNativeTarget "FunkyHelper" */;
+			buildPhases = (
+				AD10C1681ECC632B002BF215 /* Sources */,
+				AD10C1691ECC632B002BF215 /* Frameworks */,
+				AD10C16A1ECC632B002BF215 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = FunkyHelper;
+			productName = FunkyHelper;
+			productReference = AD10C16C1ECC632B002BF215 /* FunkyHelper.app */;
+			productType = "com.apple.product-type.application";
+		};
 		ADDC0F621E672CA700C6CBF0 /* Funky */ = {
 			isa = PBXNativeTarget;
 			buildConfigurationList = ADDC0F7F1E672CA700C6CBF0 /* Build configuration list for PBXNativeTarget "Funky" */;
@@ -187,6 +259,7 @@
 				ADDC0F5F1E672CA700C6CBF0 /* Sources */,
 				ADDC0F601E672CA700C6CBF0 /* Frameworks */,
 				ADDC0F611E672CA700C6CBF0 /* Resources */,
+				AD10C1831ECC65B4002BF215 /* Copy Helper App */,
 				9427CB184604D9557471BEB6 /* [CP] Embed Pods Frameworks */,
 				5043E31D490AAD24D87FB10F /* [CP] Copy Pods Resources */,
 				ADC2C04A1E9D170200FA3904 /* Crashlytics */,
@@ -228,6 +301,16 @@
 				LastUpgradeCheck = 0820;
 				ORGANIZATIONNAME = "Cătălin Stan";
 				TargetAttributes = {
+					AD10C16B1ECC632B002BF215 = {
+						CreatedOnToolsVersion = 8.3.2;
+						DevelopmentTeam = JNX7A8G939;
+						ProvisioningStyle = Automatic;
+						SystemCapabilities = {
+							com.apple.Sandbox = {
+								enabled = 1;
+							};
+						};
+					};
 					ADDC0F621E672CA700C6CBF0 = {
 						CreatedOnToolsVersion = 8.2.1;
 						DevelopmentTeam = JNX7A8G939;
@@ -267,11 +350,20 @@
 			targets = (
 				ADDC0F621E672CA700C6CBF0 /* Funky */,
 				ADDC0F751E672CA700C6CBF0 /* FunkyTests */,
+				AD10C16B1ECC632B002BF215 /* FunkyHelper */,
 			);
 		};
 /* End PBXProject section */
 
 /* Begin PBXResourcesBuildPhase section */
+		AD10C16A1ECC632B002BF215 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				AD10C1811ECC64F4002BF215 /* Main.xib in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		ADDC0F611E672CA700C6CBF0 /* Resources */ = {
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
@@ -357,6 +449,15 @@
 /* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
+		AD10C1681ECC632B002BF215 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				AD10C1731ECC632B002BF215 /* main.m in Sources */,
+				AD10C1701ECC632B002BF215 /* AppDelegate.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		ADDC0F5F1E672CA700C6CBF0 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
@@ -403,6 +504,42 @@
 /* End PBXVariantGroup section */
 
 /* Begin XCBuildConfiguration section */
+		AD10C17D1ECC632B002BF215 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CODE_SIGN_ENTITLEMENTS = FunkyHelper/FunkyHelper.entitlements;
+				CODE_SIGN_IDENTITY = "Mac Developer";
+				COMBINE_HIDPI_IMAGES = YES;
+				DEVELOPMENT_TEAM = JNX7A8G939;
+				INFOPLIST_FILE = FunkyHelper/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/../Frameworks";
+				MACOSX_DEPLOYMENT_TARGET = 10.8;
+				PRODUCT_BUNDLE_IDENTIFIER = com.catalinstan.funky.FunkyHelper;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE_SPECIFIER = "";
+			};
+			name = Debug;
+		};
+		AD10C17E1ECC632B002BF215 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CODE_SIGN_ENTITLEMENTS = FunkyHelper/FunkyHelper.entitlements;
+				CODE_SIGN_IDENTITY = "Mac Developer";
+				COMBINE_HIDPI_IMAGES = YES;
+				DEVELOPMENT_TEAM = JNX7A8G939;
+				INFOPLIST_FILE = FunkyHelper/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/../Frameworks";
+				MACOSX_DEPLOYMENT_TARGET = 10.8;
+				PRODUCT_BUNDLE_IDENTIFIER = com.catalinstan.funky.FunkyHelper;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE_SPECIFIER = "";
+			};
+			name = Release;
+		};
 		ADDC0F7D1E672CA700C6CBF0 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
@@ -556,6 +693,14 @@
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
+		AD10C17F1ECC632B002BF215 /* Build configuration list for PBXNativeTarget "FunkyHelper" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				AD10C17D1ECC632B002BF215 /* Debug */,
+				AD10C17E1ECC632B002BF215 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+		};
 		ADDC0F5E1E672CA700C6CBF0 /* Build configuration list for PBXProject "Funky" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (

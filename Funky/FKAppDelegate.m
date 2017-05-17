@@ -10,12 +10,14 @@
 #import <Crashlytics/Crashlytics.h>
 #import <MASShortcut/MASShortcut.h>
 #import <MASShortcut/MASShortcutBinder.h>
+#import <ServiceManagement/ServiceManagement.h>
 
 #import "FKAppDelegate.h"
 #import "FKHelper.h"
 #import "FKPreferencesWindowController.h"
 #import "FKBundle.h"
 
+#define FKHelperAppName                         @"FunkyHelper"
 #define FKStatusImageName                       @"FunkyStatusTemplate"
 #define FKPreferencesWindowControllerNibName    @"FKPreferencesWindowController"
 
@@ -162,6 +164,30 @@
         notification.identifier = [NSUUID UUID].UUIDString;
         [[NSUserNotificationCenter defaultUserNotificationCenter] deliverNotification:notification];
     });
+}
+
+
+- (BOOL)launchOnLogin {
+    [[NSUserDefaults standardUserDefaults] synchronize];
+    return [[NSUserDefaults standardUserDefaults] boolForKey:FKLaunchOnLoginKeyPath];
+}
+
+- (void)setLaunchOnLogin:(BOOL)launchOnLogin {
+    CFStringRef helperBundleIdentifier = (__bridge CFStringRef)[[NSBundle mainBundle].bundleIdentifier stringByAppendingPathExtension:FKHelperAppName];
+    BOOL status = SMLoginItemSetEnabled(helperBundleIdentifier, launchOnLogin);
+    
+    if ( !status ) {
+        [[NSUserDefaults standardUserDefaults] setBool:NO forKey:FKLaunchOnLoginKeyPath];
+        [[NSUserDefaults standardUserDefaults] synchronize];
+        
+        NSString *infoText = launchOnLogin ? NSLocalizedString(@"Could not set %@ to start at login",) : NSLocalizedString(@"Could not remove %@ from the login items list.",);
+        
+        NSAlert *alert = [NSAlert alertWithMessageText:NSLocalizedString(@"An error ocurred",) defaultButton:NSLocalizedString(@"OK",) alternateButton:nil otherButton:nil informativeTextWithFormat:infoText, [[NSBundle mainBundle] objectForInfoDictionaryKey:(__bridge NSString *)kCFBundleNameKey]];
+        [alert runModal];
+    } else {
+        [[NSUserDefaults standardUserDefaults] setBool:launchOnLogin forKey:FKLaunchOnLoginKeyPath];
+        [[NSUserDefaults standardUserDefaults] synchronize];
+    }
 }
 
 @end

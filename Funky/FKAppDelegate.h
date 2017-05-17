@@ -10,7 +10,7 @@
 
 #define FKBundlesKeyPath                        @"FKBundles"
 #define FKToggleAppShortcutKeyPath              @"FKToggleAppShortcut"
-
+#define FKLaunchOnLoginKeyPath                  @"FKLaunchOnLogin"
 
 @class FKPreferencesWindowController, FKBundle;
 
@@ -18,6 +18,7 @@
 
 @property (strong) FKPreferencesWindowController *preferencesWindowController;
 @property (strong) NSStatusItem *statusItem;
+@property (assign) BOOL launchOnLogin;
 
 @property (strong) IBOutlet NSMenuItem *toggleCurrentAppMenuItem;
 
