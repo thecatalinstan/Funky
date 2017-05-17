@@ -461,13 +461,6 @@ CA
                         <string key="NSValueTransformerName">NSKeyedUnarchiveFromData</string>
                     </dictionary>
                 </binding>
-                <binding destination="Xc9-FC-QLI" name="sortDescriptors" keyPath="values.FKBundlesSortDescriptors" previousBinding="slq-c2-0hi" id="O8c-UL-q1h">
-                    <dictionary key="options">
-                        <bool key="NSRaisesForNotApplicableKeys" value="NO"/>
-                        <bool key="NSValidatesImmediately" value="YES"/>
-                        <string key="NSValueTransformerName">NSKeyedUnarchiveFromData</string>
-                    </dictionary>
-                </binding>
             </connections>
         </arrayController>
         <userDefaultsController representsSharedInstance="YES" id="Xc9-FC-QLI"/>

@@ -13,6 +13,8 @@
 		AD10C1811ECC64F4002BF215 /* Main.xib in Resources */ = {isa = PBXBuildFile; fileRef = AD10C1801ECC64F4002BF215 /* Main.xib */; };
 		AD10C1841ECC65EC002BF215 /* FunkyHelper.app in Copy Helper App */ = {isa = PBXBuildFile; fileRef = AD10C16C1ECC632B002BF215 /* FunkyHelper.app */; settings = {ATTRIBUTES = (RemoveHeadersOnCopy, ); }; };
 		AD10C1861ECC7567002BF215 /* FKBinaryIcon.icns in Resources */ = {isa = PBXBuildFile; fileRef = AD10C1851ECC7567002BF215 /* FKBinaryIcon.icns */; };
+		AD10C18A1ECC7897002BF215 /* FKExecutablePathWindowController.m in Sources */ = {isa = PBXBuildFile; fileRef = AD10C1881ECC7897002BF215 /* FKExecutablePathWindowController.m */; };
+		AD10C18B1ECC7897002BF215 /* FKExecutablePathWindowController.xib in Resources */ = {isa = PBXBuildFile; fileRef = AD10C1891ECC7897002BF215 /* FKExecutablePathWindowController.xib */; };
 		AD315BAE1E7FEB0500CAF103 /* FKBundle.m in Sources */ = {isa = PBXBuildFile; fileRef = AD315BAD1E7FEB0500CAF103 /* FKBundle.m */; };
 		AD85E9081E82C2D200125BF0 /* FKBundleTableCellView.m in Sources */ = {isa = PBXBuildFile; fileRef = AD85E9071E82C2D200125BF0 /* FKBundleTableCellView.m */; };
 		ADB539ED1E6C609F00806DF8 /* FKPreferencesWindowController.m in Sources */ = {isa = PBXBuildFile; fileRef = ADB539EB1E6C609F00806DF8 /* FKPreferencesWindowController.m */; };
@@ -66,6 +68,9 @@
 		AD10C1801ECC64F4002BF215 /* Main.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = Main.xib; sourceTree = "<group>"; };
 		AD10C1821ECC655B002BF215 /* FunkyHelper.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = FunkyHelper.entitlements; sourceTree = "<group>"; };
 		AD10C1851ECC7567002BF215 /* FKBinaryIcon.icns */ = {isa = PBXFileReference; lastKnownFileType = image.icns; path = FKBinaryIcon.icns; sourceTree = "<group>"; };
+		AD10C1871ECC7897002BF215 /* FKExecutablePathWindowController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FKExecutablePathWindowController.h; sourceTree = "<group>"; };
+		AD10C1881ECC7897002BF215 /* FKExecutablePathWindowController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FKExecutablePathWindowController.m; sourceTree = "<group>"; };
+		AD10C1891ECC7897002BF215 /* FKExecutablePathWindowController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = FKExecutablePathWindowController.xib; sourceTree = "<group>"; };
 		AD315BAC1E7FEB0500CAF103 /* FKBundle.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FKBundle.h; sourceTree = "<group>"; };
 		AD315BAD1E7FEB0500CAF103 /* FKBundle.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FKBundle.m; sourceTree = "<group>"; };
 		AD85E9061E82C2D200125BF0 /* FKBundleTableCellView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FKBundleTableCellView.h; sourceTree = "<group>"; };
@@ -212,6 +217,9 @@
 				AD315BAD1E7FEB0500CAF103 /* FKBundle.m */,
 				ADDC0F711E672CA700C6CBF0 /* Info.plist */,
 				AD10C1851ECC7567002BF215 /* FKBinaryIcon.icns */,
+				AD10C1871ECC7897002BF215 /* FKExecutablePathWindowController.h */,
+				AD10C1881ECC7897002BF215 /* FKExecutablePathWindowController.m */,
+				AD10C1891ECC7897002BF215 /* FKExecutablePathWindowController.xib */,
 				ADDC0F691E672CA700C6CBF0 /* Supporting Files */,
 			);
 			path = Funky;
@@ -372,6 +380,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				AD10C1861ECC7567002BF215 /* FKBinaryIcon.icns in Resources */,
+				AD10C18B1ECC7897002BF215 /* FKExecutablePathWindowController.xib in Resources */,
 				ADB539F81E6C695700806DF8 /* FKPreferencesAppsViewController.xib in Resources */,
 				ADDC0F6D1E672CA700C6CBF0 /* Assets.xcassets in Resources */,
 				ADE308E01E6EC342001A48CB /* FKPreferencesAdvancedViewController.xib in Resources */,
@@ -473,6 +482,7 @@
 				AD85E9081E82C2D200125BF0 /* FKBundleTableCellView.m in Sources */,
 				ADB539ED1E6C609F00806DF8 /* FKPreferencesWindowController.m in Sources */,
 				ADCC3F711E684F0900A7C4F1 /* FKHelper.m in Sources */,
+				AD10C18A1ECC7897002BF215 /* FKExecutablePathWindowController.m in Sources */,
 				ADDC0F681E672CA700C6CBF0 /* FKAppDelegate.m in Sources */,
 				ADE308DF1E6EC342001A48CB /* FKPreferencesAdvancedViewController.m in Sources */,
 			);
