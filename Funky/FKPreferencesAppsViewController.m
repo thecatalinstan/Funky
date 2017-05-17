@@ -42,12 +42,6 @@
     self.appsListTableView.draggingDestinationFeedbackStyle = NSTableViewDraggingDestinationFeedbackStyleSourceList;
     
     self.appsListController.sortDescriptors = @[[NSSortDescriptor sortDescriptorWithKey:FKBundleNameKey ascending:YES], [NSSortDescriptor sortDescriptorWithKey:FKBundlePathKey ascending:YES]];
-    
-    [[NSNotificationCenter defaultCenter] addObserverForName:NSUserDefaultsDidChangeNotification object:nil queue:nil usingBlock:^(NSNotification * _Nonnull note) {
-        [self.appsListController willChangeValueForKey:@"arrangedObject"];
-        [self.appsListController prepareContent];
-        [self.appsListController didChangeValueForKey:@"arrangedObject"];
-    }];
 }
 
 - (void)filterApps:(id)sender {

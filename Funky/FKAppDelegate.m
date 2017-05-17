@@ -56,11 +56,10 @@
     [[NSUserDefaults standardUserDefaults] registerDefaults:defaults];
     [[NSUserDefaults standardUserDefaults] synchronize];
     
-    // Associate the preference key with an action
     [[MASShortcutBinder sharedBinder] bindShortcutWithDefaultsKey:FKToggleAppShortcutKeyPath toAction:^{
         [self toggleCurrentApp:nil];
     }];
-    
+
     [[NSWorkspace sharedWorkspace].notificationCenter addObserverForName:NSWorkspaceDidActivateApplicationNotification object:nil queue:nil usingBlock:^(NSNotification * _Nonnull note) { @autoreleasepool {
         dispatch_async(self.eventQueue, ^{ @autoreleasepool {
             [self handleApplicationSwitch:note];
