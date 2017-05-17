@@ -16,6 +16,27 @@
     return [[FKBundle alloc] initWithURL:URL];
 }
 
++ (instancetype)bundleWithExecutableURL:(NSURL *)URL {
+    return [[FKBundle alloc] initWithExecutableURL:URL];
+}
+
+- (instancetype)initWithExecutableURL:(NSURL *)URL {
+    NSURL *expectedBundleURL = URL.URLByDeletingLastPathComponent.URLByDeletingLastPathComponent.URLByDeletingLastPathComponent;
+    self = [self initWithURL:expectedBundleURL];
+    if ( [self.executablePath isEqualToString:URL.path] ) {
+        return self;
+    }
+    
+    self = [super init];
+    if ( self != nil ) {
+        self.name = URL.lastPathComponent;
+        self.path = URL.path;
+        self.executablePath = URL.path;
+        self.image = [[NSImage alloc] initWithContentsOfURL:[[NSBundle mainBundle] URLForResource:@"FKBinaryIcon" withExtension:@"icns"]];
+    }
+    return self;
+}
+
 - (instancetype)initWithURL:(NSURL *)URL {
     self = [super init];
     if ( self != nil ) {
@@ -35,12 +56,18 @@
         self.name = [decoder decodeObjectForKey:FKBundleNameKey];
         self.path = [decoder decodeObjectForKey:FKBundlePathKey];
         self.identifier = [decoder decodeObjectForKey:FKBundleIdentifierKey];
-        self.image = [[NSWorkspace sharedWorkspace] iconForFile:self.path] ? : [NSImage imageNamed:NSImageNameApplicationIcon];
-        
+
         self.executablePath = [decoder decodeObjectForKey:FKBundleExecutablePathKey];
         if ( self.executablePath.length == 0 ) {
             self.executablePath = [NSBundle bundleWithPath:self.path].executablePath;
         }
+        
+        if ( [self.path isEqualToString:self.executablePath] ) {
+            self.image = [[NSImage alloc] initWithContentsOfURL:[[NSBundle mainBundle] URLForResource:@"FKBinaryIcon" withExtension:@"icns"]];
+        } else {
+            self.image = [[NSWorkspace sharedWorkspace] iconForFile:self.path] ? : [NSImage imageNamed:NSImageNameApplicationIcon];
+        }
+        
     }
     return self;
 }

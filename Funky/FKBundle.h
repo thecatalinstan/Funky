@@ -25,7 +25,9 @@
 @property (nonatomic, readonly) BOOL available;
 
 + (instancetype __autoreleasing)bundleWithURL:(NSURL *)URL;
++ (instancetype __autoreleasing)bundleWithExecutableURL:(NSURL *)URL;
 
 - (instancetype)initWithURL:(NSURL *)URL;
+- (instancetype)initWithExecutableURL:(NSURL *)URL;
 
 @end

@@ -497,7 +497,11 @@ CA
                     </connections>
                 </menuItem>
                 <menuItem isSeparatorItem="YES" id="Lb4-Zl-mXc"/>
-                <menuItem title="Add Custom Path" keyEquivalent="O" id="xJa-mG-mA3"/>
+                <menuItem title="Add Custom Path" keyEquivalent="O" id="xJa-mG-mA3">
+                    <connections>
+                        <action selector="addExecutablePath:" target="-1" id="bkb-De-5Y1"/>
+                    </connections>
+                </menuItem>
             </items>
             <point key="canvasLocation" x="-284" y="290"/>
         </menu>

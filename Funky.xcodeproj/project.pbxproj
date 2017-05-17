@@ -12,6 +12,7 @@
 		AD10C1731ECC632B002BF215 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = AD10C1721ECC632B002BF215 /* main.m */; };
 		AD10C1811ECC64F4002BF215 /* Main.xib in Resources */ = {isa = PBXBuildFile; fileRef = AD10C1801ECC64F4002BF215 /* Main.xib */; };
 		AD10C1841ECC65EC002BF215 /* FunkyHelper.app in Copy Helper App */ = {isa = PBXBuildFile; fileRef = AD10C16C1ECC632B002BF215 /* FunkyHelper.app */; settings = {ATTRIBUTES = (RemoveHeadersOnCopy, ); }; };
+		AD10C1861ECC7567002BF215 /* FKBinaryIcon.icns in Resources */ = {isa = PBXBuildFile; fileRef = AD10C1851ECC7567002BF215 /* FKBinaryIcon.icns */; };
 		AD315BAE1E7FEB0500CAF103 /* FKBundle.m in Sources */ = {isa = PBXBuildFile; fileRef = AD315BAD1E7FEB0500CAF103 /* FKBundle.m */; };
 		AD85E9081E82C2D200125BF0 /* FKBundleTableCellView.m in Sources */ = {isa = PBXBuildFile; fileRef = AD85E9071E82C2D200125BF0 /* FKBundleTableCellView.m */; };
 		ADB539ED1E6C609F00806DF8 /* FKPreferencesWindowController.m in Sources */ = {isa = PBXBuildFile; fileRef = ADB539EB1E6C609F00806DF8 /* FKPreferencesWindowController.m */; };
@@ -64,6 +65,7 @@
 		AD10C17C1ECC632B002BF215 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		AD10C1801ECC64F4002BF215 /* Main.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = Main.xib; sourceTree = "<group>"; };
 		AD10C1821ECC655B002BF215 /* FunkyHelper.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = FunkyHelper.entitlements; sourceTree = "<group>"; };
+		AD10C1851ECC7567002BF215 /* FKBinaryIcon.icns */ = {isa = PBXFileReference; lastKnownFileType = image.icns; path = FKBinaryIcon.icns; sourceTree = "<group>"; };
 		AD315BAC1E7FEB0500CAF103 /* FKBundle.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FKBundle.h; sourceTree = "<group>"; };
 		AD315BAD1E7FEB0500CAF103 /* FKBundle.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FKBundle.m; sourceTree = "<group>"; };
 		AD85E9061E82C2D200125BF0 /* FKBundleTableCellView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FKBundleTableCellView.h; sourceTree = "<group>"; };
@@ -209,6 +211,7 @@
 				AD315BAC1E7FEB0500CAF103 /* FKBundle.h */,
 				AD315BAD1E7FEB0500CAF103 /* FKBundle.m */,
 				ADDC0F711E672CA700C6CBF0 /* Info.plist */,
+				AD10C1851ECC7567002BF215 /* FKBinaryIcon.icns */,
 				ADDC0F691E672CA700C6CBF0 /* Supporting Files */,
 			);
 			path = Funky;
@@ -368,6 +371,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				AD10C1861ECC7567002BF215 /* FKBinaryIcon.icns in Resources */,
 				ADB539F81E6C695700806DF8 /* FKPreferencesAppsViewController.xib in Resources */,
 				ADDC0F6D1E672CA700C6CBF0 /* Assets.xcassets in Resources */,
 				ADE308E01E6EC342001A48CB /* FKPreferencesAdvancedViewController.xib in Resources */,
@@ -700,6 +704,7 @@
 				AD10C17E1ECC632B002BF215 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		ADDC0F5E1E672CA700C6CBF0 /* Build configuration list for PBXProject "Funky" */ = {
 			isa = XCConfigurationList;
