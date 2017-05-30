@@ -6,11 +6,11 @@
 //  Copyright © 2017 Cătălin Stan. All rights reserved.
 //
 
-#import <Fabric/Fabric.h>
-#import <Crashlytics/Crashlytics.h>
-#import <MASShortcut/MASShortcut.h>
-#import <MASShortcut/MASShortcutBinder.h>
-#import <ServiceManagement/ServiceManagement.h>
+@import Fabric;
+@import Crashlytics;
+@import ShortcutRecorder;
+@import ShortcutRecorder.PTHotKey;
+@import ServiceManagement;
 
 #import "FKAppDelegate.h"
 #import "FKHelper.h"
@@ -48,18 +48,6 @@
     
     [Fabric with:@[[Crashlytics class]]];
     
-    NSMutableDictionary *defaults = [NSMutableDictionary dictionary];
-    
-    MASShortcut *toggleAppShortcut = [MASShortcut shortcutWithKeyCode:kVK_ANSI_F modifierFlags:NSShiftKeyMask|NSAlternateKeyMask|NSCommandKeyMask];
-    defaults[FKToggleAppShortcutKeyPath] = [NSKeyedArchiver archivedDataWithRootObject:toggleAppShortcut];
-    
-    [[NSUserDefaults standardUserDefaults] registerDefaults:defaults];
-    [[NSUserDefaults standardUserDefaults] synchronize];
-    
-    [[MASShortcutBinder sharedBinder] bindShortcutWithDefaultsKey:FKToggleAppShortcutKeyPath toAction:^{
-        [self toggleCurrentApp:nil];
-    }];
-
     [[NSWorkspace sharedWorkspace].notificationCenter addObserverForName:NSWorkspaceDidActivateApplicationNotification object:nil queue:nil usingBlock:^(NSNotification * _Nonnull note) { @autoreleasepool {
         dispatch_async(self.eventQueue, ^{ @autoreleasepool {
             [self handleApplicationSwitch:note];
@@ -70,11 +58,16 @@
     self.statusItem.image = [NSImage imageNamed:FKStatusImageName];
     self.statusItem.menu = self.statusMenu;
     
+    // Bind the menu item key equivalent
+    [self.toggleCurrentAppMenuItem bind:@"keyEquivalent" toObject:[NSUserDefaults standardUserDefaults] withKeyPath:FKToggleAppShortcutKeyPath options:@{NSValueTransformerBindingOption: [SRKeyEquivalentTransformer new]}];
+    [self.toggleCurrentAppMenuItem bind:@"keyEquivalentModifierMask" toObject:[NSUserDefaults standardUserDefaults] withKeyPath:FKToggleAppShortcutKeyPath options:@{NSValueTransformerBindingOption: [SRKeyEquivalentModifierMaskTransformer new]}];
+    
     [[NSNotificationCenter defaultCenter] addObserverForName:NSUserDefaultsDidChangeNotification object:nil queue:nil usingBlock:^(NSNotification * _Nonnull note) { @autoreleasepool {
-        NSData *toggleAppShortcutData = [[NSUserDefaults standardUserDefaults] objectForKey:FKToggleAppShortcutKeyPath];
-        MASShortcut *toggleAppShortcut = [NSKeyedUnarchiver unarchiveObjectWithData:toggleAppShortcutData];
-        self.toggleCurrentAppMenuItem.keyEquivalent = toggleAppShortcut.keyCodeStringForKeyEquivalent;
-        self.toggleCurrentAppMenuItem.keyEquivalentModifierMask = toggleAppShortcut.modifierFlags;
+        PTHotKey *oldToggleAppHotKey = [[PTHotKeyCenter sharedCenter] hotKeyWithIdentifier:FKToggleAppShortcutKeyPath];
+        [[PTHotKeyCenter sharedCenter] unregisterHotKey:oldToggleAppHotKey];
+        
+        PTHotKey *toggleAppHotKey = [PTHotKey hotKeyWithIdentifier:FKToggleAppShortcutKeyIdentifier keyCombo:[[NSUserDefaults standardUserDefaults] objectForKey:FKToggleAppShortcutKeyPath] target:self action:@selector(toggleCurrentApp:)];
+        [[PTHotKeyCenter sharedCenter] registerHotKey:toggleAppHotKey];
     }}];
     
     [self showPreferencesDialog:self];

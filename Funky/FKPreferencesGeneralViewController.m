@@ -6,14 +6,14 @@
 //  Copyright © 2017 Cătălin Stan. All rights reserved.
 //
 
-#import <MASShortcut/Shortcut.h>
+#import <ShortcutRecorder/ShortcutRecorder.h>
 
 #import "FKPreferencesGeneralViewController.h"
 #import "FKAppDelegate.h"
 
 @interface FKPreferencesGeneralViewController ()
 
-@property (nonatomic, weak) IBOutlet MASShortcutView *toggleAppShortcut;
+@property (nonatomic, weak) IBOutlet SRRecorderControl *toggleAppShortcut;
 
 @end
 
@@ -22,8 +22,11 @@
 - (void)awakeFromNib {
     [super awakeFromNib];
 
-    self.toggleAppShortcut.style = MASShortcutViewStyleTexturedRect;
-    self.toggleAppShortcut.associatedUserDefaultsKey = FKToggleAppShortcutKeyPath;
+    [self.toggleAppShortcut bind:NSValueBinding toObject:[NSUserDefaults standardUserDefaults] withKeyPath:FKToggleAppShortcutKeyPath options:nil];
+}
+
+- (void)dealloc {
+    [self.toggleAppShortcut unbind:NSValueBinding];
 }
 
 @end
