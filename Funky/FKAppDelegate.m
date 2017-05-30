@@ -19,6 +19,7 @@
 
 #define FKHelperAppName                         @"FunkyHelper"
 #define FKStatusImageName                       @"FunkyStatusTemplate"
+#define FKStatusActiveImageName                 @"FunkyStatusActiveTemplate"
 #define FKPreferencesWindowControllerNibName    @"FKPreferencesWindowController"
 
 @interface FKAppDelegate ()
@@ -49,7 +50,7 @@
     [Fabric with:@[[Crashlytics class]]];
     
     NSMutableDictionary *defaults = [NSMutableDictionary dictionary];
-    defaults[@"NSApplicationCrashOnExceptions"] = @YES;    
+    defaults[@"NSApplicationCrashOnExceptions"] = @YES;
     [[NSUserDefaults standardUserDefaults] registerDefaults:defaults];
     [[NSUserDefaults standardUserDefaults] synchronize];
 
@@ -121,6 +122,8 @@
     }
     
     NSLog(@"%@: %@", app.executableURL.path, @(state));
+    
+    self.statusItem.image = [NSImage imageNamed:(state ? FKStatusImageName : FKStatusActiveImageName)];
 }
 
 - (BOOL)stateForApp:(NSRunningApplication *)app inBundles:(NSArray<FKBundle *> *)bundles {
