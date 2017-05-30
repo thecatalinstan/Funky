@@ -18,6 +18,11 @@
 #import "SRModifierFlagsTransformer.h"
 #import "SRRecorderControl.h"
 #import "SRValidator.h"
+#import "PTHotKey+ShortcutRecorder.h"
+#import "PTHotKey.h"
+#import "PTHotKeyCenter.h"
+#import "PTKeyCodeTranslator.h"
+#import "PTKeyCombo.h"
 
 FOUNDATION_EXPORT double ShortcutRecorderVersionNumber;
 FOUNDATION_EXPORT const unsigned char ShortcutRecorderVersionString[];

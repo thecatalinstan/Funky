@@ -10,6 +10,7 @@
 
 #define FKBundlesKeyPath                        @"FKBundles"
 #define FKToggleAppShortcutKeyPath              @"FKToggleAppShortcut"
+#define FKToggleAppShortcutKeyIdentifier        @"FKToggleAppHotKey"
 #define FKLaunchOnLoginKeyPath                  @"FKLaunchOnLogin"
 
 @class FKPreferencesWindowController, FKBundle;
