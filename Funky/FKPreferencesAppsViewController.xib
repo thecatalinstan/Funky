@@ -461,13 +461,6 @@ CA
                         <string key="NSValueTransformerName">NSKeyedUnarchiveFromData</string>
                     </dictionary>
                 </binding>
-                <binding destination="Xc9-FC-QLI" name="sortDescriptors" keyPath="values.FKBundlesSortDescriptors" previousBinding="slq-c2-0hi" id="O8c-UL-q1h">
-                    <dictionary key="options">
-                        <bool key="NSRaisesForNotApplicableKeys" value="NO"/>
-                        <bool key="NSValidatesImmediately" value="YES"/>
-                        <string key="NSValueTransformerName">NSKeyedUnarchiveFromData</string>
-                    </dictionary>
-                </binding>
             </connections>
         </arrayController>
         <userDefaultsController representsSharedInstance="YES" id="Xc9-FC-QLI"/>
@@ -497,7 +490,11 @@ CA
                     </connections>
                 </menuItem>
                 <menuItem isSeparatorItem="YES" id="Lb4-Zl-mXc"/>
-                <menuItem title="Add Custom Path" keyEquivalent="O" id="xJa-mG-mA3"/>
+                <menuItem title="Add Custom Path" keyEquivalent="O" id="xJa-mG-mA3">
+                    <connections>
+                        <action selector="addExecutablePath:" target="-1" id="bkb-De-5Y1"/>
+                    </connections>
+                </menuItem>
             </items>
             <point key="canvasLocation" x="-284" y="290"/>
         </menu>

@@ -9,6 +9,7 @@
 #import "FKPreferencesAppsViewController.h"
 #import "FKAppDelegate.h"
 #import "FKBundle.h"
+#import "FKExecutablePathWindowController.h"
 
 @interface FKPreferencesAppsViewController () <NSTableViewDelegate, NSTableViewDataSource, NSDraggingDestination, NSTextFinderClient>
 
@@ -27,6 +28,8 @@
 
 @property (strong) IBOutlet NSLayoutConstraint *tableViewTopConstraint;
 
+@property (strong) FKExecutablePathWindowController *pathController;
+
 - (IBAction)addBundle:(id)sender;
 - (IBAction)addExecutablePath:(id)sender;
 - (IBAction)filterApps:(id)sender;
@@ -41,7 +44,9 @@
     [self.appsListTableView registerForDraggedTypes:@[NSFilenamesPboardType]];
     self.appsListTableView.draggingDestinationFeedbackStyle = NSTableViewDraggingDestinationFeedbackStyleSourceList;
     
-    self.appsListController.sortDescriptors = @[[NSSortDescriptor sortDescriptorWithKey:FKBundleNameKey ascending:YES], [NSSortDescriptor sortDescriptorWithKey:FKBundlePathKey ascending:YES]];
+    self.appsListController.sortDescriptors = @[[NSSortDescriptor sortDescriptorWithKey:FKBundleNameKey ascending:YES comparator:^NSComparisonResult(id  _Nonnull obj1, id  _Nonnull obj2) {
+        return [obj1 localizedCaseInsensitiveCompare:obj2];
+    }], [NSSortDescriptor sortDescriptorWithKey:FKBundlePathKey ascending:YES]];
 }
 
 - (void)filterApps:(id)sender {
@@ -79,11 +84,32 @@
 }
 
 - (void)addExecutablePath:(id)sender {
+
+    if ( self.pathController == nil ) {
+        self.pathController = [[FKExecutablePathWindowController alloc] initWithWindowNibName:@"FKExecutablePathWindowController"];
+    }
     
+    [NSApp beginSheet:self.pathController.window modalForWindow:self.view.window modalDelegate:self didEndSelector:@selector(executablePathSheetDidEnd:returnCode:contextInfo:) contextInfo:nil];
 }
 
 - (void)addBundleWithURL:(NSURL *)URL {
     FKBundle *bundle = [FKBundle bundleWithURL:URL];
+    if ( [[self.appsListController.arrangedObjects valueForKeyPath:FKBundleIdentifierKey] containsObject:bundle.identifier] ) {
+        return;
+    }
+    [self.appsListController addObject:bundle];
+}
+
+#pragma mark - ModalSheet Delegate
+
+- (void)executablePathSheetDidEnd:(NSWindow *)sheet returnCode:(int)returnCode contextInfo:(void  *)contextInfo {
+    [sheet orderOut:nil];
+    if ( returnCode != NSOKButton ) {
+        return;
+    }
+    
+    NSURL *URL = [NSURL fileURLWithPath:self.pathController.selectedPath];
+    FKBundle *bundle = [FKBundle bundleWithExecutableURL:URL];
     if ( [[self.appsListController.arrangedObjects valueForKeyPath:FKBundleIdentifierKey] containsObject:bundle.identifier] ) {
         return;
     }
