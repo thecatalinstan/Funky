@@ -65,7 +65,7 @@
         toolbarItems = @{
           @"General": [NSImage imageNamed:NSImageNamePreferencesGeneral],
           @"Apps": [NSImage imageNamed:NSImageNameApplicationIcon],
-          @"Advanced": [NSImage imageNamed:NSImageNameAdvanced]
+//          @"Advanced": [NSImage imageNamed:NSImageNameAdvanced]
         };
     });
     return toolbarItems;

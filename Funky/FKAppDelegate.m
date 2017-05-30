@@ -86,7 +86,7 @@
 
 - (void)toggleCurrentApp:(id)sender {
     NSRunningApplication *app = [[NSWorkspace sharedWorkspace] activeApplication][NSWorkspaceApplicationKey];
-    [self addBundleWithURL:app.bundleURL];
+    [self toggleBundleWithURL:app.bundleURL];
 }
 
 - (void)showPreferencesDialog:(id)sender {
@@ -94,10 +94,11 @@
         self.preferencesWindowController = [[FKPreferencesWindowController alloc] initWithWindowNibName:FKPreferencesWindowControllerNibName currentViewIdx:0];
     }
     [self.preferencesWindowController showWindow:sender];
+    [NSApp activateIgnoringOtherApps:YES];
 }
 
 - (void)handleApplicationSwitch:(NSNotification *)note {
-    NSRunningApplication *app = note.userInfo[NSWorkspaceApplicationKey];
+    NSRunningApplication *app = note.userInfo[NSWorkspaceApplicationKey] ? : [[NSWorkspace sharedWorkspace] activeApplication][NSWorkspaceApplicationKey];
     NSData *bundleData = [[NSUserDefaults standardUserDefaults] objectForKey:FKBundlesKeyPath];
     NSArray<FKBundle *> *bundles = [NSKeyedUnarchiver unarchiveObjectWithData:bundleData];
     
@@ -123,14 +124,14 @@
     
     NSLog(@"%@: %@", app.executableURL.path, @(state));
     
-    self.statusItem.image = [NSImage imageNamed:(state ? FKStatusImageName : FKStatusActiveImageName)];
+    self.statusItem.image = [NSImage imageNamed:(state ? FKStatusActiveImageName : FKStatusImageName)];
 }
 
 - (BOOL)stateForApp:(NSRunningApplication *)app inBundles:(NSArray<FKBundle *> *)bundles {
     return [[bundles valueForKeyPath:FKBundleIdentifierKey] containsObject:app.bundleIdentifier] || [[bundles valueForKeyPath:FKBundlePathKey] containsObject:app.bundleURL.path];
 }
 
-- (void)addBundleWithURL:(NSURL *)URL {
+- (void)toggleBundleWithURL:(NSURL *)URL {
     FKBundle *bundle = [FKBundle bundleWithURL:URL];
     
     NSData *bundleData = [[NSUserDefaults standardUserDefaults] objectForKey:FKBundlesKeyPath];
@@ -162,7 +163,10 @@
         notification.contentImage = bundle.image;
         notification.identifier = [NSUUID UUID].UUIDString;
         [[NSUserNotificationCenter defaultUserNotificationCenter] deliverNotification:notification];
+        
+        [self handleApplicationSwitch:nil];
     });
+    
 }
 
 
