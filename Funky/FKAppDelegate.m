@@ -48,6 +48,12 @@
     
     [Fabric with:@[[Crashlytics class]]];
     
+    NSMutableDictionary *defaults = [NSMutableDictionary dictionary];
+    defaults[@"NSApplicationCrashOnExceptions"] = @YES;    
+    [[NSUserDefaults standardUserDefaults] registerDefaults:defaults];
+    [[NSUserDefaults standardUserDefaults] synchronize];
+
+    
     [[NSWorkspace sharedWorkspace].notificationCenter addObserverForName:NSWorkspaceDidActivateApplicationNotification object:nil queue:nil usingBlock:^(NSNotification * _Nonnull note) { @autoreleasepool {
         dispatch_async(self.eventQueue, ^{ @autoreleasepool {
             [self handleApplicationSwitch:note];
@@ -69,8 +75,6 @@
         PTHotKey *toggleAppHotKey = [PTHotKey hotKeyWithIdentifier:FKToggleAppShortcutKeyIdentifier keyCombo:[[NSUserDefaults standardUserDefaults] objectForKey:FKToggleAppShortcutKeyPath] target:self action:@selector(toggleCurrentApp:)];
         [[PTHotKeyCenter sharedCenter] registerHotKey:toggleAppHotKey];
     }}];
-    
-    [self showPreferencesDialog:self];
 }
 
 - (void)applicationWillTerminate:(NSNotification *)aNotification {
