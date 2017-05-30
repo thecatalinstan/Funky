@@ -86,7 +86,7 @@
 
 - (void)showPreferencesDialog:(id)sender {
     if ( self.preferencesWindowController == nil ) {
-        self.preferencesWindowController = [[FKPreferencesWindowController alloc] initWithWindowNibName:FKPreferencesWindowControllerNibName currentViewIdx:1];
+        self.preferencesWindowController = [[FKPreferencesWindowController alloc] initWithWindowNibName:FKPreferencesWindowControllerNibName currentViewIdx:0];
     }
     [self.preferencesWindowController showWindow:sender];
 }

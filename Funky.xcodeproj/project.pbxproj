@@ -16,6 +16,7 @@
 		AD10C18A1ECC7897002BF215 /* FKExecutablePathWindowController.m in Sources */ = {isa = PBXBuildFile; fileRef = AD10C1881ECC7897002BF215 /* FKExecutablePathWindowController.m */; };
 		AD10C18B1ECC7897002BF215 /* FKExecutablePathWindowController.xib in Resources */ = {isa = PBXBuildFile; fileRef = AD10C1891ECC7897002BF215 /* FKExecutablePathWindowController.xib */; };
 		AD315BAE1E7FEB0500CAF103 /* FKBundle.m in Sources */ = {isa = PBXBuildFile; fileRef = AD315BAD1E7FEB0500CAF103 /* FKBundle.m */; };
+		AD606C021EDD6E0300F2DB64 /* RVNReceiptValidation.m in Sources */ = {isa = PBXBuildFile; fileRef = AD606C011EDD6E0300F2DB64 /* RVNReceiptValidation.m */; };
 		AD85E9081E82C2D200125BF0 /* FKBundleTableCellView.m in Sources */ = {isa = PBXBuildFile; fileRef = AD85E9071E82C2D200125BF0 /* FKBundleTableCellView.m */; };
 		ADB539ED1E6C609F00806DF8 /* FKPreferencesWindowController.m in Sources */ = {isa = PBXBuildFile; fileRef = ADB539EB1E6C609F00806DF8 /* FKPreferencesWindowController.m */; };
 		ADB539EE1E6C609F00806DF8 /* FKPreferencesWindowController.xib in Resources */ = {isa = PBXBuildFile; fileRef = ADB539EC1E6C609F00806DF8 /* FKPreferencesWindowController.xib */; };
@@ -73,6 +74,8 @@
 		AD10C1891ECC7897002BF215 /* FKExecutablePathWindowController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = FKExecutablePathWindowController.xib; sourceTree = "<group>"; };
 		AD315BAC1E7FEB0500CAF103 /* FKBundle.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FKBundle.h; sourceTree = "<group>"; };
 		AD315BAD1E7FEB0500CAF103 /* FKBundle.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FKBundle.m; sourceTree = "<group>"; };
+		AD606C001EDD6E0300F2DB64 /* RVNReceiptValidation.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RVNReceiptValidation.h; sourceTree = "<group>"; };
+		AD606C011EDD6E0300F2DB64 /* RVNReceiptValidation.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RVNReceiptValidation.m; sourceTree = "<group>"; };
 		AD85E9061E82C2D200125BF0 /* FKBundleTableCellView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FKBundleTableCellView.h; sourceTree = "<group>"; };
 		AD85E9071E82C2D200125BF0 /* FKBundleTableCellView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FKBundleTableCellView.m; sourceTree = "<group>"; };
 		ADB539EA1E6C609F00806DF8 /* FKPreferencesWindowController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FKPreferencesWindowController.h; sourceTree = "<group>"; };
@@ -220,6 +223,8 @@
 				AD10C1871ECC7897002BF215 /* FKExecutablePathWindowController.h */,
 				AD10C1881ECC7897002BF215 /* FKExecutablePathWindowController.m */,
 				AD10C1891ECC7897002BF215 /* FKExecutablePathWindowController.xib */,
+				AD606C001EDD6E0300F2DB64 /* RVNReceiptValidation.h */,
+				AD606C011EDD6E0300F2DB64 /* RVNReceiptValidation.m */,
 				ADDC0F691E672CA700C6CBF0 /* Supporting Files */,
 			);
 			path = Funky;
@@ -483,6 +488,7 @@
 				ADB539ED1E6C609F00806DF8 /* FKPreferencesWindowController.m in Sources */,
 				ADCC3F711E684F0900A7C4F1 /* FKHelper.m in Sources */,
 				AD10C18A1ECC7897002BF215 /* FKExecutablePathWindowController.m in Sources */,
+				AD606C021EDD6E0300F2DB64 /* RVNReceiptValidation.m in Sources */,
 				ADDC0F681E672CA700C6CBF0 /* FKAppDelegate.m in Sources */,
 				ADE308DF1E6EC342001A48CB /* FKPreferencesAdvancedViewController.m in Sources */,
 			);
