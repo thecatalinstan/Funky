@@ -72,10 +72,12 @@
 }
 
 - (void)awakeFromNib {
-    self.quitButton = [NSButton buttonWithTitle:@"Quit" target:NSApp action:@selector(terminate:)];
+    self.quitButton = [[NSButton alloc] initWithFrame:NSZeroRect];
+    self.quitButton.title = @"Quit";
+    self.quitButton.target = NSApp;
+    self.quitButton.action = @selector(terminate:);
     self.quitButton.keyEquivalent = @"q";
     self.quitButton.keyEquivalentModifierMask = NSCommandKeyMask;
-    self.quitButton.frame = NSZeroRect;
     [self.window.contentView addSubview:self.quitButton];
 
     [self.window standardWindowButton:NSWindowCloseButton].keyEquivalent = @"w";
