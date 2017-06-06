@@ -1,0 +1,76 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.Cocoa.XIB" version="3.0" toolsVersion="12120" systemVersion="16F73" targetRuntime="MacOSX.Cocoa" propertyAccessControl="none" useAutolayout="YES" customObjectInstantitationMethod="direct">
+    <dependencies>
+        <deployment identifier="macosx"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.CocoaPlugin" version="12120"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <customObject id="-2" userLabel="File's Owner" customClass="FKPreferencesGeneralViewController">
+            <connections>
+                <outlet property="toggleAppShortcut" destination="Zd9-1F-kcV" id="sWO-NY-jkv"/>
+                <outlet property="view" destination="Hz6-mo-xeY" id="0bl-1N-x8E"/>
+            </connections>
+        </customObject>
+        <customObject id="-1" userLabel="First Responder" customClass="FirstResponder"/>
+        <customObject id="-3" userLabel="Application" customClass="NSObject"/>
+        <customView id="Hz6-mo-xeY">
+            <rect key="frame" x="0.0" y="0.0" width="483" height="102"/>
+            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
+            <subviews>
+                <textField horizontalHuggingPriority="251" verticalHuggingPriority="750" allowsCharacterPickerTouchBarItem="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ejO-yv-uSw">
+                    <rect key="frame" x="18" y="65" width="204" height="17"/>
+                    <constraints>
+                        <constraint firstAttribute="width" constant="200" id="Gia-eh-WZW"/>
+                    </constraints>
+                    <textFieldCell key="cell" scrollable="YES" lineBreakMode="clipping" sendsActionOnEndEditing="YES" alignment="right" title="Toggle current app:" id="xBc-qc-4yD">
+                        <font key="font" metaFont="system"/>
+                        <color key="textColor" name="labelColor" catalog="System" colorSpace="catalog"/>
+                        <color key="backgroundColor" name="controlColor" catalog="System" colorSpace="catalog"/>
+                    </textFieldCell>
+                </textField>
+                <customView translatesAutoresizingMaskIntoConstraints="NO" id="Zd9-1F-kcV" customClass="SRRecorderControl">
+                    <rect key="frame" x="228" y="61" width="200" height="25"/>
+                    <constraints>
+                        <constraint firstAttribute="height" constant="25" id="g71-67-5Zm"/>
+                        <constraint firstAttribute="width" constant="200" id="gpg-v6-h95"/>
+                    </constraints>
+                </customView>
+                <box verticalHuggingPriority="750" boxType="separator" translatesAutoresizingMaskIntoConstraints="NO" id="V8S-6n-Aa4">
+                    <rect key="frame" x="20" y="46" width="443" height="5"/>
+                </box>
+                <button verticalHuggingPriority="251" verticalCompressionResistancePriority="749" translatesAutoresizingMaskIntoConstraints="NO" id="xzA-iH-A42">
+                    <rect key="frame" x="226" y="18" width="183" height="22"/>
+                    <constraints>
+                        <constraint firstAttribute="height" constant="18" id="HCT-hr-JT0"/>
+                    </constraints>
+                    <buttonCell key="cell" type="check" title="Launch Funky when I login" bezelStyle="regularSquare" imagePosition="left" alignment="left" state="on" inset="2" id="Aoa-Vw-DCf">
+                        <behavior key="behavior" changeContents="YES" doesNotDimImage="YES" lightByContents="YES"/>
+                        <font key="font" metaFont="system"/>
+                    </buttonCell>
+                    <connections>
+                        <binding destination="-3" name="value" keyPath="delegate.launchOnLogin" id="K0O-Iu-J79">
+                            <dictionary key="options">
+                                <bool key="NSAlwaysPresentsApplicationModalAlerts" value="YES"/>
+                                <bool key="NSValidatesImmediately" value="YES"/>
+                            </dictionary>
+                        </binding>
+                    </connections>
+                </button>
+            </subviews>
+            <constraints>
+                <constraint firstItem="V8S-6n-Aa4" firstAttribute="leading" secondItem="Hz6-mo-xeY" secondAttribute="leading" constant="20" symbolic="YES" id="3tI-3D-lDS"/>
+                <constraint firstItem="ejO-yv-uSw" firstAttribute="top" secondItem="Hz6-mo-xeY" secondAttribute="top" constant="20" symbolic="YES" id="Ae2-Ns-VZu"/>
+                <constraint firstAttribute="trailing" secondItem="V8S-6n-Aa4" secondAttribute="trailing" constant="20" symbolic="YES" id="W8I-Cq-kcf"/>
+                <constraint firstItem="xzA-iH-A42" firstAttribute="top" secondItem="V8S-6n-Aa4" secondAttribute="bottom" constant="10" id="eEF-jr-1Ef"/>
+                <constraint firstItem="xzA-iH-A42" firstAttribute="leading" secondItem="Zd9-1F-kcV" secondAttribute="leading" id="eJN-UF-3HG"/>
+                <constraint firstItem="Zd9-1F-kcV" firstAttribute="leading" secondItem="ejO-yv-uSw" secondAttribute="trailing" constant="8" symbolic="YES" id="fpo-86-vwP"/>
+                <constraint firstAttribute="bottom" secondItem="xzA-iH-A42" secondAttribute="bottom" constant="20" id="gSs-ik-mpJ"/>
+                <constraint firstItem="V8S-6n-Aa4" firstAttribute="top" secondItem="ejO-yv-uSw" secondAttribute="bottom" constant="16" id="nyg-f8-lIJ"/>
+                <constraint firstItem="Zd9-1F-kcV" firstAttribute="centerY" secondItem="ejO-yv-uSw" secondAttribute="centerY" id="und-U4-yMl"/>
+                <constraint firstItem="ejO-yv-uSw" firstAttribute="leading" secondItem="Hz6-mo-xeY" secondAttribute="leading" constant="20" symbolic="YES" id="vDT-ly-QvP"/>
+            </constraints>
+            <point key="canvasLocation" x="140.5" y="283.5"/>
+        </customView>
+    </objects>
+</document>

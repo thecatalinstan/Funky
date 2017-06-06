@@ -1,8 +1,8 @@
 //
 //  AppDelegate.h
-//  Funky
+//  FunkyHelper
 //
-//  Created by Cătălin Stan on 01/03/2017.
+//  Created by Cătălin Stan on 17/05/2017.
 //  Copyright © 2017 Cătălin Stan. All rights reserved.
 //
 

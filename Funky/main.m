@@ -7,7 +7,16 @@
 //
 
 #import <Cocoa/Cocoa.h>
+#import "RVNReceiptValidation.h"
 
 int main(int argc, const char * argv[]) {
-    return NSApplicationMain(argc, argv);
+    @try {
+#if !DEBUG && !DEVELOPMENT
+        RVNValidate();
+#endif
+        return NSApplicationMain(argc, argv);
+    } @catch (NSException *e) {
+        NSLog(@"%@", e.reason);
+        return EXIT_FAILURE;
+    }
 }
