@@ -30,10 +30,10 @@
                     </textFieldCell>
                 </textField>
                 <customView translatesAutoresizingMaskIntoConstraints="NO" id="Zd9-1F-kcV" customClass="SRRecorderControl">
-                    <rect key="frame" x="228" y="61" width="160" height="25"/>
+                    <rect key="frame" x="228" y="61" width="200" height="25"/>
                     <constraints>
                         <constraint firstAttribute="height" constant="25" id="g71-67-5Zm"/>
-                        <constraint firstAttribute="width" constant="160" id="gpg-v6-h95"/>
+                        <constraint firstAttribute="width" constant="200" id="gpg-v6-h95"/>
                     </constraints>
                 </customView>
                 <box verticalHuggingPriority="750" boxType="separator" translatesAutoresizingMaskIntoConstraints="NO" id="V8S-6n-Aa4">
