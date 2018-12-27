@@ -124,7 +124,9 @@
     
     NSLog(@"%@: %@", app.executableURL.path, @(state));
     
-    self.statusItem.image = [NSImage imageNamed:(state ? FKStatusActiveImageName : FKStatusImageName)];
+    dispatch_async(dispatch_get_main_queue(), ^{
+        self.statusItem.image = [NSImage imageNamed:(state ? FKStatusActiveImageName : FKStatusImageName)];        
+    });
 }
 
 - (BOOL)stateForApp:(NSRunningApplication *)app inBundles:(NSArray<FKBundle *> *)bundles {
