@@ -121,7 +121,9 @@
     }
     
     if ( length == 0 ) {
-        *error = nil;
+        if ( error != NULL ) {
+            *error = nil;
+        }
         return INT32_MAX;
     }
     
