@@ -130,7 +130,11 @@
 }
 
 - (BOOL)stateForApp:(NSRunningApplication *)app inBundles:(NSArray<FKBundle *> *)bundles {
-    return [[bundles valueForKeyPath:FKBundleIdentifierKey] containsObject:app.bundleIdentifier] || [[bundles valueForKeyPath:FKBundlePathKey] containsObject:app.bundleURL.path];
+    BOOL haveBundleIdentifier = [[bundles valueForKeyPath:FKBundleIdentifierKey] containsObject:app.bundleIdentifier];
+    BOOL haveBundlePath = [[bundles valueForKeyPath:FKBundlePathKey] containsObject:app.bundleURL.path];
+    BOOL haveExecutablePath = [[bundles valueForKeyPath:FKBundleExecutablePathKey] containsObject:app.executableURL.path];
+    
+    return haveBundleIdentifier || haveBundlePath || haveExecutablePath;
 }
 
 - (void)toggleBundleWithURL:(NSURL *)URL {
