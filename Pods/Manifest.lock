@@ -1,7 +1,7 @@
 PODS:
-  - Crashlytics (3.8.4):
-    - Fabric (~> 1.6.3)
-  - Fabric (1.6.11)
+  - Crashlytics (3.12.0):
+    - Fabric (~> 1.9.0)
+  - Fabric (1.9.0)
   - ShortcutRecorder (2.17):
     - ShortcutRecorder/Core (= 2.17)
     - ShortcutRecorder/PTHotKey (= 2.17)
@@ -10,9 +10,14 @@ PODS:
     - ShortcutRecorder/Core
 
 DEPENDENCIES:
-  - Crashlytics (~> 3.8.0)
-  - Fabric (~> 1.6.11)
+  - Crashlytics (~> 3.12.0)
+  - Fabric (~> 1.9.0)
   - ShortcutRecorder (from `https://github.com/Kentzo/ShortcutRecorder`, branch `master`)
+
+SPEC REPOS:
+  https://github.com/cocoapods/specs.git:
+    - Crashlytics
+    - Fabric
 
 EXTERNAL SOURCES:
   ShortcutRecorder:
@@ -21,14 +26,14 @@ EXTERNAL SOURCES:
 
 CHECKOUT OPTIONS:
   ShortcutRecorder:
-    :commit: d8aab0e3534f4321b7f7f9fc4df4185a2c89ca6a
+    :commit: c978ce9bb482c31acfabe23baa2b075808a1fdd8
     :git: https://github.com/Kentzo/ShortcutRecorder
 
 SPEC CHECKSUMS:
-  Crashlytics: 79e236942ca1e7fc641df1feb9a275360a78ab6a
-  Fabric: 5911403591946b8228ab1c51d98f1d7137e863c6
+  Crashlytics: 07fb167b1694128c1c9a5a5cc319b0e9c3ca0933
+  Fabric: f988e33c97f08930a413e08123064d2e5f68d655
   ShortcutRecorder: c0e1ae0e97917925feab04e8817d2be6ef1b0548
 
-PODFILE CHECKSUM: 922c03a17b8601e6cd086092211890c7b03c289b
+PODFILE CHECKSUM: c24b7745d4b7f8abade95379a846335c35209de4
 
-COCOAPODS: 1.2.0
+COCOAPODS: 1.5.3

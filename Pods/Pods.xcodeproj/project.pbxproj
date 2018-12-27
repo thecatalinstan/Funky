@@ -8,7 +8,6 @@
 
 /* Begin PBXBuildFile section */
 		004AA6AE48C6F66FC09C8882ABA51031 /* shortcut-recorder-yosemite-bezel-editing-left@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = E4C1FFBAB546B12115A486CD1F4CB6D1 /* shortcut-recorder-yosemite-bezel-editing-left@2x.png */; };
-		006B2B9A04FB8A911C55ADDB127582B9 /* ShortcutRecorder.bundle in Resources */ = {isa = PBXBuildFile; fileRef = BB2B0A833F8233F56EA527A4AF88C8D5 /* ShortcutRecorder.bundle */; };
 		00BB45DC0E32BE7F919BA68DA39B0B1C /* shortcut-recorder-bezel-disabled-left@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 0A63D1E414A669F7AA666C531264C654 /* shortcut-recorder-bezel-disabled-left@2x.png */; };
 		00CDB709B8321F4755CD100ED419DAC0 /* shortcut-recorder-bezel-disabled-right.png in Resources */ = {isa = PBXBuildFile; fileRef = 7A3A039C0F6737B37CE7D64EBB266302 /* shortcut-recorder-bezel-disabled-right.png */; };
 		0469DBA0BF5AC09002F9F195ABD45490 /* shortcut-recorder-yosemite-bezel-editing-disabled-left.png in Resources */ = {isa = PBXBuildFile; fileRef = B2A92CAF195CC7C6BD6E458013D485EA /* shortcut-recorder-yosemite-bezel-editing-disabled-left.png */; };
@@ -17,9 +16,10 @@
 		0679668736003C6D1634FE7593BCBB9D /* de.lproj in Resources */ = {isa = PBXBuildFile; fileRef = D1E4C728AFF0C2E32161A72356B573BE /* de.lproj */; };
 		08DDEFF5A0B82D9FF753A23658C2E672 /* es.lproj in Resources */ = {isa = PBXBuildFile; fileRef = 2A1BA52CA9160F60A14ECAF131D00D9B /* es.lproj */; };
 		117F1DD1E5FEA4FEC05ED24623E70F8C /* shortcut-recorder-yosemite-bezel-editing-disabled-middle.png in Resources */ = {isa = PBXBuildFile; fileRef = E8217FB8668CB5820C227E4654EEBE40 /* shortcut-recorder-yosemite-bezel-editing-disabled-middle.png */; };
-		1199C51AA36E34FED5F73CC6A9309A10 /* ShortcutRecorder-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = 7BC398E789120FD9472ACE20E396B149 /* ShortcutRecorder-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		1199C51AA36E34FED5F73CC6A9309A10 /* ShortcutRecorder-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = AAA0AF5547EA4B27DFF53710A72A7B33 /* ShortcutRecorder-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		1770C14B9F73887F0003EC3EF35913C8 /* nb.lproj in Resources */ = {isa = PBXBuildFile; fileRef = 96BCD00D1CE209256C432A7F63AC60CF /* nb.lproj */; };
 		1A103B068A13E5382247910BA0743387 /* shortcut-recorder-bezel-disabled-middle@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 71D6192F3715F79BADF25F3B8DB9A1F3 /* shortcut-recorder-bezel-disabled-middle@2x.png */; };
+		1AAE4B399ED78C2D20D79DDE1AD78D57 /* ShortcutRecorder.bundle in Resources */ = {isa = PBXBuildFile; fileRef = 55B35C9C7F0D119A8FE319CB5E33FF58 /* ShortcutRecorder.bundle */; };
 		1B0BDE901C356A4E6DA3540D215F1BF0 /* fr.lproj in Resources */ = {isa = PBXBuildFile; fileRef = 4012A313D1621873A315B1414F41DC2A /* fr.lproj */; };
 		1BAD527EFC263C68937B1CAE5826BED9 /* shortcut-recorder-yosemite-bezel-disabled-right.png in Resources */ = {isa = PBXBuildFile; fileRef = C285DD4093063E6DB0F3CC0132EFC084 /* shortcut-recorder-yosemite-bezel-disabled-right.png */; };
 		1C2527744A23B3C76D6AA464F706E2EC /* shortcut-recorder-bezel-editing-disabled-left.png in Resources */ = {isa = PBXBuildFile; fileRef = 190A9609E68231E23D8E9B46969F1D7C /* shortcut-recorder-bezel-editing-disabled-left.png */; };
@@ -51,7 +51,6 @@
 		4D54B989E45F305C3B2954B9622BFFC9 /* shortcut-recorder-bezel-editing-right@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = B2A854594B7EA5435E955018B4F12AA5 /* shortcut-recorder-bezel-editing-right@2x.png */; };
 		4EDD20A82A6EFCA73722CE0E4F4E1F89 /* shortcut-recorder-yosemite-bezel-editing-right.png in Resources */ = {isa = PBXBuildFile; fileRef = FFD3E2347B92F75E1838921DFF835CB1 /* shortcut-recorder-yosemite-bezel-editing-right.png */; };
 		5473196D69BDCBAEF89DFA89376AB9D3 /* shortcut-recorder-yosemite-bezel-left.png in Resources */ = {isa = PBXBuildFile; fileRef = 349B6081C58DE689521446D788F016A0 /* shortcut-recorder-yosemite-bezel-left.png */; };
-		56EB2B3A3C978F60D3A42BE08C7CD61D /* Cocoa.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 4D014CC6267C4F16880F4CE89F9CD766 /* Cocoa.framework */; };
 		56F4445AFC23BC5BE437A127835D1AF0 /* shortcut-recorder-yosemite-bezel-left@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = E2C2EB4DEF0AB3264D3E0DCDF48820F9 /* shortcut-recorder-yosemite-bezel-left@2x.png */; };
 		571A4E03CC912F137FC357808FC86605 /* zh-Hans.lproj in Resources */ = {isa = PBXBuildFile; fileRef = B9F3EBF5D6D8A2F8CA5CF65090AAF503 /* zh-Hans.lproj */; };
 		5780AB00B7AFE459771340F9868FA9B5 /* PTHotKey.m in Sources */ = {isa = PBXBuildFile; fileRef = 502F26420F5DB7BA4601AC3F988CED9C /* PTHotKey.m */; settings = {COMPILER_FLAGS = "-fno-objc-arc"; }; };
@@ -65,11 +64,11 @@
 		65280A15EEA80E2C8210FAD263A28EA9 /* shortcut-recorder-bezel-left.png in Resources */ = {isa = PBXBuildFile; fileRef = C694C4EE337B82D2E8DC5C7C5EEC654C /* shortcut-recorder-bezel-left.png */; };
 		68E01423193C17CAE1639E6B9FB27475 /* shortcut-recorder-clear-highlighted@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 50141D78A2E64D9419CFCA80ACD017A1 /* shortcut-recorder-clear-highlighted@2x.png */; };
 		69EB33E2E9C345DA4EAF809659844958 /* shortcut-recorder-yosemite-bezel-editing-disabled-middle@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 0366D3EC1A8B16F8751BAE10DB93888C /* shortcut-recorder-yosemite-bezel-editing-disabled-middle@2x.png */; };
+		6B398CD60CF575897FA199CF4D97274F /* Carbon.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3B0A27F7D816EF3C2A8A037C0AE9F6CE /* Carbon.framework */; };
 		6B9AD703766AEFC0C35957D1038AAB05 /* SRValidator.m in Sources */ = {isa = PBXBuildFile; fileRef = EC1E2D32E614B19E3B64A0EC44C5FA54 /* SRValidator.m */; settings = {COMPILER_FLAGS = "-DOS_OBJECT_USE_OBJC=0"; }; };
 		6BF19D4D812DF13FCCC040A484B5ADD5 /* shortcut-recorder-bezel-editing-disabled-left@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = D7A44601D358CB6D7068428427952EC0 /* shortcut-recorder-bezel-editing-disabled-left@2x.png */; };
 		6CC689D94CDF1DF801E864D5CB524D06 /* shortcut-recorder-bezel-editing-disabled-middle@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = F3D9E7C4B2324B5A39192BCDC658B8B4 /* shortcut-recorder-bezel-editing-disabled-middle@2x.png */; };
 		6D648B485BF4130D71AB1F07EEEDF397 /* pt-BR.lproj in Resources */ = {isa = PBXBuildFile; fileRef = E64FACFB33BB7884A0DE17AF1DD96168 /* pt-BR.lproj */; };
-		74D2B0DF9AC62AC79A0E7973951EE5DA /* Carbon.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 2D161976F1755521FCFC031E367AC180 /* Carbon.framework */; };
 		7677518F5F79657E8244B18C6B681103 /* shortcut-recorder-yosemite-bezel-blue-highlighted-right@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 91A040633D56D9B49584A12B43CCC0AC /* shortcut-recorder-yosemite-bezel-blue-highlighted-right@2x.png */; };
 		77A268AFB1194600E32CBCA34FF84B1F /* shortcut-recorder-clear.png in Resources */ = {isa = PBXBuildFile; fileRef = 0D2B166CD93ED7A7F157E892A9DEA137 /* shortcut-recorder-clear.png */; };
 		7967666F070410A5089496D37FE8982D /* shortcut-recorder-yosemite-bezel-right@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 270347486426DD9C180E020D1E9E4F05 /* shortcut-recorder-yosemite-bezel-right@2x.png */; };
@@ -80,6 +79,7 @@
 		82D09CC2D9076B6D415AA5CDE908CFFC /* shortcut-recorder-snapback.png in Resources */ = {isa = PBXBuildFile; fileRef = 4A5727D02AAED24916E34150C1CF3BC9 /* shortcut-recorder-snapback.png */; };
 		83B62D3496813AB381C76F4328860804 /* SRKeyEquivalentModifierMaskTransformer.m in Sources */ = {isa = PBXBuildFile; fileRef = CC1D931986D6E34FE0689F9F3F955679 /* SRKeyEquivalentModifierMaskTransformer.m */; settings = {COMPILER_FLAGS = "-DOS_OBJECT_USE_OBJC=0"; }; };
 		84ABFB24054A28FFD18AC6A918AD0143 /* shortcut-recorder-yosemite-bezel-editing-disabled-right.png in Resources */ = {isa = PBXBuildFile; fileRef = 992D22FBC24BD520AADD6008FB4663DF /* shortcut-recorder-yosemite-bezel-editing-disabled-right.png */; };
+		84D1A7B431643F812F52D0153D2FDB80 /* Cocoa.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3D39892B712BA302C323D7387AD35584 /* Cocoa.framework */; };
 		850B7EECDDFA874BA0CD280447BAB644 /* shortcut-recorder-yosemite-clear@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 3A6F5E6B146FF1060CC7B9D0090B4ACD /* shortcut-recorder-yosemite-clear@2x.png */; };
 		872AC83F2E7F664AC51EE7AE29092C91 /* en.lproj in Resources */ = {isa = PBXBuildFile; fileRef = 8621108D6929F0B497D6FA7DC7941EA6 /* en.lproj */; };
 		88BF0E33C2EDB99388FF02BE881E24A0 /* PTHotKey.h in Headers */ = {isa = PBXBuildFile; fileRef = A944BFE2062EE77A50086D17D9780267 /* PTHotKey.h */; settings = {ATTRIBUTES = (Public, ); }; };
@@ -97,7 +97,7 @@
 		97666AB0E465F089272EDD28101B7015 /* shortcut-recorder-bezel-graphite-highlighted-left@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 103AF8578AFFAD782E64F2CAC0BF0280 /* shortcut-recorder-bezel-graphite-highlighted-left@2x.png */; };
 		978B3CDFF3F0F53F437AEE5CDBC9EEE8 /* shortcut-recorder-bezel-editing-disabled-middle.png in Resources */ = {isa = PBXBuildFile; fileRef = 5160A8607214D2E5445D43053A2E52B4 /* shortcut-recorder-bezel-editing-disabled-middle.png */; };
 		9DFB5E4A22202DA2F39C6E131298B754 /* pt.lproj in Resources */ = {isa = PBXBuildFile; fileRef = 4EE8C28EF57D5DED94733D65FBFEEE3A /* pt.lproj */; };
-		9E6E1681F54A79DFBF6C72A7BEC02863 /* ShortcutRecorder-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = DE6E97DD27713284335D5D16AE78383D /* ShortcutRecorder-dummy.m */; };
+		9E6E1681F54A79DFBF6C72A7BEC02863 /* ShortcutRecorder-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = C9DC494CC4DA9BE36A2622025F7FC3A4 /* ShortcutRecorder-dummy.m */; };
 		9ED4C596658EB20DA7AE0C19B836FFD0 /* PTHotKeyCenter.h in Headers */ = {isa = PBXBuildFile; fileRef = 5A3FA00D2E6A3683B9B1C83C242697AD /* PTHotKeyCenter.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		A2A0EE98B19B1972EF05043136B47518 /* SRKeyCodeTransformer.h in Headers */ = {isa = PBXBuildFile; fileRef = 3BEF97A7F0009096AD393131114F296E /* SRKeyCodeTransformer.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		A5ABFD70D85E1C09F361B3F705A06A50 /* sv.lproj in Resources */ = {isa = PBXBuildFile; fileRef = 42237615479424EA939BBC8A078AC4DC /* sv.lproj */; };
@@ -112,13 +112,13 @@
 		B3493253AD92E164924A198FE6143363 /* SRCommon.m in Sources */ = {isa = PBXBuildFile; fileRef = BEF81C84BEC86E1B52DFAF17AD54528F /* SRCommon.m */; settings = {COMPILER_FLAGS = "-DOS_OBJECT_USE_OBJC=0"; }; };
 		B54296E2DB2E7B92CBB6AA49CA55E75A /* sk.lproj in Resources */ = {isa = PBXBuildFile; fileRef = 14B485E8FA6731CDA717A65CB404257E /* sk.lproj */; };
 		B607D33E119C045633541A651BC46FA2 /* shortcut-recorder-yosemite-bezel-editing-left.png in Resources */ = {isa = PBXBuildFile; fileRef = ACF7CE8B07033D7CBA143E7B0C35511E /* shortcut-recorder-yosemite-bezel-editing-left.png */; };
+		B89EDDA24E6EB1E2F95C640FA35972DA /* Cocoa.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3D39892B712BA302C323D7387AD35584 /* Cocoa.framework */; };
 		BABFA79BC0DAC55AB3CDC044D16142CF /* SRModifierFlagsTransformer.m in Sources */ = {isa = PBXBuildFile; fileRef = B0A4A17029C17455FDFA3766309B815A /* SRModifierFlagsTransformer.m */; settings = {COMPILER_FLAGS = "-DOS_OBJECT_USE_OBJC=0"; }; };
 		BC1A1DFE6AFE925D8555514B212FAB00 /* shortcut-recorder-yosemite-clear.png in Resources */ = {isa = PBXBuildFile; fileRef = 6F727918F694328B796F242804455CFD /* shortcut-recorder-yosemite-clear.png */; };
 		BF2573C6A6E48711C634E17D407DD386 /* shortcut-recorder-snapback-highlighted@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 71C3EE5377E3FABEAB4920F500F90AA7 /* shortcut-recorder-snapback-highlighted@2x.png */; };
 		BF4E14A692E51B3F97E1D99817B4E0D9 /* shortcut-recorder-bezel-editing-middle.png in Resources */ = {isa = PBXBuildFile; fileRef = F850A9E96EB09E2BFE7B3EC3D163301B /* shortcut-recorder-bezel-editing-middle.png */; };
 		C2C590593A235469CE65A26F2E6A6067 /* PTKeyCombo.h in Headers */ = {isa = PBXBuildFile; fileRef = EFF4FBA20E81158B3FA9C2BDB454582D /* PTKeyCombo.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		C2D16C3F70A337F5C06907B834D921B0 /* shortcut-recorder-yosemite-bezel-middle.png in Resources */ = {isa = PBXBuildFile; fileRef = 3621BD32A38D97F0436A1B8DC5C57FFA /* shortcut-recorder-yosemite-bezel-middle.png */; };
-		C380D5886B2587AF60DEE77275741657 /* Cocoa.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 4D014CC6267C4F16880F4CE89F9CD766 /* Cocoa.framework */; };
 		C668E4519B715D06E016902C23362774 /* shortcut-recorder-yosemite-bezel-graphite-highlighted-left.png in Resources */ = {isa = PBXBuildFile; fileRef = A7E411D32B7140277B7142AFC16C9383 /* shortcut-recorder-yosemite-bezel-graphite-highlighted-left.png */; };
 		C7D2E70E03A035DC90F907F9EF783EF2 /* PTKeyCombo.m in Sources */ = {isa = PBXBuildFile; fileRef = E2FCD3590A8B3D534A4A60B04DA93DA7 /* PTKeyCombo.m */; settings = {COMPILER_FLAGS = "-fno-objc-arc"; }; };
 		CBAA0BD95336F2B32BD3214689FB3F32 /* PTKeyCodeTranslator.m in Sources */ = {isa = PBXBuildFile; fileRef = 142D27C1DC7995C82A591ED930249F8D /* PTKeyCodeTranslator.m */; settings = {COMPILER_FLAGS = "-fno-objc-arc"; }; };
@@ -130,7 +130,7 @@
 		DAFE1C906A6F1571D2D451CA81C8FC1D /* cs.lproj in Resources */ = {isa = PBXBuildFile; fileRef = 95CB0EC81EC7600BA049C47701505F1A /* cs.lproj */; };
 		DB19829358AF2B2463DB3744B9CFE74C /* ShortcutRecorder.h in Headers */ = {isa = PBXBuildFile; fileRef = EB07525D22ABB1E3B8C1099E58C63B92 /* ShortcutRecorder.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		DC52A332725E481563699FEC68471ED0 /* shortcut-recorder-bezel-middle.png in Resources */ = {isa = PBXBuildFile; fileRef = 5CE851672859CAAAB99E6C4AA3BF06B2 /* shortcut-recorder-bezel-middle.png */; };
-		DC7D85D63432029098E010F0A7E52DAD /* Pods-Funky-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = 06F7E91E65C160AE30304488013F8236 /* Pods-Funky-dummy.m */; };
+		DC7D85D63432029098E010F0A7E52DAD /* Pods-Funky-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = 3E281BFBCDA766137A35723D1F0D1F85 /* Pods-Funky-dummy.m */; };
 		DD3188A2935C77EF909FD938D05CDEB2 /* SRKeyCodeTransformer.m in Sources */ = {isa = PBXBuildFile; fileRef = CCE1FA2C0705BF24EFE6823ED8BA6186 /* SRKeyCodeTransformer.m */; settings = {COMPILER_FLAGS = "-DOS_OBJECT_USE_OBJC=0"; }; };
 		E11B4D1B26FC8AF94C8B6F437FAE3BD6 /* shortcut-recorder-bezel-editing-left@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 98CB77A3D14F628799FE67DBBC7F62EB /* shortcut-recorder-bezel-editing-left@2x.png */; };
 		E284512A7DE78BC0E83AB31C9875352D /* it.lproj in Resources */ = {isa = PBXBuildFile; fileRef = 077DE8E00B10DC9E2AA94A7E97204A00 /* it.lproj */; };
@@ -150,7 +150,7 @@
 		F9372BC3606784CE4B489F6C3D2B29F1 /* shortcut-recorder-yosemite-bezel-blue-highlighted-middle@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = F0FDD38B8526C9B3ADBDADC1B0373778 /* shortcut-recorder-yosemite-bezel-blue-highlighted-middle@2x.png */; };
 		FE6E32C189887986AB224E3C9EBD813B /* shortcut-recorder-bezel-blue-highlighted-right.png in Resources */ = {isa = PBXBuildFile; fileRef = 505A73B85E454CB096FF230E69FE4EB0 /* shortcut-recorder-bezel-blue-highlighted-right.png */; };
 		FEA25BC9F0872E639DD97679703C0228 /* es-MX.lproj in Resources */ = {isa = PBXBuildFile; fileRef = 12F7BECA668591D8CFE712D28B81EF22 /* es-MX.lproj */; };
-		FEBBB33C80DEA98CF9BCBBCF7103534D /* Pods-Funky-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = 2E1F5FE1DB0E05CF2D68BA9A226217AE /* Pods-Funky-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		FEBBB33C80DEA98CF9BCBBCF7103534D /* Pods-Funky-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = 05DFF279A4270EEB18217E6F5CED7E45 /* Pods-Funky-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -174,7 +174,7 @@
 		00E8053641771484BF6AA7489BCA1FC5 /* shortcut-recorder-yosemite-bezel-editing-middle@2x.png */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = image.png; name = "shortcut-recorder-yosemite-bezel-editing-middle@2x.png"; path = "Resources/shortcut-recorder-yosemite-bezel-editing-middle@2x.png"; sourceTree = "<group>"; };
 		017F38D03283467E39E5CE595E49992F /* shortcut-recorder-yosemite-bezel-graphite-highlighted-right.png */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = image.png; name = "shortcut-recorder-yosemite-bezel-graphite-highlighted-right.png"; path = "Resources/shortcut-recorder-yosemite-bezel-graphite-highlighted-right.png"; sourceTree = "<group>"; };
 		0366D3EC1A8B16F8751BAE10DB93888C /* shortcut-recorder-yosemite-bezel-editing-disabled-middle@2x.png */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = image.png; name = "shortcut-recorder-yosemite-bezel-editing-disabled-middle@2x.png"; path = "Resources/shortcut-recorder-yosemite-bezel-editing-disabled-middle@2x.png"; sourceTree = "<group>"; };
-		06F7E91E65C160AE30304488013F8236 /* Pods-Funky-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "Pods-Funky-dummy.m"; sourceTree = "<group>"; };
+		05DFF279A4270EEB18217E6F5CED7E45 /* Pods-Funky-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "Pods-Funky-umbrella.h"; sourceTree = "<group>"; };
 		077DE8E00B10DC9E2AA94A7E97204A00 /* it.lproj */ = {isa = PBXFileReference; includeInIndex = 1; name = it.lproj; path = Resources/it.lproj; sourceTree = "<group>"; };
 		0A63D1E414A669F7AA666C531264C654 /* shortcut-recorder-bezel-disabled-left@2x.png */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = image.png; name = "shortcut-recorder-bezel-disabled-left@2x.png"; path = "Resources/shortcut-recorder-bezel-disabled-left@2x.png"; sourceTree = "<group>"; };
 		0D2B166CD93ED7A7F157E892A9DEA137 /* shortcut-recorder-clear.png */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = image.png; name = "shortcut-recorder-clear.png"; path = "Resources/shortcut-recorder-clear.png"; sourceTree = "<group>"; };
@@ -184,6 +184,7 @@
 		142D27C1DC7995C82A591ED930249F8D /* PTKeyCodeTranslator.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = PTKeyCodeTranslator.m; path = PTHotKey/PTKeyCodeTranslator.m; sourceTree = "<group>"; };
 		1484248D04AF199175C074C0E7EFD172 /* shortcut-recorder-clear@2x.png */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = image.png; name = "shortcut-recorder-clear@2x.png"; path = "Resources/shortcut-recorder-clear@2x.png"; sourceTree = "<group>"; };
 		14B485E8FA6731CDA717A65CB404257E /* sk.lproj */ = {isa = PBXFileReference; includeInIndex = 1; name = sk.lproj; path = Resources/sk.lproj; sourceTree = "<group>"; };
+		1568F233E6554D99DA6738F43BA6A188 /* ShortcutRecorder.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; name = ShortcutRecorder.framework; path = ShortcutRecorder.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		16ED18272FBD9582C3CD7EA58EB056E8 /* SRKeyEquivalentModifierMaskTransformer.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = SRKeyEquivalentModifierMaskTransformer.h; path = Library/SRKeyEquivalentModifierMaskTransformer.h; sourceTree = "<group>"; };
 		17F7172F9A85E1F5E68A9DAE966D80B5 /* SRRecorderControl.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = SRRecorderControl.m; path = Library/SRRecorderControl.m; sourceTree = "<group>"; };
 		190A9609E68231E23D8E9B46969F1D7C /* shortcut-recorder-bezel-editing-disabled-left.png */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = image.png; name = "shortcut-recorder-bezel-editing-disabled-left.png"; path = "Resources/shortcut-recorder-bezel-editing-disabled-left.png"; sourceTree = "<group>"; };
@@ -198,25 +199,22 @@
 		2A89800D6090CBBE909FA3E25381DF08 /* shortcut-recorder-bezel-blue-highlighted-middle.png */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = image.png; name = "shortcut-recorder-bezel-blue-highlighted-middle.png"; path = "Resources/shortcut-recorder-bezel-blue-highlighted-middle.png"; sourceTree = "<group>"; };
 		2C541C33FF3508637EFC2A9792CE216D /* Crashlytics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Crashlytics.framework; path = OSX/Crashlytics.framework; sourceTree = "<group>"; };
 		2CCAD364B0E4A18FDAE6138045A667BA /* shortcut-recorder-yosemite-bezel-disabled-left@2x.png */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = image.png; name = "shortcut-recorder-yosemite-bezel-disabled-left@2x.png"; path = "Resources/shortcut-recorder-yosemite-bezel-disabled-left@2x.png"; sourceTree = "<group>"; };
-		2D161976F1755521FCFC031E367AC180 /* Carbon.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Carbon.framework; path = Platforms/MacOSX.platform/Developer/SDKs/MacOSX10.12.sdk/System/Library/Frameworks/Carbon.framework; sourceTree = DEVELOPER_DIR; };
 		2DB1D2314E40E843EE536D7685E225B1 /* shortcut-recorder-yosemite-bezel-middle@2x.png */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = image.png; name = "shortcut-recorder-yosemite-bezel-middle@2x.png"; path = "Resources/shortcut-recorder-yosemite-bezel-middle@2x.png"; sourceTree = "<group>"; };
-		2E1F5FE1DB0E05CF2D68BA9A226217AE /* Pods-Funky-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "Pods-Funky-umbrella.h"; sourceTree = "<group>"; };
 		30B4140C1C3C8E3EB4B37DA9568F2AAF /* shortcut-recorder-yosemite-bezel-blue-highlighted-left@2x.png */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = image.png; name = "shortcut-recorder-yosemite-bezel-blue-highlighted-left@2x.png"; path = "Resources/shortcut-recorder-yosemite-bezel-blue-highlighted-left@2x.png"; sourceTree = "<group>"; };
 		31BDE6826487ED490B08E83CE6C9A57C /* shortcut-recorder-bezel-blue-highlighted-left.png */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = image.png; name = "shortcut-recorder-bezel-blue-highlighted-left.png"; path = "Resources/shortcut-recorder-bezel-blue-highlighted-left.png"; sourceTree = "<group>"; };
 		336B3D40A504FF8CA50BF18420C2843E /* shortcut-recorder-yosemite-bezel-graphite-highlighted-middle@2x.png */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = image.png; name = "shortcut-recorder-yosemite-bezel-graphite-highlighted-middle@2x.png"; path = "Resources/shortcut-recorder-yosemite-bezel-graphite-highlighted-middle@2x.png"; sourceTree = "<group>"; };
 		3493E7B80BB5C92D95DC74A68FDA85FA /* shortcut-recorder-bezel-disabled-middle.png */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = image.png; name = "shortcut-recorder-bezel-disabled-middle.png"; path = "Resources/shortcut-recorder-bezel-disabled-middle.png"; sourceTree = "<group>"; };
 		349B6081C58DE689521446D788F016A0 /* shortcut-recorder-yosemite-bezel-left.png */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = image.png; name = "shortcut-recorder-yosemite-bezel-left.png"; path = "Resources/shortcut-recorder-yosemite-bezel-left.png"; sourceTree = "<group>"; };
 		34C46AF3E5EB963F3EAF232CB2E3D456 /* shortcut-recorder-bezel-graphite-highlighted-middle@2x.png */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = image.png; name = "shortcut-recorder-bezel-graphite-highlighted-middle@2x.png"; path = "Resources/shortcut-recorder-bezel-graphite-highlighted-middle@2x.png"; sourceTree = "<group>"; };
-		35C694BFC32B8EB0C6EBA1433DE12E2E /* ShortcutRecorder.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = ShortcutRecorder.xcconfig; sourceTree = "<group>"; };
 		3621BD32A38D97F0436A1B8DC5C57FFA /* shortcut-recorder-yosemite-bezel-middle.png */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = image.png; name = "shortcut-recorder-yosemite-bezel-middle.png"; path = "Resources/shortcut-recorder-yosemite-bezel-middle.png"; sourceTree = "<group>"; };
-		377904F7ECAE47C5E2ADA8E3429CB0EE /* Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		384577CADD2D93EDAEC839B2A9A6F7D5 /* shortcut-recorder-bezel-editing-disabled-right.png */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = image.png; name = "shortcut-recorder-bezel-editing-disabled-right.png"; path = "Resources/shortcut-recorder-bezel-editing-disabled-right.png"; sourceTree = "<group>"; };
-		38FFB854230B8F30D116978CCADDA783 /* Pods-Funky.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-Funky.debug.xcconfig"; sourceTree = "<group>"; };
-		391B22A228BBCA95FB79EC58042951BB /* ShortcutRecorder.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; name = ShortcutRecorder.framework; path = ShortcutRecorder.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		39A479FD148472440CC82E6CEE8EF6C4 /* shortcut-recorder-bezel-editing-middle@2x.png */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = image.png; name = "shortcut-recorder-bezel-editing-middle@2x.png"; path = "Resources/shortcut-recorder-bezel-editing-middle@2x.png"; sourceTree = "<group>"; };
 		3A6F5E6B146FF1060CC7B9D0090B4ACD /* shortcut-recorder-yosemite-clear@2x.png */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = image.png; name = "shortcut-recorder-yosemite-clear@2x.png"; path = "Resources/shortcut-recorder-yosemite-clear@2x.png"; sourceTree = "<group>"; };
+		3B0A27F7D816EF3C2A8A037C0AE9F6CE /* Carbon.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Carbon.framework; path = Platforms/MacOSX.platform/Developer/SDKs/MacOSX10.13.sdk/System/Library/Frameworks/Carbon.framework; sourceTree = DEVELOPER_DIR; };
 		3BEF97A7F0009096AD393131114F296E /* SRKeyCodeTransformer.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = SRKeyCodeTransformer.h; path = Library/SRKeyCodeTransformer.h; sourceTree = "<group>"; };
+		3D39892B712BA302C323D7387AD35584 /* Cocoa.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Cocoa.framework; path = Platforms/MacOSX.platform/Developer/SDKs/MacOSX10.13.sdk/System/Library/Frameworks/Cocoa.framework; sourceTree = DEVELOPER_DIR; };
 		3D654BD90B91136FF803E6C3A5F32038 /* SRRecorderControl.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = SRRecorderControl.h; path = Library/SRRecorderControl.h; sourceTree = "<group>"; };
+		3E281BFBCDA766137A35723D1F0D1F85 /* Pods-Funky-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "Pods-Funky-dummy.m"; sourceTree = "<group>"; };
 		4000292547E8F9262849BFFD91C02152 /* PTHotKeyCenter.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = PTHotKeyCenter.m; path = PTHotKey/PTHotKeyCenter.m; sourceTree = "<group>"; };
 		4012A313D1621873A315B1414F41DC2A /* fr.lproj */ = {isa = PBXFileReference; includeInIndex = 1; name = fr.lproj; path = Resources/fr.lproj; sourceTree = "<group>"; };
 		42237615479424EA939BBC8A078AC4DC /* sv.lproj */ = {isa = PBXFileReference; includeInIndex = 1; name = sv.lproj; path = Resources/sv.lproj; sourceTree = "<group>"; };
@@ -224,17 +222,16 @@
 		46F4CCC6C35012216C56A732B8B16AF9 /* ro.lproj */ = {isa = PBXFileReference; includeInIndex = 1; name = ro.lproj; path = Resources/ro.lproj; sourceTree = "<group>"; };
 		4A15886DD2CF459987D24230FE2FD763 /* PTKeyCodeTranslator.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = PTKeyCodeTranslator.h; path = PTHotKey/PTKeyCodeTranslator.h; sourceTree = "<group>"; };
 		4A5727D02AAED24916E34150C1CF3BC9 /* shortcut-recorder-snapback.png */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = image.png; name = "shortcut-recorder-snapback.png"; path = "Resources/shortcut-recorder-snapback.png"; sourceTree = "<group>"; };
-		4B9F00975E8CAD515C01F1B77CFE3D03 /* Pods-Funky-frameworks.sh */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.script.sh; path = "Pods-Funky-frameworks.sh"; sourceTree = "<group>"; };
-		4D014CC6267C4F16880F4CE89F9CD766 /* Cocoa.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Cocoa.framework; path = Platforms/MacOSX.platform/Developer/SDKs/MacOSX10.12.sdk/System/Library/Frameworks/Cocoa.framework; sourceTree = DEVELOPER_DIR; };
 		4EE8C28EF57D5DED94733D65FBFEEE3A /* pt.lproj */ = {isa = PBXFileReference; includeInIndex = 1; name = pt.lproj; path = Resources/pt.lproj; sourceTree = "<group>"; };
 		4FBDBC5B82A8C78CE9ACAF4F0956D305 /* shortcut-recorder-snapback-highlighted.png */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = image.png; name = "shortcut-recorder-snapback-highlighted.png"; path = "Resources/shortcut-recorder-snapback-highlighted.png"; sourceTree = "<group>"; };
 		50141D78A2E64D9419CFCA80ACD017A1 /* shortcut-recorder-clear-highlighted@2x.png */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = image.png; name = "shortcut-recorder-clear-highlighted@2x.png"; path = "Resources/shortcut-recorder-clear-highlighted@2x.png"; sourceTree = "<group>"; };
 		502F26420F5DB7BA4601AC3F988CED9C /* PTHotKey.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = PTHotKey.m; path = PTHotKey/PTHotKey.m; sourceTree = "<group>"; };
 		505A73B85E454CB096FF230E69FE4EB0 /* shortcut-recorder-bezel-blue-highlighted-right.png */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = image.png; name = "shortcut-recorder-bezel-blue-highlighted-right.png"; path = "Resources/shortcut-recorder-bezel-blue-highlighted-right.png"; sourceTree = "<group>"; };
+		509A61C209E2EAA8784510D91162A310 /* Pods-Funky-resources.sh */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.script.sh; path = "Pods-Funky-resources.sh"; sourceTree = "<group>"; };
 		50F49C9B39FB427E234FAD8481220753 /* PTHotKey+ShortcutRecorder.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = "PTHotKey+ShortcutRecorder.h"; path = "PTHotKey/PTHotKey+ShortcutRecorder.h"; sourceTree = "<group>"; };
 		5160A8607214D2E5445D43053A2E52B4 /* shortcut-recorder-bezel-editing-disabled-middle.png */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = image.png; name = "shortcut-recorder-bezel-editing-disabled-middle.png"; path = "Resources/shortcut-recorder-bezel-editing-disabled-middle.png"; sourceTree = "<group>"; };
-		535EB861BEF53EE0CEBF283357B8D486 /* Pods_Funky.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; name = Pods_Funky.framework; path = "Pods-Funky.framework"; sourceTree = BUILT_PRODUCTS_DIR; };
-		5724E9B89EAD0F18DC6A49765DEFF775 /* Pods-Funky.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-Funky.release.xcconfig"; sourceTree = "<group>"; };
+		54893DEEDF4B59461D6B88D03FE252A7 /* Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		55B35C9C7F0D119A8FE319CB5E33FF58 /* ShortcutRecorder.bundle */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; name = ShortcutRecorder.bundle; path = "ShortcutRecorder-ShortcutRecorder.bundle"; sourceTree = BUILT_PRODUCTS_DIR; };
 		5A3FA00D2E6A3683B9B1C83C242697AD /* PTHotKeyCenter.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = PTHotKeyCenter.h; path = PTHotKey/PTHotKeyCenter.h; sourceTree = "<group>"; };
 		5BE5379505DB642566886CFA7C498C58 /* shortcut-recorder-bezel-graphite-highlighted-middle.png */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = image.png; name = "shortcut-recorder-bezel-graphite-highlighted-middle.png"; path = "Resources/shortcut-recorder-bezel-graphite-highlighted-middle.png"; sourceTree = "<group>"; };
 		5C32E322884E097AF21DDE7359F1F712 /* shortcut-recorder-yosemite-bezel-graphite-highlighted-middle.png */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = image.png; name = "shortcut-recorder-yosemite-bezel-graphite-highlighted-middle.png"; path = "Resources/shortcut-recorder-yosemite-bezel-graphite-highlighted-middle.png"; sourceTree = "<group>"; };
@@ -243,8 +240,10 @@
 		6219DF0D53BBEECFE169784926A645EC /* shortcut-recorder-yosemite-bezel-blue-highlighted-right.png */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = image.png; name = "shortcut-recorder-yosemite-bezel-blue-highlighted-right.png"; path = "Resources/shortcut-recorder-yosemite-bezel-blue-highlighted-right.png"; sourceTree = "<group>"; };
 		62AFF673ABC6E018D2C51737A3E38FAD /* shortcut-recorder-yosemite-bezel-disabled-right@2x.png */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = image.png; name = "shortcut-recorder-yosemite-bezel-disabled-right@2x.png"; path = "Resources/shortcut-recorder-yosemite-bezel-disabled-right@2x.png"; sourceTree = "<group>"; };
 		654B75E61C67D340C2D4BDA34A19E4CF /* CLSReport.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = CLSReport.h; path = OSX/Crashlytics.framework/Versions/A/Headers/CLSReport.h; sourceTree = "<group>"; };
+		6717D8B827A8F79429B6546F3292EB40 /* ShortcutRecorder-prefix.pch */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "ShortcutRecorder-prefix.pch"; sourceTree = "<group>"; };
 		67A4916F7934B027CC1B44457E59DF72 /* shortcut-recorder-bezel-disabled-right@2x.png */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = image.png; name = "shortcut-recorder-bezel-disabled-right@2x.png"; path = "Resources/shortcut-recorder-bezel-disabled-right@2x.png"; sourceTree = "<group>"; };
 		6A6DAA1C2CE62ABD6245C2102D40574B /* shortcut-recorder-yosemite-bezel-blue-highlighted-middle.png */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = image.png; name = "shortcut-recorder-yosemite-bezel-blue-highlighted-middle.png"; path = "Resources/shortcut-recorder-yosemite-bezel-blue-highlighted-middle.png"; sourceTree = "<group>"; };
+		6B471E57EF2BF52A7D621F5BE478DDCB /* Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		6B59A6D232E193F11381E3944094FECD /* shortcut-recorder-yosemite-clear-highlighted@2x.png */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = image.png; name = "shortcut-recorder-yosemite-clear-highlighted@2x.png"; path = "Resources/shortcut-recorder-yosemite-clear-highlighted@2x.png"; sourceTree = "<group>"; };
 		6D4C433E086DC09E7FEC8BBAE4C0D547 /* shortcut-recorder-bezel-editing-right.png */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = image.png; name = "shortcut-recorder-bezel-editing-right.png"; path = "Resources/shortcut-recorder-bezel-editing-right.png"; sourceTree = "<group>"; };
 		6F6CB3C26518F6BB04C1D2D1ED9D17D7 /* SRKeyEquivalentTransformer.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = SRKeyEquivalentTransformer.m; path = Library/SRKeyEquivalentTransformer.m; sourceTree = "<group>"; };
@@ -254,43 +253,42 @@
 		7156C1B74779B13AAC70F36CF5720463 /* shortcut-recorder-bezel-blue-highlighted-left@2x.png */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = image.png; name = "shortcut-recorder-bezel-blue-highlighted-left@2x.png"; path = "Resources/shortcut-recorder-bezel-blue-highlighted-left@2x.png"; sourceTree = "<group>"; };
 		71C3EE5377E3FABEAB4920F500F90AA7 /* shortcut-recorder-snapback-highlighted@2x.png */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = image.png; name = "shortcut-recorder-snapback-highlighted@2x.png"; path = "Resources/shortcut-recorder-snapback-highlighted@2x.png"; sourceTree = "<group>"; };
 		71D6192F3715F79BADF25F3B8DB9A1F3 /* shortcut-recorder-bezel-disabled-middle@2x.png */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = image.png; name = "shortcut-recorder-bezel-disabled-middle@2x.png"; path = "Resources/shortcut-recorder-bezel-disabled-middle@2x.png"; sourceTree = "<group>"; };
-		78841B0690516126B5B7E91CAAA14919 /* Pods-Funky-acknowledgements.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "Pods-Funky-acknowledgements.plist"; sourceTree = "<group>"; };
 		7A3A039C0F6737B37CE7D64EBB266302 /* shortcut-recorder-bezel-disabled-right.png */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = image.png; name = "shortcut-recorder-bezel-disabled-right.png"; path = "Resources/shortcut-recorder-bezel-disabled-right.png"; sourceTree = "<group>"; };
-		7BC398E789120FD9472ACE20E396B149 /* ShortcutRecorder-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "ShortcutRecorder-umbrella.h"; sourceTree = "<group>"; };
+		7A7027DCC1F1CCDCED7D9FFB92517BDD /* ShortcutRecorder.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.module; path = ShortcutRecorder.modulemap; sourceTree = "<group>"; };
 		7E0DB2DCFD08BEA696B3D49E4D8A9D08 /* th.lproj */ = {isa = PBXFileReference; includeInIndex = 1; name = th.lproj; path = Resources/th.lproj; sourceTree = "<group>"; };
 		84DA6278E84B8E2AEAE689D07CEAD43D /* CLSAttributes.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = CLSAttributes.h; path = OSX/Crashlytics.framework/Versions/A/Headers/CLSAttributes.h; sourceTree = "<group>"; };
 		85B886CADA5A46840BD5F2EF03108F79 /* shortcut-recorder-bezel-right@2x.png */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = image.png; name = "shortcut-recorder-bezel-right@2x.png"; path = "Resources/shortcut-recorder-bezel-right@2x.png"; sourceTree = "<group>"; };
 		8621108D6929F0B497D6FA7DC7941EA6 /* en.lproj */ = {isa = PBXFileReference; includeInIndex = 1; name = en.lproj; path = Resources/en.lproj; sourceTree = "<group>"; };
 		8651D5B0C19F01483B29F1999E5F755A /* shortcut-recorder-bezel-graphite-highlighted-right@2x.png */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = image.png; name = "shortcut-recorder-bezel-graphite-highlighted-right@2x.png"; path = "Resources/shortcut-recorder-bezel-graphite-highlighted-right@2x.png"; sourceTree = "<group>"; };
 		8698DF55823D929C4FCC225B01E48616 /* PTHotKey+ShortcutRecorder.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = "PTHotKey+ShortcutRecorder.m"; path = "PTHotKey/PTHotKey+ShortcutRecorder.m"; sourceTree = "<group>"; };
-		87351A4696A9D0CD31FC01A89AEFA0B9 /* Pods-Funky-acknowledgements.markdown */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; path = "Pods-Funky-acknowledgements.markdown"; sourceTree = "<group>"; };
+		86B95565E05E4579B84F93CB97E06815 /* Pods-Funky-acknowledgements.markdown */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; path = "Pods-Funky-acknowledgements.markdown"; sourceTree = "<group>"; };
 		87479329D137BC755F52705B65855B0A /* shortcut-recorder-bezel-disabled-left.png */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = image.png; name = "shortcut-recorder-bezel-disabled-left.png"; path = "Resources/shortcut-recorder-bezel-disabled-left.png"; sourceTree = "<group>"; };
 		88C5AFA0F8F142EB82FA2BCC86E59ABB /* shortcut-recorder-yosemite-bezel-right.png */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = image.png; name = "shortcut-recorder-yosemite-bezel-right.png"; path = "Resources/shortcut-recorder-yosemite-bezel-right.png"; sourceTree = "<group>"; };
 		8ABCC24F71A21C8199F812C93C8DF3EE /* SRValidator.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = SRValidator.h; path = Library/SRValidator.h; sourceTree = "<group>"; };
 		8E85216CF906E2805598A7E7EF854CCD /* CLSLogging.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = CLSLogging.h; path = OSX/Crashlytics.framework/Versions/A/Headers/CLSLogging.h; sourceTree = "<group>"; };
+		911F1C3AB279BE5954BB3259A76DDA5B /* ShortcutRecorder.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = ShortcutRecorder.xcconfig; sourceTree = "<group>"; };
 		91A040633D56D9B49584A12B43CCC0AC /* shortcut-recorder-yosemite-bezel-blue-highlighted-right@2x.png */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = image.png; name = "shortcut-recorder-yosemite-bezel-blue-highlighted-right@2x.png"; path = "Resources/shortcut-recorder-yosemite-bezel-blue-highlighted-right@2x.png"; sourceTree = "<group>"; };
 		93A4A3777CF96A4AAC1D13BA6DCCEA73 /* Podfile */ = {isa = PBXFileReference; explicitFileType = text.script.ruby; includeInIndex = 1; lastKnownFileType = text; name = Podfile; path = ../Podfile; sourceTree = SOURCE_ROOT; xcLanguageSpecificationIdentifier = xcode.lang.ruby; };
+		946C52F91E33FEFE320EBE34A6226627 /* Pods-Funky.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.module; path = "Pods-Funky.modulemap"; sourceTree = "<group>"; };
 		95CB0EC81EC7600BA049C47701505F1A /* cs.lproj */ = {isa = PBXFileReference; includeInIndex = 1; name = cs.lproj; path = Resources/cs.lproj; sourceTree = "<group>"; };
 		96BCD00D1CE209256C432A7F63AC60CF /* nb.lproj */ = {isa = PBXFileReference; includeInIndex = 1; name = nb.lproj; path = Resources/nb.lproj; sourceTree = "<group>"; };
 		98120A590C7C9B77B992B5D1CAD5D993 /* shortcut-recorder-yosemite-bezel-blue-highlighted-left.png */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = image.png; name = "shortcut-recorder-yosemite-bezel-blue-highlighted-left.png"; path = "Resources/shortcut-recorder-yosemite-bezel-blue-highlighted-left.png"; sourceTree = "<group>"; };
 		98CB77A3D14F628799FE67DBBC7F62EB /* shortcut-recorder-bezel-editing-left@2x.png */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = image.png; name = "shortcut-recorder-bezel-editing-left@2x.png"; path = "Resources/shortcut-recorder-bezel-editing-left@2x.png"; sourceTree = "<group>"; };
 		992D22FBC24BD520AADD6008FB4663DF /* shortcut-recorder-yosemite-bezel-editing-disabled-right.png */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = image.png; name = "shortcut-recorder-yosemite-bezel-editing-disabled-right.png"; path = "Resources/shortcut-recorder-yosemite-bezel-editing-disabled-right.png"; sourceTree = "<group>"; };
-		99C1062740EE4DC8A152E46C95230471 /* ShortcutRecorder.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; path = ShortcutRecorder.modulemap; sourceTree = "<group>"; };
 		9A589384D03242039CB981C474E07DDD /* shortcut-recorder-bezel-graphite-highlighted-left.png */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = image.png; name = "shortcut-recorder-bezel-graphite-highlighted-left.png"; path = "Resources/shortcut-recorder-bezel-graphite-highlighted-left.png"; sourceTree = "<group>"; };
-		9A6FCC57653CDEDD12AC1A6F71679476 /* ResourceBundle-ShortcutRecorder-Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "ResourceBundle-ShortcutRecorder-Info.plist"; sourceTree = "<group>"; };
 		9B6DD3DF1A569121B6562CA0688D744C /* Crashlytics.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = Crashlytics.h; path = OSX/Crashlytics.framework/Versions/A/Headers/Crashlytics.h; sourceTree = "<group>"; };
 		9DFD631AD5B6D19EBBA89B77E496F84E /* ru.lproj */ = {isa = PBXFileReference; includeInIndex = 1; name = ru.lproj; path = Resources/ru.lproj; sourceTree = "<group>"; };
 		9EC6D9FBE41FA2CEAF1EBF8F33F85314 /* shortcut-recorder-yosemite-bezel-disabled-middle.png */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = image.png; name = "shortcut-recorder-yosemite-bezel-disabled-middle.png"; path = "Resources/shortcut-recorder-yosemite-bezel-disabled-middle.png"; sourceTree = "<group>"; };
 		9F68866672EEFCD327AB7167F3EE7872 /* shortcut-recorder-yosemite-snapback-highlighted@2x.png */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = image.png; name = "shortcut-recorder-yosemite-snapback-highlighted@2x.png"; path = "Resources/shortcut-recorder-yosemite-snapback-highlighted@2x.png"; sourceTree = "<group>"; };
 		A0C1ADCD6B04976239ACF4A2FB1AFD9B /* shortcut-recorder-bezel-editing-disabled-right@2x.png */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = image.png; name = "shortcut-recorder-bezel-editing-disabled-right@2x.png"; path = "Resources/shortcut-recorder-bezel-editing-disabled-right@2x.png"; sourceTree = "<group>"; };
 		A2BA94F2F9329F6DC398FF28D06D1419 /* shortcut-recorder-snapback@2x.png */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = image.png; name = "shortcut-recorder-snapback@2x.png"; path = "Resources/shortcut-recorder-snapback@2x.png"; sourceTree = "<group>"; };
-		A3741C1AB1ADD4AC9C5B7DAE2DFAB1C2 /* Pods-Funky.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; path = "Pods-Funky.modulemap"; sourceTree = "<group>"; };
 		A3BFB1B6C2C6F7A28C87E2410F692E99 /* shortcut-recorder-yosemite-clear-highlighted.png */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = image.png; name = "shortcut-recorder-yosemite-clear-highlighted.png"; path = "Resources/shortcut-recorder-yosemite-clear-highlighted.png"; sourceTree = "<group>"; };
 		A3CE1C29A55BF42754A5809E681FD2C4 /* el.lproj */ = {isa = PBXFileReference; includeInIndex = 1; name = el.lproj; path = Resources/el.lproj; sourceTree = "<group>"; };
 		A598CF042545272821484302805FF3CC /* shortcut-recorder-bezel-blue-highlighted-right@2x.png */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = image.png; name = "shortcut-recorder-bezel-blue-highlighted-right@2x.png"; path = "Resources/shortcut-recorder-bezel-blue-highlighted-right@2x.png"; sourceTree = "<group>"; };
 		A7E411D32B7140277B7142AFC16C9383 /* shortcut-recorder-yosemite-bezel-graphite-highlighted-left.png */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = image.png; name = "shortcut-recorder-yosemite-bezel-graphite-highlighted-left.png"; path = "Resources/shortcut-recorder-yosemite-bezel-graphite-highlighted-left.png"; sourceTree = "<group>"; };
 		A944BFE2062EE77A50086D17D9780267 /* PTHotKey.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = PTHotKey.h; path = PTHotKey/PTHotKey.h; sourceTree = "<group>"; };
 		A96E89122255C59D3060D62B43C167C8 /* shortcut-recorder-yosemite-bezel-graphite-highlighted-right@2x.png */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = image.png; name = "shortcut-recorder-yosemite-bezel-graphite-highlighted-right@2x.png"; path = "Resources/shortcut-recorder-yosemite-bezel-graphite-highlighted-right@2x.png"; sourceTree = "<group>"; };
+		AAA0AF5547EA4B27DFF53710A72A7B33 /* ShortcutRecorder-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "ShortcutRecorder-umbrella.h"; sourceTree = "<group>"; };
 		ACF7CE8B07033D7CBA143E7B0C35511E /* shortcut-recorder-yosemite-bezel-editing-left.png */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = image.png; name = "shortcut-recorder-yosemite-bezel-editing-left.png"; path = "Resources/shortcut-recorder-yosemite-bezel-editing-left.png"; sourceTree = "<group>"; };
 		B0A4A17029C17455FDFA3766309B815A /* SRModifierFlagsTransformer.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = SRModifierFlagsTransformer.m; path = Library/SRModifierFlagsTransformer.m; sourceTree = "<group>"; };
 		B2A854594B7EA5435E955018B4F12AA5 /* shortcut-recorder-bezel-editing-right@2x.png */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = image.png; name = "shortcut-recorder-bezel-editing-right@2x.png"; path = "Resources/shortcut-recorder-bezel-editing-right@2x.png"; sourceTree = "<group>"; };
@@ -298,34 +296,35 @@
 		B43A8B6A52D3E117F8840C55709E8A17 /* shortcut-recorder-yosemite-bezel-editing-disabled-left@2x.png */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = image.png; name = "shortcut-recorder-yosemite-bezel-editing-disabled-left@2x.png"; path = "Resources/shortcut-recorder-yosemite-bezel-editing-disabled-left@2x.png"; sourceTree = "<group>"; };
 		B4E5883A680AFB131F2CB64FDA44265F /* shortcut-recorder-bezel-middle@2x.png */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = image.png; name = "shortcut-recorder-bezel-middle@2x.png"; path = "Resources/shortcut-recorder-bezel-middle@2x.png"; sourceTree = "<group>"; };
 		B7F2965FDD9D75568DD72131F714CDF5 /* Answers.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = Answers.h; path = OSX/Crashlytics.framework/Versions/A/Headers/Answers.h; sourceTree = "<group>"; };
-		B8DDD7715C255605CEB409DC85D3E58E /* ShortcutRecorder-prefix.pch */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "ShortcutRecorder-prefix.pch"; sourceTree = "<group>"; };
 		B9F3EBF5D6D8A2F8CA5CF65090AAF503 /* zh-Hans.lproj */ = {isa = PBXFileReference; includeInIndex = 1; name = "zh-Hans.lproj"; path = "Resources/zh-Hans.lproj"; sourceTree = "<group>"; };
-		BB2B0A833F8233F56EA527A4AF88C8D5 /* ShortcutRecorder.bundle */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; name = ShortcutRecorder.bundle; path = ShortcutRecorder.bundle; sourceTree = BUILT_PRODUCTS_DIR; };
-		BB40CE5BC2BC336BF8C9C37B62F7303F /* Pods-Funky-resources.sh */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.script.sh; path = "Pods-Funky-resources.sh"; sourceTree = "<group>"; };
 		BBD2DA40D4AC1BE406842CA27B0CDA8D /* shortcut-recorder-yosemite-bezel-editing-middle.png */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = image.png; name = "shortcut-recorder-yosemite-bezel-editing-middle.png"; path = "Resources/shortcut-recorder-yosemite-bezel-editing-middle.png"; sourceTree = "<group>"; };
 		BCDBDD9F97FC173787864D539D5E62FD /* shortcut-recorder-yosemite-bezel-disabled-middle@2x.png */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = image.png; name = "shortcut-recorder-yosemite-bezel-disabled-middle@2x.png"; path = "Resources/shortcut-recorder-yosemite-bezel-disabled-middle@2x.png"; sourceTree = "<group>"; };
 		BEF81C84BEC86E1B52DFAF17AD54528F /* SRCommon.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = SRCommon.m; path = Library/SRCommon.m; sourceTree = "<group>"; };
 		C02E1AC20E319A1BBC50A02232C836B2 /* shortcut-recorder-yosemite-snapback.png */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = image.png; name = "shortcut-recorder-yosemite-snapback.png"; path = "Resources/shortcut-recorder-yosemite-snapback.png"; sourceTree = "<group>"; };
 		C1F76DAAC3FCB8C8F054BFAC74336EDE /* shortcut-recorder-bezel-graphite-highlighted-right.png */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = image.png; name = "shortcut-recorder-bezel-graphite-highlighted-right.png"; path = "Resources/shortcut-recorder-bezel-graphite-highlighted-right.png"; sourceTree = "<group>"; };
 		C1FB1A8F4E1BDA2B0C28E5D6BF6FAFDD /* shortcut-recorder-yosemite-bezel-editing-disabled-right@2x.png */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = image.png; name = "shortcut-recorder-yosemite-bezel-editing-disabled-right@2x.png"; path = "Resources/shortcut-recorder-yosemite-bezel-editing-disabled-right@2x.png"; sourceTree = "<group>"; };
+		C238A3B49B03D86A4D5D0B59757295C4 /* Pods_Funky.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; name = Pods_Funky.framework; path = "Pods-Funky.framework"; sourceTree = BUILT_PRODUCTS_DIR; };
 		C285DD4093063E6DB0F3CC0132EFC084 /* shortcut-recorder-yosemite-bezel-disabled-right.png */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = image.png; name = "shortcut-recorder-yosemite-bezel-disabled-right.png"; path = "Resources/shortcut-recorder-yosemite-bezel-disabled-right.png"; sourceTree = "<group>"; };
 		C694C4EE337B82D2E8DC5C7C5EEC654C /* shortcut-recorder-bezel-left.png */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = image.png; name = "shortcut-recorder-bezel-left.png"; path = "Resources/shortcut-recorder-bezel-left.png"; sourceTree = "<group>"; };
-		C7130A230E0C349F2E1E74DF96B42E94 /* Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		C9BD4130B27E090E466B249261DADFAD /* shortcut-recorder-yosemite-bezel-disabled-left.png */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = image.png; name = "shortcut-recorder-yosemite-bezel-disabled-left.png"; path = "Resources/shortcut-recorder-yosemite-bezel-disabled-left.png"; sourceTree = "<group>"; };
+		C9DC494CC4DA9BE36A2622025F7FC3A4 /* ShortcutRecorder-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "ShortcutRecorder-dummy.m"; sourceTree = "<group>"; };
 		CAD4C0F5A897FFB612496D627744F1B3 /* ca.lproj */ = {isa = PBXFileReference; includeInIndex = 1; name = ca.lproj; path = Resources/ca.lproj; sourceTree = "<group>"; };
 		CB6047A6C251D68CBD7E63D85F6DED45 /* FABAttributes.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = FABAttributes.h; path = OSX/Fabric.framework/Versions/A/Headers/FABAttributes.h; sourceTree = "<group>"; };
 		CC1D931986D6E34FE0689F9F3F955679 /* SRKeyEquivalentModifierMaskTransformer.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = SRKeyEquivalentModifierMaskTransformer.m; path = Library/SRKeyEquivalentModifierMaskTransformer.m; sourceTree = "<group>"; };
 		CCE1FA2C0705BF24EFE6823ED8BA6186 /* SRKeyCodeTransformer.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = SRKeyCodeTransformer.m; path = Library/SRKeyCodeTransformer.m; sourceTree = "<group>"; };
 		CCF7C93021AC3EE549B55ECC3C5B8B30 /* shortcut-recorder-bezel-editing-left.png */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = image.png; name = "shortcut-recorder-bezel-editing-left.png"; path = "Resources/shortcut-recorder-bezel-editing-left.png"; sourceTree = "<group>"; };
+		D14EF28F67620E5ADA031B44666556D0 /* Pods-Funky.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-Funky.release.xcconfig"; sourceTree = "<group>"; };
 		D1E4C728AFF0C2E32161A72356B573BE /* de.lproj */ = {isa = PBXFileReference; includeInIndex = 1; name = de.lproj; path = Resources/de.lproj; sourceTree = "<group>"; };
 		D7A44601D358CB6D7068428427952EC0 /* shortcut-recorder-bezel-editing-disabled-left@2x.png */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = image.png; name = "shortcut-recorder-bezel-editing-disabled-left@2x.png"; path = "Resources/shortcut-recorder-bezel-editing-disabled-left@2x.png"; sourceTree = "<group>"; };
-		DE6E97DD27713284335D5D16AE78383D /* ShortcutRecorder-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "ShortcutRecorder-dummy.m"; sourceTree = "<group>"; };
 		E06115C787BAC0A7F8C8ACC69B456DE6 /* shortcut-recorder-bezel-left@2x.png */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = image.png; name = "shortcut-recorder-bezel-left@2x.png"; path = "Resources/shortcut-recorder-bezel-left@2x.png"; sourceTree = "<group>"; };
 		E07F9429A04CC3FCF4D65670DA56D677 /* CLSStackFrame.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = CLSStackFrame.h; path = OSX/Crashlytics.framework/Versions/A/Headers/CLSStackFrame.h; sourceTree = "<group>"; };
 		E2C2EB4DEF0AB3264D3E0DCDF48820F9 /* shortcut-recorder-yosemite-bezel-left@2x.png */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = image.png; name = "shortcut-recorder-yosemite-bezel-left@2x.png"; path = "Resources/shortcut-recorder-yosemite-bezel-left@2x.png"; sourceTree = "<group>"; };
 		E2FCD3590A8B3D534A4A60B04DA93DA7 /* PTKeyCombo.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = PTKeyCombo.m; path = PTHotKey/PTKeyCombo.m; sourceTree = "<group>"; };
+		E42CC6DA34211804EEE8551C13E6FCDF /* Pods-Funky-frameworks.sh */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.script.sh; path = "Pods-Funky-frameworks.sh"; sourceTree = "<group>"; };
 		E4C1FFBAB546B12115A486CD1F4CB6D1 /* shortcut-recorder-yosemite-bezel-editing-left@2x.png */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = image.png; name = "shortcut-recorder-yosemite-bezel-editing-left@2x.png"; path = "Resources/shortcut-recorder-yosemite-bezel-editing-left@2x.png"; sourceTree = "<group>"; };
+		E580A71539B945E6197D96D94399B932 /* ResourceBundle-ShortcutRecorder-Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "ResourceBundle-ShortcutRecorder-Info.plist"; sourceTree = "<group>"; };
 		E64FACFB33BB7884A0DE17AF1DD96168 /* pt-BR.lproj */ = {isa = PBXFileReference; includeInIndex = 1; name = "pt-BR.lproj"; path = "Resources/pt-BR.lproj"; sourceTree = "<group>"; };
+		E7553F1D5616F5364F2A6A8B73E80B83 /* Pods-Funky.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-Funky.debug.xcconfig"; sourceTree = "<group>"; };
 		E8217FB8668CB5820C227E4654EEBE40 /* shortcut-recorder-yosemite-bezel-editing-disabled-middle.png */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = image.png; name = "shortcut-recorder-yosemite-bezel-editing-disabled-middle.png"; path = "Resources/shortcut-recorder-yosemite-bezel-editing-disabled-middle.png"; sourceTree = "<group>"; };
 		EB07525D22ABB1E3B8C1099E58C63B92 /* ShortcutRecorder.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = ShortcutRecorder.h; path = Library/ShortcutRecorder.h; sourceTree = "<group>"; };
 		EC1E2D32E614B19E3B64A0EC44C5FA54 /* SRValidator.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = SRValidator.m; path = Library/SRValidator.m; sourceTree = "<group>"; };
@@ -340,6 +339,7 @@
 		F9B02F448DB03C107F106FD539A19C14 /* ANSCompatibility.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = ANSCompatibility.h; path = OSX/Crashlytics.framework/Versions/A/Headers/ANSCompatibility.h; sourceTree = "<group>"; };
 		FB173831DB3EBC27C5725CD17A071C27 /* shortcut-recorder-yosemite-snapback-highlighted.png */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = image.png; name = "shortcut-recorder-yosemite-snapback-highlighted.png"; path = "Resources/shortcut-recorder-yosemite-snapback-highlighted.png"; sourceTree = "<group>"; };
 		FB2A28540BB557E68D4AA8E153B68B68 /* Fabric.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Fabric.framework; path = OSX/Fabric.framework; sourceTree = "<group>"; };
+		FC46F304E91D8CCA5E3CABF932AD12FF /* Pods-Funky-acknowledgements.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "Pods-Funky-acknowledgements.plist"; sourceTree = "<group>"; };
 		FFD3E2347B92F75E1838921DFF835CB1 /* shortcut-recorder-yosemite-bezel-editing-right.png */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = image.png; name = "shortcut-recorder-yosemite-bezel-editing-right.png"; path = "Resources/shortcut-recorder-yosemite-bezel-editing-right.png"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -348,8 +348,8 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				74D2B0DF9AC62AC79A0E7973951EE5DA /* Carbon.framework in Frameworks */,
-				C380D5886B2587AF60DEE77275741657 /* Cocoa.framework in Frameworks */,
+				6B398CD60CF575897FA199CF4D97274F /* Carbon.framework in Frameworks */,
+				B89EDDA24E6EB1E2F95C640FA35972DA /* Cocoa.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -357,7 +357,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				56EB2B3A3C978F60D3A42BE08C7CD61D /* Cocoa.framework in Frameworks */,
+				84D1A7B431643F812F52D0153D2FDB80 /* Cocoa.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -371,21 +371,6 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
-		14986DB3EEDE65B8EEB90825A0E743A2 /* Support Files */ = {
-			isa = PBXGroup;
-			children = (
-				377904F7ECAE47C5E2ADA8E3429CB0EE /* Info.plist */,
-				9A6FCC57653CDEDD12AC1A6F71679476 /* ResourceBundle-ShortcutRecorder-Info.plist */,
-				99C1062740EE4DC8A152E46C95230471 /* ShortcutRecorder.modulemap */,
-				35C694BFC32B8EB0C6EBA1433DE12E2E /* ShortcutRecorder.xcconfig */,
-				DE6E97DD27713284335D5D16AE78383D /* ShortcutRecorder-dummy.m */,
-				B8DDD7715C255605CEB409DC85D3E58E /* ShortcutRecorder-prefix.pch */,
-				7BC398E789120FD9472ACE20E396B149 /* ShortcutRecorder-umbrella.h */,
-			);
-			name = "Support Files";
-			path = "../Target Support Files/ShortcutRecorder";
-			sourceTree = "<group>";
-		};
 		359594722D813FF2BAEE36CE81234575 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
@@ -520,14 +505,22 @@
 			name = Frameworks;
 			sourceTree = "<group>";
 		};
-		5571879366B80A5225A02F91C67084F2 /* Products */ = {
+		57A65F0DC94B3647A536CDDD467627C9 /* Pods-Funky */ = {
 			isa = PBXGroup;
 			children = (
-				535EB861BEF53EE0CEBF283357B8D486 /* Pods_Funky.framework */,
-				BB2B0A833F8233F56EA527A4AF88C8D5 /* ShortcutRecorder.bundle */,
-				391B22A228BBCA95FB79EC58042951BB /* ShortcutRecorder.framework */,
+				54893DEEDF4B59461D6B88D03FE252A7 /* Info.plist */,
+				946C52F91E33FEFE320EBE34A6226627 /* Pods-Funky.modulemap */,
+				86B95565E05E4579B84F93CB97E06815 /* Pods-Funky-acknowledgements.markdown */,
+				FC46F304E91D8CCA5E3CABF932AD12FF /* Pods-Funky-acknowledgements.plist */,
+				3E281BFBCDA766137A35723D1F0D1F85 /* Pods-Funky-dummy.m */,
+				E42CC6DA34211804EEE8551C13E6FCDF /* Pods-Funky-frameworks.sh */,
+				509A61C209E2EAA8784510D91162A310 /* Pods-Funky-resources.sh */,
+				05DFF279A4270EEB18217E6F5CED7E45 /* Pods-Funky-umbrella.h */,
+				E7553F1D5616F5364F2A6A8B73E80B83 /* Pods-Funky.debug.xcconfig */,
+				D14EF28F67620E5ADA031B44666556D0 /* Pods-Funky.release.xcconfig */,
 			);
-			name = Products;
+			name = "Pods-Funky";
+			path = "Target Support Files/Pods-Funky";
 			sourceTree = "<group>";
 		};
 		6859F5BA95709D95744F4B52D3191867 /* Crashlytics */ = {
@@ -546,6 +539,16 @@
 			path = Crashlytics;
 			sourceTree = "<group>";
 		};
+		724FF7112CACC180B4AD5C696DC8D97B /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				C238A3B49B03D86A4D5D0B59757295C4 /* Pods_Funky.framework */,
+				55B35C9C7F0D119A8FE319CB5E33FF58 /* ShortcutRecorder.bundle */,
+				1568F233E6554D99DA6738F43BA6A188 /* ShortcutRecorder.framework */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
 		7704E9154A470FC8EB93874535BF94A0 /* Pods */ = {
 			isa = PBXGroup;
 			children = (
@@ -562,7 +565,7 @@
 				93A4A3777CF96A4AAC1D13BA6DCCEA73 /* Podfile */,
 				D648CE86F139C7CCFD55D5B8A03BE74B /* Frameworks */,
 				7704E9154A470FC8EB93874535BF94A0 /* Pods */,
-				5571879366B80A5225A02F91C67084F2 /* Products */,
+				724FF7112CACC180B4AD5C696DC8D97B /* Products */,
 				A1F64023C4A3DF985275DA44FBFA0655 /* Targets Support Files */,
 			);
 			sourceTree = "<group>";
@@ -570,7 +573,7 @@
 		A1F64023C4A3DF985275DA44FBFA0655 /* Targets Support Files */ = {
 			isa = PBXGroup;
 			children = (
-				DAE716686FD282DD568350BD6AB4C13E /* Pods-Funky */,
+				57A65F0DC94B3647A536CDDD467627C9 /* Pods-Funky */,
 			);
 			name = "Targets Support Files";
 			sourceTree = "<group>";
@@ -580,7 +583,7 @@
 			children = (
 				D80D4F4EE2449757081EF2B2742E515E /* Core */,
 				EE9F41AD239927E9A2034EA38717F3B2 /* PTHotKey */,
-				14986DB3EEDE65B8EEB90825A0E743A2 /* Support Files */,
+				DD9445EDE9453B683E2D6F68D80D7984 /* Support Files */,
 			);
 			name = ShortcutRecorder;
 			path = ShortcutRecorder;
@@ -589,7 +592,7 @@
 		D648CE86F139C7CCFD55D5B8A03BE74B /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
-				ED5F324927D863958C51D97A238FCA73 /* OS X */,
+				E54C390691D9464DCF0A5D1FF793B4A9 /* OS X */,
 			);
 			name = Frameworks;
 			sourceTree = "<group>";
@@ -617,29 +620,26 @@
 			name = Core;
 			sourceTree = "<group>";
 		};
-		DAE716686FD282DD568350BD6AB4C13E /* Pods-Funky */ = {
+		DD9445EDE9453B683E2D6F68D80D7984 /* Support Files */ = {
 			isa = PBXGroup;
 			children = (
-				C7130A230E0C349F2E1E74DF96B42E94 /* Info.plist */,
-				A3741C1AB1ADD4AC9C5B7DAE2DFAB1C2 /* Pods-Funky.modulemap */,
-				87351A4696A9D0CD31FC01A89AEFA0B9 /* Pods-Funky-acknowledgements.markdown */,
-				78841B0690516126B5B7E91CAAA14919 /* Pods-Funky-acknowledgements.plist */,
-				06F7E91E65C160AE30304488013F8236 /* Pods-Funky-dummy.m */,
-				4B9F00975E8CAD515C01F1B77CFE3D03 /* Pods-Funky-frameworks.sh */,
-				BB40CE5BC2BC336BF8C9C37B62F7303F /* Pods-Funky-resources.sh */,
-				2E1F5FE1DB0E05CF2D68BA9A226217AE /* Pods-Funky-umbrella.h */,
-				38FFB854230B8F30D116978CCADDA783 /* Pods-Funky.debug.xcconfig */,
-				5724E9B89EAD0F18DC6A49765DEFF775 /* Pods-Funky.release.xcconfig */,
+				6B471E57EF2BF52A7D621F5BE478DDCB /* Info.plist */,
+				E580A71539B945E6197D96D94399B932 /* ResourceBundle-ShortcutRecorder-Info.plist */,
+				7A7027DCC1F1CCDCED7D9FFB92517BDD /* ShortcutRecorder.modulemap */,
+				911F1C3AB279BE5954BB3259A76DDA5B /* ShortcutRecorder.xcconfig */,
+				C9DC494CC4DA9BE36A2622025F7FC3A4 /* ShortcutRecorder-dummy.m */,
+				6717D8B827A8F79429B6546F3292EB40 /* ShortcutRecorder-prefix.pch */,
+				AAA0AF5547EA4B27DFF53710A72A7B33 /* ShortcutRecorder-umbrella.h */,
 			);
-			name = "Pods-Funky";
-			path = "Target Support Files/Pods-Funky";
+			name = "Support Files";
+			path = "../Target Support Files/ShortcutRecorder";
 			sourceTree = "<group>";
 		};
-		ED5F324927D863958C51D97A238FCA73 /* OS X */ = {
+		E54C390691D9464DCF0A5D1FF793B4A9 /* OS X */ = {
 			isa = PBXGroup;
 			children = (
-				2D161976F1755521FCFC031E367AC180 /* Carbon.framework */,
-				4D014CC6267C4F16880F4CE89F9CD766 /* Cocoa.framework */,
+				3B0A27F7D816EF3C2A8A037C0AE9F6CE /* Carbon.framework */,
+				3D39892B712BA302C323D7387AD35584 /* Cocoa.framework */,
 			);
 			name = "OS X";
 			sourceTree = "<group>";
@@ -723,7 +723,7 @@
 			);
 			name = ShortcutRecorder;
 			productName = ShortcutRecorder;
-			productReference = 391B22A228BBCA95FB79EC58042951BB /* ShortcutRecorder.framework */;
+			productReference = 1568F233E6554D99DA6738F43BA6A188 /* ShortcutRecorder.framework */;
 			productType = "com.apple.product-type.framework";
 		};
 		7BD7F71BB79BD77743F4348ACDC67D6A /* Pods-Funky */ = {
@@ -741,7 +741,7 @@
 			);
 			name = "Pods-Funky";
 			productName = "Pods-Funky";
-			productReference = 535EB861BEF53EE0CEBF283357B8D486 /* Pods_Funky.framework */;
+			productReference = C238A3B49B03D86A4D5D0B59757295C4 /* Pods_Funky.framework */;
 			productType = "com.apple.product-type.framework";
 		};
 		B8AA5CF9439E6E126DCC4B4AA0A8D177 /* ShortcutRecorder-ShortcutRecorder */ = {
@@ -758,7 +758,7 @@
 			);
 			name = "ShortcutRecorder-ShortcutRecorder";
 			productName = "ShortcutRecorder-ShortcutRecorder";
-			productReference = BB2B0A833F8233F56EA527A4AF88C8D5 /* ShortcutRecorder.bundle */;
+			productReference = 55B35C9C7F0D119A8FE319CB5E33FF58 /* ShortcutRecorder.bundle */;
 			productType = "com.apple.product-type.bundle";
 		};
 /* End PBXNativeTarget section */
@@ -767,8 +767,8 @@
 		D41D8CD98F00B204E9800998ECF8427E /* Project object */ = {
 			isa = PBXProject;
 			attributes = {
-				LastSwiftUpdateCheck = 0830;
-				LastUpgradeCheck = 0700;
+				LastSwiftUpdateCheck = 0930;
+				LastUpgradeCheck = 0930;
 			};
 			buildConfigurationList = 2D8E8EC45A3A1A1D94AE762CB5028504 /* Build configuration list for PBXProject "Pods" */;
 			compatibilityVersion = "Xcode 3.2";
@@ -778,7 +778,7 @@
 				en,
 			);
 			mainGroup = 7DB346D0F39D3F0E887471402A8071AB;
-			productRefGroup = 5571879366B80A5225A02F91C67084F2 /* Products */;
+			productRefGroup = 724FF7112CACC180B4AD5C696DC8D97B /* Products */;
 			projectDirPath = "";
 			projectRoot = "";
 			targets = (
@@ -794,7 +794,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				006B2B9A04FB8A911C55ADDB127582B9 /* ShortcutRecorder.bundle in Resources */,
+				1AAE4B399ED78C2D20D79DDE1AD78D57 /* ShortcutRecorder.bundle in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -972,247 +972,217 @@
 /* End PBXTargetDependency section */
 
 /* Begin XCBuildConfiguration section */
-		0D888A937A632FABDDE664F6303DAD4B /* Debug */ = {
+		269F8E09D61DFA120CE0135D4C6C788A /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 911F1C3AB279BE5954BB3259A76DDA5B /* ShortcutRecorder.xcconfig */;
+			buildSettings = {
+				CLANG_ENABLE_OBJC_WEAK = NO;
+				CODE_SIGN_IDENTITY = "";
+				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
+				COMBINE_HIDPI_IMAGES = YES;
+				CURRENT_PROJECT_VERSION = 1;
+				DEFINES_MODULE = YES;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				FRAMEWORK_VERSION = A;
+				GCC_PREFIX_HEADER = "Target Support Files/ShortcutRecorder/ShortcutRecorder-prefix.pch";
+				INFOPLIST_FILE = "Target Support Files/ShortcutRecorder/Info.plist";
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/../Frameworks @loader_path/Frameworks";
+				MACOSX_DEPLOYMENT_TARGET = 10.6;
+				MODULEMAP_FILE = "Target Support Files/ShortcutRecorder/ShortcutRecorder.modulemap";
+				PRODUCT_MODULE_NAME = ShortcutRecorder;
+				PRODUCT_NAME = ShortcutRecorder;
+				SDKROOT = macosx;
+				SKIP_INSTALL = YES;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = "$(inherited) ";
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+			};
+			name = Debug;
+		};
+		2E46DD07DADC3269969D4027FE88566E /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
 				CLANG_ANALYZER_NONNULL = YES;
-				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES;
-				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
 				CLANG_CXX_LIBRARY = "libc++";
 				CLANG_ENABLE_MODULES = YES;
 				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
 				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
 				CLANG_WARN_CONSTANT_CONVERSION = YES;
-				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
 				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
 				CLANG_WARN_EMPTY_BODY = YES;
 				CLANG_WARN_ENUM_CONVERSION = YES;
 				CLANG_WARN_INFINITE_RECURSION = YES;
 				CLANG_WARN_INT_CONVERSION = YES;
-				CLANG_WARN_OBJC_ROOT_CLASS = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
 				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
 				CLANG_WARN_UNREACHABLE_CODE = YES;
 				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				CODE_SIGNING_ALLOWED = NO;
 				CODE_SIGNING_REQUIRED = NO;
 				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
 				ENABLE_TESTABILITY = YES;
-				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
 				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
 				GCC_OPTIMIZATION_LEVEL = 0;
 				GCC_PREPROCESSOR_DEFINITIONS = (
 					"POD_CONFIGURATION_DEBUG=1",
 					"DEBUG=1",
 					"$(inherited)",
 				);
-				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
 				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
-				GCC_WARN_ABOUT_RETURN_TYPE = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
 				GCC_WARN_UNDECLARED_SELECTOR = YES;
-				GCC_WARN_UNINITIALIZED_AUTOS = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
 				MACOSX_DEPLOYMENT_TARGET = 10.7;
+				MTL_ENABLE_DEBUG_INFO = YES;
 				ONLY_ACTIVE_ARCH = YES;
-				PROVISIONING_PROFILE_SPECIFIER = NO_SIGNING/;
+				PRODUCT_NAME = "$(TARGET_NAME)";
 				STRIP_INSTALLED_PRODUCT = NO;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
 				SYMROOT = "${SRCROOT}/../build";
 			};
 			name = Debug;
 		};
-		16606049C147A8E13C83DA842B4F2DEF /* Release */ = {
+		2E474737C20F7DD2542F57C14EC1C342 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 911F1C3AB279BE5954BB3259A76DDA5B /* ShortcutRecorder.xcconfig */;
+			buildSettings = {
+				CODE_SIGN_IDENTITY = "-";
+				COMBINE_HIDPI_IMAGES = YES;
+				CONFIGURATION_BUILD_DIR = "$(BUILD_DIR)/$(CONFIGURATION)$(EFFECTIVE_PLATFORM_NAME)/ShortcutRecorder";
+				INFOPLIST_FILE = "Target Support Files/ShortcutRecorder/ResourceBundle-ShortcutRecorder-Info.plist";
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Bundles";
+				MACOSX_DEPLOYMENT_TARGET = 10.6;
+				PRODUCT_NAME = ShortcutRecorder;
+				SDKROOT = macosx;
+				SKIP_INSTALL = YES;
+				WRAPPER_EXTENSION = bundle;
+			};
+			name = Debug;
+		};
+		351F31AC55BA6807AFC79ED31FDDB94E /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = E7553F1D5616F5364F2A6A8B73E80B83 /* Pods-Funky.debug.xcconfig */;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = NO;
+				CODE_SIGN_IDENTITY = "";
+				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
+				COMBINE_HIDPI_IMAGES = YES;
+				CURRENT_PROJECT_VERSION = 1;
+				DEFINES_MODULE = YES;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				FRAMEWORK_VERSION = A;
+				INFOPLIST_FILE = "Target Support Files/Pods-Funky/Info.plist";
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/../Frameworks @loader_path/Frameworks";
+				MACH_O_TYPE = staticlib;
+				MACOSX_DEPLOYMENT_TARGET = 10.7;
+				MODULEMAP_FILE = "Target Support Files/Pods-Funky/Pods-Funky.modulemap";
+				OTHER_LDFLAGS = "";
+				OTHER_LIBTOOLFLAGS = "";
+				PODS_ROOT = "$(SRCROOT)";
+				PRODUCT_BUNDLE_IDENTIFIER = "org.cocoapods.${PRODUCT_NAME:rfc1034identifier}";
+				PRODUCT_NAME = "$(TARGET_NAME:c99extidentifier)";
+				SDKROOT = macosx;
+				SKIP_INSTALL = YES;
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+			};
+			name = Debug;
+		};
+		4F19DC360C49BD6116511FE4E508DFFE /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
 				CLANG_ANALYZER_NONNULL = YES;
-				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES;
-				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
 				CLANG_CXX_LIBRARY = "libc++";
 				CLANG_ENABLE_MODULES = YES;
 				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
 				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
 				CLANG_WARN_CONSTANT_CONVERSION = YES;
-				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
 				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
 				CLANG_WARN_EMPTY_BODY = YES;
 				CLANG_WARN_ENUM_CONVERSION = YES;
 				CLANG_WARN_INFINITE_RECURSION = YES;
 				CLANG_WARN_INT_CONVERSION = YES;
-				CLANG_WARN_OBJC_ROOT_CLASS = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
 				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
 				CLANG_WARN_UNREACHABLE_CODE = YES;
 				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				CODE_SIGNING_ALLOWED = NO;
 				CODE_SIGNING_REQUIRED = NO;
-				COPY_PHASE_STRIP = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
 				ENABLE_NS_ASSERTIONS = NO;
-				GCC_C_LANGUAGE_STANDARD = gnu99;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_NO_COMMON_BLOCKS = YES;
 				GCC_PREPROCESSOR_DEFINITIONS = (
 					"POD_CONFIGURATION_RELEASE=1",
 					"$(inherited)",
 				);
 				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
-				GCC_WARN_ABOUT_RETURN_TYPE = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
 				GCC_WARN_UNDECLARED_SELECTOR = YES;
-				GCC_WARN_UNINITIALIZED_AUTOS = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
 				MACOSX_DEPLOYMENT_TARGET = 10.7;
-				PROVISIONING_PROFILE_SPECIFIER = NO_SIGNING/;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				PRODUCT_NAME = "$(TARGET_NAME)";
 				STRIP_INSTALLED_PRODUCT = NO;
 				SYMROOT = "${SRCROOT}/../build";
-				VALIDATE_PRODUCT = YES;
 			};
 			name = Release;
 		};
-		2634D690F0E5E69A90E2CD8E2D37D297 /* Release */ = {
+		6FF33BB29C3FC5399730CDB3CC11478A /* Release */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = 35C694BFC32B8EB0C6EBA1433DE12E2E /* ShortcutRecorder.xcconfig */;
-			buildSettings = {
-				CODE_SIGN_IDENTITY = "-";
-				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
-				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
-				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
-				COMBINE_HIDPI_IMAGES = YES;
-				CURRENT_PROJECT_VERSION = 1;
-				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
-				DEFINES_MODULE = YES;
-				DYLIB_COMPATIBILITY_VERSION = 1;
-				DYLIB_CURRENT_VERSION = 1;
-				DYLIB_INSTALL_NAME_BASE = "@rpath";
-				ENABLE_STRICT_OBJC_MSGSEND = YES;
-				FRAMEWORK_VERSION = A;
-				GCC_NO_COMMON_BLOCKS = YES;
-				GCC_PREFIX_HEADER = "Target Support Files/ShortcutRecorder/ShortcutRecorder-prefix.pch";
-				INFOPLIST_FILE = "Target Support Files/ShortcutRecorder/Info.plist";
-				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
-				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/../Frameworks @loader_path/Frameworks";
-				MACOSX_DEPLOYMENT_TARGET = 10.6;
-				MODULEMAP_FILE = "Target Support Files/ShortcutRecorder/ShortcutRecorder.modulemap";
-				MTL_ENABLE_DEBUG_INFO = NO;
-				PRODUCT_NAME = ShortcutRecorder;
-				SDKROOT = macosx;
-				SKIP_INSTALL = YES;
-				VERSIONING_SYSTEM = "apple-generic";
-				VERSION_INFO_PREFIX = "";
-			};
-			name = Release;
-		};
-		28B1CDE9A4685A377E55AFB85D3F3170 /* Debug */ = {
-			isa = XCBuildConfiguration;
-			baseConfigurationReference = 38FFB854230B8F30D116978CCADDA783 /* Pods-Funky.debug.xcconfig */;
-			buildSettings = {
-				CODE_SIGN_IDENTITY = "-";
-				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
-				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
-				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
-				COMBINE_HIDPI_IMAGES = YES;
-				CURRENT_PROJECT_VERSION = 1;
-				DEBUG_INFORMATION_FORMAT = dwarf;
-				DEFINES_MODULE = YES;
-				DYLIB_COMPATIBILITY_VERSION = 1;
-				DYLIB_CURRENT_VERSION = 1;
-				DYLIB_INSTALL_NAME_BASE = "@rpath";
-				ENABLE_STRICT_OBJC_MSGSEND = YES;
-				FRAMEWORK_VERSION = A;
-				GCC_NO_COMMON_BLOCKS = YES;
-				INFOPLIST_FILE = "Target Support Files/Pods-Funky/Info.plist";
-				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
-				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/../Frameworks @loader_path/Frameworks";
-				MACH_O_TYPE = staticlib;
-				MACOSX_DEPLOYMENT_TARGET = 10.7;
-				MODULEMAP_FILE = "Target Support Files/Pods-Funky/Pods-Funky.modulemap";
-				MTL_ENABLE_DEBUG_INFO = YES;
-				OTHER_LDFLAGS = "";
-				OTHER_LIBTOOLFLAGS = "";
-				PODS_ROOT = "$(SRCROOT)";
-				PRODUCT_BUNDLE_IDENTIFIER = "org.cocoapods.${PRODUCT_NAME:rfc1034identifier}";
-				PRODUCT_NAME = Pods_Funky;
-				SDKROOT = macosx;
-				SKIP_INSTALL = YES;
-				VERSIONING_SYSTEM = "apple-generic";
-				VERSION_INFO_PREFIX = "";
-			};
-			name = Debug;
-		};
-		2FB153E5BEC9F0EF6A313F820BEDCDEA /* Debug */ = {
-			isa = XCBuildConfiguration;
-			baseConfigurationReference = 35C694BFC32B8EB0C6EBA1433DE12E2E /* ShortcutRecorder.xcconfig */;
-			buildSettings = {
-				CODE_SIGN_IDENTITY = "-";
-				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
-				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
-				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
-				COMBINE_HIDPI_IMAGES = YES;
-				CURRENT_PROJECT_VERSION = 1;
-				DEBUG_INFORMATION_FORMAT = dwarf;
-				DEFINES_MODULE = YES;
-				DYLIB_COMPATIBILITY_VERSION = 1;
-				DYLIB_CURRENT_VERSION = 1;
-				DYLIB_INSTALL_NAME_BASE = "@rpath";
-				ENABLE_STRICT_OBJC_MSGSEND = YES;
-				FRAMEWORK_VERSION = A;
-				GCC_NO_COMMON_BLOCKS = YES;
-				GCC_PREFIX_HEADER = "Target Support Files/ShortcutRecorder/ShortcutRecorder-prefix.pch";
-				INFOPLIST_FILE = "Target Support Files/ShortcutRecorder/Info.plist";
-				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
-				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/../Frameworks @loader_path/Frameworks";
-				MACOSX_DEPLOYMENT_TARGET = 10.6;
-				MODULEMAP_FILE = "Target Support Files/ShortcutRecorder/ShortcutRecorder.modulemap";
-				MTL_ENABLE_DEBUG_INFO = YES;
-				PRODUCT_NAME = ShortcutRecorder;
-				SDKROOT = macosx;
-				SKIP_INSTALL = YES;
-				VERSIONING_SYSTEM = "apple-generic";
-				VERSION_INFO_PREFIX = "";
-			};
-			name = Debug;
-		};
-		4B1DBFD34E4890CB29F3E69D4397C208 /* Release */ = {
-			isa = XCBuildConfiguration;
-			baseConfigurationReference = 5724E9B89EAD0F18DC6A49765DEFF775 /* Pods-Funky.release.xcconfig */;
-			buildSettings = {
-				CODE_SIGN_IDENTITY = "-";
-				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
-				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
-				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
-				COMBINE_HIDPI_IMAGES = YES;
-				CURRENT_PROJECT_VERSION = 1;
-				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
-				DEFINES_MODULE = YES;
-				DYLIB_COMPATIBILITY_VERSION = 1;
-				DYLIB_CURRENT_VERSION = 1;
-				DYLIB_INSTALL_NAME_BASE = "@rpath";
-				ENABLE_STRICT_OBJC_MSGSEND = YES;
-				FRAMEWORK_VERSION = A;
-				GCC_NO_COMMON_BLOCKS = YES;
-				INFOPLIST_FILE = "Target Support Files/Pods-Funky/Info.plist";
-				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
-				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/../Frameworks @loader_path/Frameworks";
-				MACH_O_TYPE = staticlib;
-				MACOSX_DEPLOYMENT_TARGET = 10.7;
-				MODULEMAP_FILE = "Target Support Files/Pods-Funky/Pods-Funky.modulemap";
-				MTL_ENABLE_DEBUG_INFO = NO;
-				OTHER_LDFLAGS = "";
-				OTHER_LIBTOOLFLAGS = "";
-				PODS_ROOT = "$(SRCROOT)";
-				PRODUCT_BUNDLE_IDENTIFIER = "org.cocoapods.${PRODUCT_NAME:rfc1034identifier}";
-				PRODUCT_NAME = Pods_Funky;
-				SDKROOT = macosx;
-				SKIP_INSTALL = YES;
-				VERSIONING_SYSTEM = "apple-generic";
-				VERSION_INFO_PREFIX = "";
-			};
-			name = Release;
-		};
-		516E98DE4C4FDC1553891750B050594C /* Debug */ = {
-			isa = XCBuildConfiguration;
-			baseConfigurationReference = 35C694BFC32B8EB0C6EBA1433DE12E2E /* ShortcutRecorder.xcconfig */;
+			baseConfigurationReference = 911F1C3AB279BE5954BB3259A76DDA5B /* ShortcutRecorder.xcconfig */;
 			buildSettings = {
 				CODE_SIGN_IDENTITY = "-";
 				COMBINE_HIDPI_IMAGES = YES;
 				CONFIGURATION_BUILD_DIR = "$(BUILD_DIR)/$(CONFIGURATION)$(EFFECTIVE_PLATFORM_NAME)/ShortcutRecorder";
-				ENABLE_STRICT_OBJC_MSGSEND = YES;
-				GCC_NO_COMMON_BLOCKS = YES;
 				INFOPLIST_FILE = "Target Support Files/ShortcutRecorder/ResourceBundle-ShortcutRecorder-Info.plist";
 				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Bundles";
 				MACOSX_DEPLOYMENT_TARGET = 10.6;
@@ -1221,24 +1191,71 @@
 				SKIP_INSTALL = YES;
 				WRAPPER_EXTENSION = bundle;
 			};
-			name = Debug;
+			name = Release;
 		};
-		B6CA85E27F8A5088DFD693A75B58FAFF /* Release */ = {
+		E8334CCB520450BC12C9303B212A701F /* Release */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = 35C694BFC32B8EB0C6EBA1433DE12E2E /* ShortcutRecorder.xcconfig */;
+			baseConfigurationReference = D14EF28F67620E5ADA031B44666556D0 /* Pods-Funky.release.xcconfig */;
 			buildSettings = {
-				CODE_SIGN_IDENTITY = "-";
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = NO;
+				CODE_SIGN_IDENTITY = "";
+				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
 				COMBINE_HIDPI_IMAGES = YES;
-				CONFIGURATION_BUILD_DIR = "$(BUILD_DIR)/$(CONFIGURATION)$(EFFECTIVE_PLATFORM_NAME)/ShortcutRecorder";
-				ENABLE_STRICT_OBJC_MSGSEND = YES;
-				GCC_NO_COMMON_BLOCKS = YES;
-				INFOPLIST_FILE = "Target Support Files/ShortcutRecorder/ResourceBundle-ShortcutRecorder-Info.plist";
-				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Bundles";
+				CURRENT_PROJECT_VERSION = 1;
+				DEFINES_MODULE = YES;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				FRAMEWORK_VERSION = A;
+				INFOPLIST_FILE = "Target Support Files/Pods-Funky/Info.plist";
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/../Frameworks @loader_path/Frameworks";
+				MACH_O_TYPE = staticlib;
+				MACOSX_DEPLOYMENT_TARGET = 10.7;
+				MODULEMAP_FILE = "Target Support Files/Pods-Funky/Pods-Funky.modulemap";
+				OTHER_LDFLAGS = "";
+				OTHER_LIBTOOLFLAGS = "";
+				PODS_ROOT = "$(SRCROOT)";
+				PRODUCT_BUNDLE_IDENTIFIER = "org.cocoapods.${PRODUCT_NAME:rfc1034identifier}";
+				PRODUCT_NAME = "$(TARGET_NAME:c99extidentifier)";
+				SDKROOT = macosx;
+				SKIP_INSTALL = YES;
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+			};
+			name = Release;
+		};
+		F1186614F410A9EF1C984D91724D4776 /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 911F1C3AB279BE5954BB3259A76DDA5B /* ShortcutRecorder.xcconfig */;
+			buildSettings = {
+				CLANG_ENABLE_OBJC_WEAK = NO;
+				CODE_SIGN_IDENTITY = "";
+				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
+				COMBINE_HIDPI_IMAGES = YES;
+				CURRENT_PROJECT_VERSION = 1;
+				DEFINES_MODULE = YES;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				FRAMEWORK_VERSION = A;
+				GCC_PREFIX_HEADER = "Target Support Files/ShortcutRecorder/ShortcutRecorder-prefix.pch";
+				INFOPLIST_FILE = "Target Support Files/ShortcutRecorder/Info.plist";
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/../Frameworks @loader_path/Frameworks";
 				MACOSX_DEPLOYMENT_TARGET = 10.6;
+				MODULEMAP_FILE = "Target Support Files/ShortcutRecorder/ShortcutRecorder.modulemap";
+				PRODUCT_MODULE_NAME = ShortcutRecorder;
 				PRODUCT_NAME = ShortcutRecorder;
 				SDKROOT = macosx;
 				SKIP_INSTALL = YES;
-				WRAPPER_EXTENSION = bundle;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = "$(inherited) ";
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
 			};
 			name = Release;
 		};
@@ -1248,8 +1265,8 @@
 		0B4A9619AB295AD310AD92A0D67C1A9A /* Build configuration list for PBXNativeTarget "ShortcutRecorder-ShortcutRecorder" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
-				516E98DE4C4FDC1553891750B050594C /* Debug */,
-				B6CA85E27F8A5088DFD693A75B58FAFF /* Release */,
+				2E474737C20F7DD2542F57C14EC1C342 /* Debug */,
+				6FF33BB29C3FC5399730CDB3CC11478A /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
@@ -1257,8 +1274,8 @@
 		1D69BBC3CA63B7D313AE57D9C26F1EEE /* Build configuration list for PBXNativeTarget "Pods-Funky" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
-				28B1CDE9A4685A377E55AFB85D3F3170 /* Debug */,
-				4B1DBFD34E4890CB29F3E69D4397C208 /* Release */,
+				351F31AC55BA6807AFC79ED31FDDB94E /* Debug */,
+				E8334CCB520450BC12C9303B212A701F /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
@@ -1266,8 +1283,8 @@
 		1E3F5F24C029942FA008EFD75AB344F8 /* Build configuration list for PBXNativeTarget "ShortcutRecorder" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
-				2FB153E5BEC9F0EF6A313F820BEDCDEA /* Debug */,
-				2634D690F0E5E69A90E2CD8E2D37D297 /* Release */,
+				269F8E09D61DFA120CE0135D4C6C788A /* Debug */,
+				F1186614F410A9EF1C984D91724D4776 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
@@ -1275,8 +1292,8 @@
 		2D8E8EC45A3A1A1D94AE762CB5028504 /* Build configuration list for PBXProject "Pods" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
-				0D888A937A632FABDDE664F6303DAD4B /* Debug */,
-				16606049C147A8E13C83DA842B4F2DEF /* Release */,
+				2E46DD07DADC3269969D4027FE88566E /* Debug */,
+				4F19DC360C49BD6116511FE4E508DFFE /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
