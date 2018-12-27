@@ -13,6 +13,10 @@ Funky maintains a list of apps for which it will set the function key to standar
 
 Use GitHub's [issue tracker](https://github.com/thecatalinstan/Funky/issues) to submit bug reports feature requests, or just to say hi.
 
+## Privacy Policy
+
+Please carefully read the [Privacy Policy](https://github.com/thecatalinstan/Funky/blob/master/Privacy.md).
+
 ---
 
 ## Contributors Welcome
