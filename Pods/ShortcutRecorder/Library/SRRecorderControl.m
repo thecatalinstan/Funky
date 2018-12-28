@@ -476,56 +476,42 @@ typedef NS_ENUM(NSUInteger, _SRRecorderControlButtonTag)
 
 - (NSDictionary *)normalLabelAttributes
 {
-    static dispatch_once_t OnceToken;
-    static NSDictionary *NormalAttributes = nil;
-    dispatch_once(&OnceToken, ^{
-        NSMutableParagraphStyle *p = [[NSMutableParagraphStyle alloc] init];
-        p.alignment = NSCenterTextAlignment;
-        p.lineBreakMode = NSLineBreakByTruncatingTail;
-        p.baseWritingDirection = NSWritingDirectionLeftToRight;
-        NormalAttributes = @{
-            NSParagraphStyleAttributeName: [p copy],
-            NSFontAttributeName: [NSFont labelFontOfSize:[NSFont systemFontSize]],
-            NSForegroundColorAttributeName: [NSColor controlTextColor]
-        };
-    });
-    return NormalAttributes;
+    NSMutableParagraphStyle *p = [[NSMutableParagraphStyle alloc] init];
+    p.alignment = NSCenterTextAlignment;
+    p.lineBreakMode = NSLineBreakByTruncatingTail;
+    p.baseWritingDirection = NSWritingDirectionLeftToRight;
+    return @{
+             NSParagraphStyleAttributeName: [p copy],
+             NSFontAttributeName: [NSFont labelFontOfSize:[NSFont systemFontSize]],
+             NSForegroundColorAttributeName: [NSColor darkGrayColor]
+             };
 }
 
 - (NSDictionary *)recordingLabelAttributes
 {
-    static dispatch_once_t OnceToken;
-    static NSDictionary *RecordingAttributes = nil;
-    dispatch_once(&OnceToken, ^{
-        NSMutableParagraphStyle *p = [[NSMutableParagraphStyle alloc] init];
-        p.alignment = NSCenterTextAlignment;
-        p.lineBreakMode = NSLineBreakByTruncatingTail;
-        p.baseWritingDirection = NSWritingDirectionLeftToRight;
-        RecordingAttributes = @{
-            NSParagraphStyleAttributeName: [p copy],
-            NSFontAttributeName: [NSFont labelFontOfSize:[NSFont systemFontSize]],
-            NSForegroundColorAttributeName: [NSColor disabledControlTextColor]
-        };
-    });
-    return RecordingAttributes;
+   
+    NSMutableParagraphStyle *p = [[NSMutableParagraphStyle alloc] init];
+    p.alignment = NSCenterTextAlignment;
+    p.lineBreakMode = NSLineBreakByTruncatingTail;
+    p.baseWritingDirection = NSWritingDirectionLeftToRight;
+    return @{
+             NSParagraphStyleAttributeName: [p copy],
+             NSFontAttributeName: [NSFont labelFontOfSize:[NSFont systemFontSize]],
+             NSForegroundColorAttributeName: [NSColor grayColor]
+             };
 }
 
 - (NSDictionary *)disabledLabelAttributes
 {
-    static dispatch_once_t OnceToken;
-    static NSDictionary *DisabledAttributes = nil;
-    dispatch_once(&OnceToken, ^{
-        NSMutableParagraphStyle *p = [[NSMutableParagraphStyle alloc] init];
-        p.alignment = NSCenterTextAlignment;
-        p.lineBreakMode = NSLineBreakByTruncatingTail;
-        p.baseWritingDirection = NSWritingDirectionLeftToRight;
-        DisabledAttributes = @{
-            NSParagraphStyleAttributeName: [p copy],
-            NSFontAttributeName: [NSFont labelFontOfSize:[NSFont systemFontSize]],
-            NSForegroundColorAttributeName: [NSColor disabledControlTextColor]
-        };
-    });
-    return DisabledAttributes;
+    NSMutableParagraphStyle *p = [[NSMutableParagraphStyle alloc] init];
+    p.alignment = NSCenterTextAlignment;
+    p.lineBreakMode = NSLineBreakByTruncatingTail;
+    p.baseWritingDirection = NSWritingDirectionLeftToRight;
+    return @{
+             NSParagraphStyleAttributeName: [p copy],
+             NSFontAttributeName: [NSFont labelFontOfSize:[NSFont systemFontSize]],
+             NSForegroundColorAttributeName: [NSColor lightGrayColor]
+             };
 }
 
 
