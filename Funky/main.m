@@ -9,6 +9,11 @@
 #import <Cocoa/Cocoa.h>
 #import "RVNReceiptValidation.h"
 
+// Set this to 1 to skip Mac AppStore receipt validation
+#ifndef DEVELOPMENT
+#   define DEVELOPMENT 0
+#endif
+
 int main(int argc, const char * argv[]) {
     @try {
 #if !DEBUG && !DEVELOPMENT
