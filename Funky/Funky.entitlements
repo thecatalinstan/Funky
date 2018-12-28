@@ -12,11 +12,9 @@
 	<true/>
 	<key>com.apple.security.network.client</key>
 	<true/>
-    <key>com.apple.security.temporary-exception.sbpl</key>
-    <array>
-        <string>(allow iokit-open)</string>
-        <string>(allow iokit-set-properties (iokit-property "HIDFKeyMode"))</string>
-        <string>(allow mach-lookup (global-name "com.apple.AssetCacheLocatorService"))</string>
-    </array>
+	<key>com.apple.security.temporary-exception.sbpl</key>
+	<array>
+		<string>(allow iokit-set-properties (iokit-property &quot;HIDFKeyMode&quot;))</string>
+	</array>
 </dict>
 </plist>
